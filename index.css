@@ -1,0 +1,194 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Sen', sans-serif;
+    color: #005163;
+    background: #fff;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .parallax-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Beautiful Smile Section - Layered Structure */
+  .smile-section {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .smile-section-heading {
+    position: relative;
+    padding: 58px 0;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .smile-section-row {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .background-layer {
+    position: absolute;
+    inset: 0;
+    background-image: url('/background-ursmile.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 0;
+  }
+
+  .background-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .image-layer {
+    position: relative;
+    width: 63.3%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .image-layer-left {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .image-layer img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px !important;
+  }
+
+  .image-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    max-width: 36.7%;
+    padding: 0 5vh;
+    margin-left: 72px;
+    margin-top: 0px;
+  }
+
+  .text-overlay-left {
+    left: 0;
+    text-align: right;
+  }
+
+  .text-overlay-right {
+    right: 0;
+    text-align: left;
+    padding-left: 10vh;
+    padding-right: 5vh;
+  }
+
+  .text-button-wrapper {
+    margin-top: 2rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6AE0F2;
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+  .smile-section-row {
+    min-height: auto;
+  }
+
+  .background-layer {
+    background-attachment: scroll;
+  }
+
+  .image-layer {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .text-overlay {
+    position: relative;
+    top: auto;
+    transform: none;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .text-overlay-left,
+  .text-overlay-right {
+    text-align: left;
+    padding: 2rem 1.5rem;
+  }
+
+  .text-button-wrapper {
+    justify-content: flex-start !important;
+  }
+}
