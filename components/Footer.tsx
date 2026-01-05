@@ -88,10 +88,10 @@ const Footer: React.FC<Props> = ({ lang }) => {
           <div>
             <h4 className="text-2xl font-bold mb-6 text-brand-cyan">{t.connect}</h4>
             <div className="flex gap-4 mb-8">
-              <a href="#" className="w-12 h-12 bg-brand-cyan text-black flex items-center justify-center hover:bg-white transition-all rounded-full">
+              <a href="#" className="w-12 h-12 bg-brand-cyan text-black flex items-center justify-center hover:bg-white transition-all rounded-full" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="w-12 h-12 bg-brand-cyan text-black flex items-center justify-center hover:bg-white transition-all rounded-full">
+              <a href="#" className="w-12 h-12 bg-brand-cyan text-black flex items-center justify-center hover:bg-white transition-all rounded-full" aria-label="Instagram">
                 <Instagram size={24} />
               </a>
             </div>

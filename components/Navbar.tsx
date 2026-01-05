@@ -147,7 +147,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
         </div>
 
         {/* Mobile Toggle */}
-        <button className="lg:hidden text-brand-cyan p-2" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden text-brand-cyan p-2" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? (lang === 'fr' ? "Fermer le menu" : "Close menu") : (lang === 'fr' ? "Ouvrir le menu" : "Open menu")}>
           {isOpen ? <X size={36} strokeWidth={1.5} /> : <Menu size={36} strokeWidth={1.5} />}
         </button>
       </div>

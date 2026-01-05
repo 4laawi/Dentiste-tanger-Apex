@@ -133,6 +133,8 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             alt="Routine dental care"
             className="w-full h-full object-cover"
             loading="lazy"
+            width="6240"
+            height="4160"
           />
           <div
             className="image-gradient-overlay"
@@ -171,6 +173,8 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             alt="Restorative procedures"
             className="w-full h-full object-cover"
             loading="lazy"
+            width="5875"
+            height="3917"
           />
           <div
             className="image-gradient-overlay"
@@ -209,6 +213,8 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             alt="Cosmetic transformations"
             className="w-full h-full object-cover"
             loading="lazy"
+            width="6044"
+            height="4029"
           />
           <div
             className="image-gradient-overlay"

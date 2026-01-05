@@ -46,15 +46,15 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
   };
 
   const expertiseItems = [
-    { title: expertise?.facettes || "facettes", img: "/photo5.webp" },
-    { title: expertise?.aligneurs || "aligneurs", img: "/orthodontie.jpg" },
-    { title: expertise?.couronnes || "couronnes", img: "/couronne.jpg" },
-    { title: expertise?.blanchimentFlash || "blanchiment fläsh", img: "/blanchiment dentaire (1).jpg" },
-    { title: expertise?.implant || "implant", img: "/implant.webp" },
-    { title: expertise?.pedodontie || "pédodontie", img: "/enfant.jpg" },
-    { title: expertise?.traitementsCanalaires || "traitements canalaires", img: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" },
-    { title: expertise?.parodontie || "parodontie", img: "/parodontie.jpg" },
-    { title: expertise?.chirurgieOrale || "chirurgie orale", img: "/photo6.webp" },
+    { title: expertise?.facettes || "facettes", img: "/photo5.webp", width: 6240, height: 4160 },
+    { title: expertise?.aligneurs || "aligneurs", img: "/orthodontie.jpg", width: 1200, height: 801 },
+    { title: expertise?.couronnes || "couronnes", img: "/couronne.jpg", width: 1400, height: 934 },
+    { title: expertise?.blanchimentFlash || "blanchiment fläsh", img: "/blanchiment dentaire (1).jpg", width: 778, height: 518 },
+    { title: expertise?.implant || "implant", img: "/implant.webp", width: 1200, height: 800 },
+    { title: expertise?.pedodontie || "pédodontie", img: "/enfant.jpg", width: 2560, height: 1707 },
+    { title: expertise?.traitementsCanalaires || "traitements canalaires", img: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80", width: 800, height: 600 },
+    { title: expertise?.parodontie || "parodontie", img: "/parodontie.jpg", width: 1067, height: 679 },
+    { title: expertise?.chirurgieOrale || "chirurgie orale", img: "/photo6.webp", width: 6240, height: 4160 },
   ];
 
 
@@ -75,12 +75,16 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             alt="Dr. Reda Saoui - Dental Consultation"
             className="hidden md:block w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
+            width="1247"
+            height="843"
           />
           <img
             src="/hero-phone-tangeir-dentiste.png"
             alt="Dr. Reda Saoui - Dental Consultation Mobile"
             className="block md:hidden w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
+            width="535"
+            height="841"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
@@ -124,7 +128,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 -translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/dr-reda.webp" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" />
+                <img src="/dr-reda.webp" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" width="1696" height="2528" />
               </div>
             </div>
             <div ref={doctorParallax.targetRef} className="w-full lg:w-1/2">
@@ -137,7 +141,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                 <ul className="space-y-6">
                   {t.know_doctor.list.map((item: string, i: number) => (
                     <li key={i} className="flex gap-4 text-xl font-medium group">
-                      <span className="text-brand-cyan font-bold transition-transform group-hover:translate-x-2">»</span> {item}
+                      <span className="text-brand-dark font-bold transition-transform group-hover:translate-x-2">»</span> {item}
                     </li>
                   ))}
                 </ul>
@@ -162,7 +166,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/Photo3.png" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Clinic" loading="lazy" />
+                <img src="/Photo3.png" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Clinic" loading="lazy" width="1371" height="839" />
               </div>
             </div>
             <div ref={detailsParallax.targetRef} className="w-full lg:w-1/2">
@@ -175,7 +179,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                 <ul className="space-y-6">
                   {t.details.list.map((item: string, i: number) => (
                     <li key={i} className="flex gap-4 text-xl font-medium group">
-                      <span className="text-brand-cyan font-bold transition-transform group-hover:translate-x-2">»</span> {item}
+                      <span className="text-brand-dark font-bold transition-transform group-hover:translate-x-2">»</span> {item}
                     </li>
                   ))}
                 </ul>
@@ -197,14 +201,14 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             </h3>
             <div className="pt-4">
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-12">
-                <img src="/cnss.png" alt="CNSS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/cnops.png" alt="CNOPS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/axa.png" alt="AXA" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/wafa.png" alt="Wafa Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/inscription-amo-tadamon.jpg" alt="AMO Tadamon" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/sanlam1.png" alt="Sanlam" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/unnamed.png" alt="Insurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                <img src="/ROYALE-MAROCAINE-DASSURANCE.png" alt="Royal Marocaine d'Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="/cnss.png" alt="CNSS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
+                <img src="/cnops.png" alt="CNOPS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
+                <img src="/axa.png" alt="AXA" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="404" height="345" />
+                <img src="/wafa.png" alt="Wafa Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1442" height="1871" />
+                <img src="/inscription-amo-tadamon.jpg" alt="AMO Tadamon" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="494" height="475" />
+                <img src="/sanlam1.png" alt="Sanlam" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="259" height="249" />
+                <img src="/unnamed.png" alt="Insurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="512" height="512" />
+                <img src="/ROYALE-MAROCAINE-DASSURANCE.png" alt="Royal Marocaine d'Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1200" height="1200" />
               </div>
             </div>
           </div>
@@ -216,7 +220,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
             <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] overflow-hidden shadow-[0_0_100px_rgba(106,224,242,0.1)] rounded-sm">
-              <img src="/DSCF7556.jpg" className="w-full h-full object-cover" alt="Dental Technology" loading="lazy" />
+              <img src="/DSCF7556.jpg" className="w-full h-full object-cover" alt="Dental Technology" loading="lazy" width="6044" height="4029" />
             </div>
             <div ref={implantsParallax.targetRef} className="w-full lg:w-1/2 space-y-10">
               <h2 className="text-6xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter">
@@ -248,7 +252,14 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(0)}
               >
-                <img src={item.img} className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isHovered ? 'opacity-60 grayscale-0 scale-110' : 'opacity-30 grayscale'}`} alt={item.title} loading="lazy" />
+                <img
+                  src={item.img}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isHovered ? 'opacity-60 grayscale-0 scale-110' : 'opacity-30 grayscale'}`}
+                  alt={item.title}
+                  loading="lazy"
+                  width={item.width}
+                  height={item.height}
+                />
                 <div className="absolute inset-0 flex flex-col justify-end p-12 text-white bg-gradient-to-t from-black/80 to-transparent">
                   <h3 className={`text-3xl md:text-4xl font-bold font-work leading-none mb-4 lowercase transition-transform ${isHovered ? '-translate-y-2' : ''}`}>{item.title}</h3>
                   <div className={`h-1 bg-brand-cyan transition-all duration-700 ${isHovered ? 'w-16' : 'w-0'}`}></div>
@@ -266,7 +277,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             <div ref={comfortParallax.targetRef} className="lg:w-1/2">
               <h2 className="text-6xl md:text-[6vw] font-bold font-work leading-[0.9] tracking-tighter mb-12">
                 <span className="lowercase">{t.tech_section.title_main}</span> <br />
-                <span className="font-light opacity-30 italic font-serif text-brand-cyan text-3xl md:text-[3vw] block mt-2">{t.tech_section.title_sub}</span>
+                <span className="font-light opacity-60 italic font-serif text-brand-dark text-3xl md:text-[3vw] block mt-2">{t.tech_section.title_sub}</span>
               </h2>
               <div className="max-w-xl space-y-10">
                 <div className="space-y-6">
@@ -283,9 +294,9 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
               </div>
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4 h-[450px] md:h-[700px]">
-              <img src="/photo4.png" className="w-full h-full object-cover col-span-2 row-span-1 rounded-sm shadow-xl" alt="APEX Technology" loading="lazy" />
-              <img src="/DSCF7518.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="3D Printing" loading="lazy" />
-              <img src="/DSCF7520.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="Advanced Imaging" loading="lazy" />
+              <img src="/photo4.png" className="w-full h-full object-cover col-span-2 row-span-1 rounded-sm shadow-xl" alt="APEX Technology" loading="lazy" width="1568" height="839" />
+              <img src="/DSCF7518.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="3D Printing" loading="lazy" width="5757" height="3838" />
+              <img src="/DSCF7520.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="Advanced Imaging" loading="lazy" width="5909" height="3939" />
             </div>
           </div>
         </div>
@@ -323,7 +334,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                   <MapPin className="text-brand-cyan mt-1" size={40} strokeWidth={1} />
                   <div>
                     <p className="text-2xl font-work lowercase mb-2">{ADDRESS}</p>
-                    <a href="#" className="text-brand-cyan font-bold uppercase text-xs tracking-widest border-b border-brand-cyan">{t.contact_team.get_directions}</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Apex+Dental+Clinic+Tanger" target="_blank" rel="noopener noreferrer" className="text-brand-cyan font-bold uppercase text-xs tracking-widest border-b border-brand-cyan">{t.contact_team.get_directions}</a>
                   </div>
                 </div>
                 <div className="flex gap-6 items-start">
@@ -364,12 +375,20 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                   }}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <input name="name" type="text" placeholder={t.contact_team.placeholders.name} required className="bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white" />
-                    <input name="lastName" type="text" placeholder={t.contact_team.placeholders.lastName} required className="bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white" />
+                    <div>
+                      <label htmlFor="name-input" className="sr-only">{t.contact_team.placeholders.name}</label>
+                      <input id="name-input" name="name" type="text" placeholder={t.contact_team.placeholders.name} required className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white" />
+                    </div>
+                    <div>
+                      <label htmlFor="lastname-input" className="sr-only">{t.contact_team.placeholders.lastName}</label>
+                      <input id="lastname-input" name="lastName" type="text" placeholder={t.contact_team.placeholders.lastName} required className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white" />
+                    </div>
                   </div>
 
                   <div className="relative">
+                    <label htmlFor="service-select" className="sr-only">{t.contact_team.placeholders.service}</label>
                     <select
+                      id="service-select"
                       name="service"
                       required
                       className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white appearance-none cursor-pointer"
@@ -396,6 +415,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                     </div>
                   </div>
 
+                  <label htmlFor="other-service-input" className="sr-only">{t.contact_team.placeholders.specify}</label>
                   <input
                     id="other-service-input"
                     name="otherService"

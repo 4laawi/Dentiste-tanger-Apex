@@ -30,6 +30,8 @@ const Testimonials: React.FC<Props> = ({ t }) => {
               alt="Quote"
               className="w-12 md:w-16 h-auto opacity-100"
               loading="lazy"
+              width="64"
+              height="64"
             />
           </div>
 
@@ -60,6 +62,7 @@ const Testimonials: React.FC<Props> = ({ t }) => {
                 key={i}
                 onClick={() => setIndex(i)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${i === index ? 'bg-brand-cyan scale-125' : 'bg-white/20'}`}
+                aria-label={`View testimonial ${i + 1}`}
               />
             ))}
           </div>
@@ -96,6 +99,8 @@ const Testimonials: React.FC<Props> = ({ t }) => {
                 alt="Google"
                 className="w-6 h-6"
                 loading="lazy"
+                width="48"
+                height="48"
               />
               <span>{t.reviews}</span>
               <span className="text-brand-cyan text-2xl group-hover:translate-x-1 transition-transform">→</span>
