@@ -47,13 +47,13 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
 
   const expertiseItems = [
     { title: expertise?.facettes || "facettes", img: "/photo5.webp", width: 6240, height: 4160 },
-    { title: expertise?.aligneurs || "aligneurs", img: "/orthodontie.jpg", width: 1200, height: 801 },
-    { title: expertise?.couronnes || "couronnes", img: "/couronne.jpg", width: 1400, height: 934 },
-    { title: expertise?.blanchimentFlash || "blanchiment fläsh", img: "/blanchiment dentaire (1).jpg", width: 778, height: 518 },
+    { title: expertise?.aligneurs || "aligneurs", img: "/orthodontie.webp", width: 1200, height: 801 },
+    { title: expertise?.couronnes || "couronnes", img: "/couronne.webp", width: 1400, height: 934 },
+    { title: expertise?.blanchimentFlash || "blanchiment fläsh", img: "/blanchiment dentaire (1).webp", width: 778, height: 518 },
     { title: expertise?.implant || "implant", img: "/implant.webp", width: 1200, height: 800 },
-    { title: expertise?.pedodontie || "pédodontie", img: "/enfant.jpg", width: 2560, height: 1707 },
+    { title: expertise?.pedodontie || "pédodontie", img: "/enfant.webp", width: 2560, height: 1707 },
     { title: expertise?.traitementsCanalaires || "traitements canalaires", img: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80", width: 800, height: 600 },
-    { title: expertise?.parodontie || "parodontie", img: "/parodontie.jpg", width: 1067, height: 679 },
+    { title: expertise?.parodontie || "parodontie", img: "/parodontie.webp", width: 1067, height: 679 },
     { title: expertise?.chirurgieOrale || "chirurgie orale", img: "/photo6.webp", width: 6240, height: 4160 },
   ];
 
@@ -71,7 +71,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img
-            src="/PHoto1.png"
+            src="/PHoto1.webp"
             alt="Dr. Reda Saoui - Dental Consultation"
             className="hidden md:block w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
@@ -79,7 +79,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             height="843"
           />
           <img
-            src="/hero-phone-tangeir-dentiste.png"
+            src="/hero-phone-tangeir-dentiste.webp"
             alt="Dr. Reda Saoui - Dental Consultation Mobile"
             className="block md:hidden w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
@@ -166,7 +166,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/Photo3.png" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Clinic" loading="lazy" width="1371" height="839" />
+                <img src="/Photo3.webp" className="w-full h-[400px] md:h-[650px] object-cover shadow-2xl rounded-sm" alt="Clinic" loading="lazy" width="1371" height="839" />
               </div>
             </div>
             <div ref={detailsParallax.targetRef} className="w-full lg:w-1/2">
@@ -201,14 +201,14 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             </h3>
             <div className="pt-4">
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-12">
-                <img src="/cnss.png" alt="CNSS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
-                <img src="/cnops.png" alt="CNOPS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
-                <img src="/axa.png" alt="AXA" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="404" height="345" />
-                <img src="/wafa.png" alt="Wafa Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1442" height="1871" />
-                <img src="/inscription-amo-tadamon.jpg" alt="AMO Tadamon" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="494" height="475" />
-                <img src="/sanlam1.png" alt="Sanlam" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="259" height="249" />
-                <img src="/unnamed.png" alt="Insurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="512" height="512" />
-                <img src="/ROYALE-MAROCAINE-DASSURANCE.png" alt="Royal Marocaine d'Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1200" height="1200" />
+                <img src="/cnss.webp" alt="CNSS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
+                <img src="/cnops.webp" alt="CNOPS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
+                <img src="/axa.webp" alt="AXA" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="404" height="345" />
+                <img src="/wafa.webp" alt="Wafa Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1442" height="1871" />
+                <img src="/inscription-amo-tadamon.webp" alt="AMO Tadamon" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="494" height="475" />
+                <img src="/sanlam1.webp" alt="Sanlam" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="259" height="249" />
+                <img src="/unnamed.webp" alt="Insurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="512" height="512" />
+                <img src="/ROYALE-MAROCAINE-DASSURANCE.webp" alt="Royal Marocaine d'Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1200" height="1200" />
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
             <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] overflow-hidden shadow-[0_0_100px_rgba(106,224,242,0.1)] rounded-sm">
-              <img src="/DSCF7556.jpg" className="w-full h-full object-cover" alt="Dental Technology" loading="lazy" width="6044" height="4029" />
+              <img src="/DSCF7556.webp" className="w-full h-full object-cover" alt="Dental Technology" loading="lazy" width="6044" height="4029" />
             </div>
             <div ref={implantsParallax.targetRef} className="w-full lg:w-1/2 space-y-10">
               <h2 className="text-6xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter">
@@ -294,9 +294,9 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
               </div>
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4 h-[450px] md:h-[700px]">
-              <img src="/photo4.png" className="w-full h-full object-cover col-span-2 row-span-1 rounded-sm shadow-xl" alt="APEX Technology" loading="lazy" width="1568" height="839" />
-              <img src="/DSCF7518.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="3D Printing" loading="lazy" width="5757" height="3838" />
-              <img src="/DSCF7520.jpg" className="w-full h-full object-cover rounded-sm shadow-xl" alt="Advanced Imaging" loading="lazy" width="5909" height="3939" />
+              <img src="/photo4.webp" className="w-full h-full object-cover col-span-2 row-span-1 rounded-sm shadow-xl" alt="APEX Technology" loading="lazy" width="1568" height="839" />
+              <img src="/DSCF7518.webp" className="w-full h-full object-cover rounded-sm shadow-xl" alt="3D Printing" loading="lazy" width="5757" height="3838" />
+              <img src="/DSCF7520.webp" className="w-full h-full object-cover rounded-sm shadow-xl" alt="Advanced Imaging" loading="lazy" width="5909" height="3939" />
             </div>
           </div>
         </div>

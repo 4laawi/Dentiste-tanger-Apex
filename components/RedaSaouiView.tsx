@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PHONE } from "../constants";
 import { useParallax } from "../hooks/useParallax";
 
-const bannerImage = "/DSCF7520.jpg";
+const bannerImage = "/DSCF7520.webp";
 
 interface Props {
   t: any;
@@ -82,7 +82,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative h-full">
                 <div className="absolute inset-0 bg-brand-cyan/5 -translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/photo-reda-saoui.png" className="w-full h-full object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" />
+                <img src="/photo-reda-saoui.webp" className="w-full h-full object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" />
               </div>
             </div>
             <div ref={storyParallax.targetRef} className="w-full lg:w-1/2">

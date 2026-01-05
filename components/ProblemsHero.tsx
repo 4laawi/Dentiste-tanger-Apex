@@ -20,7 +20,7 @@ const ProblemsHero: React.FC<Props> = ({ t, lang }) => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(54, 54, 54, 0.65) 100%, rgba(255, 255, 255, 0) 100%), url(/Photo3.png)`,
+          backgroundImage: `linear-gradient(180deg, rgba(54, 54, 54, 0.65) 100%, rgba(255, 255, 255, 0) 100%), url(/Photo3.webp)`,
           backgroundBlendMode: 'soft-light'
         }}
       ></div>

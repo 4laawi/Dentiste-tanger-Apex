@@ -33,7 +33,7 @@ const BlogView: React.FC<Props> = ({ t, lang }) => {
             <section className="relative h-[60vh] flex items-center overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/photo4.png"
+                        src="/photo4.webp"
                         alt="Blog Hero"
                         className="w-full h-full object-cover opacity-40"
                     />

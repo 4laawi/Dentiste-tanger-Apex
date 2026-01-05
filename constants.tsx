@@ -659,7 +659,7 @@ export const PROBLEMS: Problem[] = [
   { id: '3', title: 'chipped/cracked tooth repair', image: '/unnamed.webp', link: '#' },
   { id: '4', title: 'crooked teeth', image: '/photo5.webp', link: '#' },
   { id: '5', title: 'infant frenectomies', image: '/carousel2.webp', link: '#' },
-  { id: '6', title: 'sleep apnea & snoring', image: '/DSCF7556.jpg', link: '#' },
+  { id: '6', title: 'sleep apnea & snoring', image: '/DSCF7556.webp', link: '#' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

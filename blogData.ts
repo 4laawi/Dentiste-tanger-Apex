@@ -33,7 +33,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: 'Jan 15, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/photo4.png',
+            image: '/photo4.webp',
             category: 'Technology',
             seoTitle: 'Future of Digital Dentistry in Tangier | APEX Dr. Reda Saoui',
             seoDescription: 'Discover how 3D printing and CAD/CAM technology are revolutionizing dental care at APEX, the leading digital dentist in Tangier.'
@@ -58,7 +58,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: 'Feb 02, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/orthodontie.jpg',
+            image: '/orthodontie.webp',
             category: 'Cosmetic',
             seoTitle: 'Invisalign for Adults in Tangier | Discreet Orthodontics | APEX',
             seoDescription: 'Learn why Invisalign is the preferred choice for adults in Tangier seeking a discreet way to straighten their teeth at APEX clinic.'
@@ -103,7 +103,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: 'Apr 05, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/PHoto1.png',
+            image: '/PHoto1.webp',
             category: 'Guide',
             seoTitle: 'How to Choose the Best Dentist in Tangier | APEX Guide',
             seoDescription: 'Looking for a dentiste Tanger? Our guide covers the top factors to consider, from technology to patient reviews, to help you find the right fit.'
@@ -126,7 +126,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: 'May 12, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/Photo3.png',
+            image: '/Photo3.webp',
             category: 'Tourism',
             seoTitle: 'Dental Tourism Tangier | Affordable High-Quality Care | APEX',
             seoDescription: 'Discover why Tangier is a top destination for dental tourism. Get world-class implants and cosmetic dentistry at APEX clinic.'
@@ -178,7 +178,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: '15 Jan, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/photo4.png',
+            image: '/photo4.webp',
             category: 'Technologie',
             seoTitle: 'L\'Avenir de la Dentisterie Numérique à Tanger | APEX Dr. Reda Saoui',
             seoDescription: 'Découvrez comment l\'impression 3D et la technologie CAD/CAM révolutionnent les soins chez APEX, votre dentiste numérique à Tanger.'
@@ -203,7 +203,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: '02 Fév, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/orthodontie.jpg',
+            image: '/orthodontie.webp',
             category: 'Esthétique',
             seoTitle: 'Invisalign pour Adultes à Tanger | Orthodontie Discrète | APEX',
             seoDescription: 'Découvrez pourquoi Invisalign est le choix préféré des adultes à Tanger pour aligner leurs dents en toute discrétion chez APEX.'
@@ -248,7 +248,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: '05 Avr, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/PHoto1.png',
+            image: '/PHoto1.webp',
             category: 'Guide',
             seoTitle: 'Comment Choisir le Meilleur Dentiste à Tanger | Guide APEX',
             seoDescription: 'Vous cherchez un dentiste Tanger ? Notre guide vous aide à choisir selon la technologie, l\'expertise et les avis patients.'
@@ -271,7 +271,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
             `,
             date: '12 Mai, 2024',
             author: 'Dr. Reda Saoui',
-            image: '/Photo3.png',
+            image: '/Photo3.webp',
             category: 'Tourisme',
             seoTitle: 'Tourisme Dentaire Tanger | Soins de Qualité Accessibles | APEX',
             seoDescription: 'Découvrez pourquoi Tanger est une destination majeure pour le tourisme dentaire. Implants et esthétique de qualité chez APEX.'

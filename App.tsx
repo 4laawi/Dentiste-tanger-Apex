@@ -174,7 +174,13 @@ const AppContent: React.FC = () => {
                   path="/blog/:slug"
                   element={<BlogPostView t={t} lang={lang} />}
                 />
+                <Route path="*" element={<NotFound />} />
               </Routes>
+
+              <SEO
+                lang={lang}
+                canonical={`https://www.apexdental.ma${location.pathname}`}
+              />
             </Suspense>
           </motion.div>
         </AnimatePresence>
@@ -187,8 +193,18 @@ const AppContent: React.FC = () => {
   );
 };
 
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from './components/SEO.tsx';
+import NotFound from './components/NotFound.tsx';
+
+// ... other imports ...
+
 const App: React.FC = () => {
-  return <AppContent />;
+  return (
+    <HelmetProvider>
+      <AppContent />
+    </HelmetProvider>
+  );
 };
 
 export default App;

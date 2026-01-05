@@ -33,7 +33,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
       <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/photo10.png"
+            src="/dr-reda.webp"
             alt="Dr. Reda Saoui"
             className="w-full h-full object-cover opacity-60"
           />
@@ -85,7 +85,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 -translate-x-6 translate-y-6 -z-10"></div>
                 <img
-                  src="/photo-reda-saoui.png"
+                  src="/photo-reda-saoui.webp"
                   className="w-full h-[650px] object-cover shadow-2xl rounded-sm"
                   alt="Dr. Reda Saoui"
                   loading="lazy"
@@ -219,8 +219,8 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
           <div className="flex flex-col lg:flex-row-reverse items-center gap-20 lg:gap-40">
             <div className="w-full lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                <img src="/Photo3.png" alt="Lifestyle 1" className="w-full h-[400px] object-cover rounded-sm shadow-xl" loading="lazy" />
-                <img src="/DSCF7518.jpg" alt="Lifestyle 2" className="w-full h-[400px] object-cover rounded-sm shadow-xl mt-12" loading="lazy" />
+                <img src="/PHoto1.webp" alt="Lifestyle 1" className="w-full h-[400px] object-cover rounded-sm shadow-xl" loading="lazy" />
+                <img src="/DSCF7518.webp" alt="Lifestyle 2" className="w-full h-[400px] object-cover rounded-sm shadow-xl mt-12" loading="lazy" />
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">
