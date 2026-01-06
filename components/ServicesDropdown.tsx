@@ -45,7 +45,7 @@ const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                     >
                         <div className="aspect-[16/9] overflow-hidden rounded-sm">
                             <img
-                                src="/background-ursmile.webp"
+                                src="/DSCF7556.webp"
                                 alt="Our Services"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             />

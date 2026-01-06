@@ -71,20 +71,20 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img
-            src="/PHoto1.webp"
+            src="/photo5.webp"
             alt="Dr. Reda Saoui - Dental Consultation"
             className="hidden md:block w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
-            width="1247"
-            height="843"
+            width="6240"
+            height="4160"
           />
           <img
-            src="/hero-phone-tangeir-dentiste.webp"
+            src="/photo5.webp"
             alt="Dr. Reda Saoui - Dental Consultation Mobile"
             className="block md:hidden w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
-            width="535"
-            height="841"
+            width="6240"
+            height="4160"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
@@ -199,16 +199,14 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             <h3 className="text-lg md:text-xl lg:text-2xl font-work font-semibold text-black/90 max-w-3xl mx-auto leading-relaxed">
               {t.insurance.desc}
             </h3>
-            <div className="pt-4">
-              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-12">
-                <img src="/cnss.webp" alt="CNSS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
-                <img src="/cnops.webp" alt="CNOPS" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="320" height="320" />
-                <img src="/axa.webp" alt="AXA" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="404" height="345" />
-                <img src="/wafa.webp" alt="Wafa Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1442" height="1871" />
-                <img src="/inscription-amo-tadamon.webp" alt="AMO Tadamon" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="494" height="475" />
-                <img src="/sanlam1.webp" alt="Sanlam" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="259" height="249" />
-                <img src="/unnamed.webp" alt="Insurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="512" height="512" />
-                <img src="/ROYALE-MAROCAINE-DASSURANCE.webp" alt="Royal Marocaine d'Assurance" className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" width="1200" height="1200" />
+            <div className="pt-8 overflow-x-auto no-scrollbar">
+              <div className="flex flex-nowrap items-center gap-6 md:gap-12 min-w-max px-4 mx-auto justify-center">
+                <img src="/cnss.webp" alt="CNSS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/cnops.webp" alt="CNOPS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/axa.webp" alt="AXA" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/wafa.webp" alt="Wafa Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/sanlam1.webp" alt="Sanlam" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/ROYALE-MAROCAINE-DASSURANCE.webp" alt="Royal Marocaine d'Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
               </div>
             </div>
           </div>

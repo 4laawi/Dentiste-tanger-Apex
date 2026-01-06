@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PHONE } from "../constants";
 import { useParallax } from "../hooks/useParallax";
 
-const bannerImage = "/DSCF7520.webp";
+const bannerImage = "/DSCF7556.webp";
 
 interface Props {
   t: any;
@@ -34,7 +34,9 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             src={bannerImage}
             alt="Dr. Reda Saoui"
             className="w-full h-full object-cover"
-            style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
+            style={{ opacity: 0.6 }}
+            width="6044"
+            height="4029"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
