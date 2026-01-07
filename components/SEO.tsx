@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
     const siteTitle = "APEX | Dr. Reda Saoui - Dentiste à Tanger";
     const finalTitle = title ? `${title} | APEX` : siteTitle;
-    const finalDescription = description || "APEX - Cabinet dentaire du Dr. Reda Saoui à Tanger. Votre dentiste de confiance pour des soins dentaires d'excellence : implants, facettes, blanchiment et Invisalign.";
+    const finalDescription = description || "APEX - Clinique dentaire du Dr. Reda Saoui à Tanger. Votre dentiste de confiance pour des soins dentaires d'excellence : implants, facettes, blanchiment et Invisalign.";
     const finalCanonical = canonical || "https://www.apexdental.ma/";
 
     const jsonLd = schema ? JSON.stringify(schema) : JSON.stringify({
@@ -36,9 +36,9 @@ const SEO: React.FC<SEOProps> = ({
         "telephone": "+212666061666",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Numero 8, Résidence Zainab, Place des Nations, Av. Abou Bakr Errazi",
-            "addressLocality": "Tangier",
-            "postalCode": "90010",
+            "streetAddress": "Place des Nations, Avenue Abou Bakr Errazi, Résidence Zainab – rez-de-chaussée, cabinet n°8",
+            "addressLocality": "Tanger",
+            "postalCode": "90000",
             "addressCountry": "MA"
         },
         "openingHoursSpecification": [

@@ -132,8 +132,8 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
               </div>
             </div>
             <div ref={doctorParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
-                <span className="font-light block opacity-40">{t.know_doctor.title_light}</span>
+              <h2 className="text-4xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
+                <span className="font-light block opacity-40 text-3xl md:text-5xl lg:text-[4vw]">{t.know_doctor.title_light}</span>
                 {t.know_doctor.title_bold}
               </h2>
               <div className="border-l-2 border-black pl-10 space-y-8">
@@ -170,7 +170,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
               </div>
             </div>
             <div ref={detailsParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
+              <h2 className="text-4xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
                 <span className="font-light block opacity-40">{t.details.title_light}</span>
                 {t.details.title_bold}
               </h2>
@@ -179,7 +179,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                 <ul className="space-y-6">
                   {t.details.list.map((item: string, i: number) => (
                     <li key={i} className="flex gap-4 text-xl font-medium group">
-                      <span className="text-brand-dark font-bold transition-transform group-hover:translate-x-2">»</span> {item}
+                      <span className="text-brand-dark font-bold transition-transform group-hover:translate-x-2">•</span> {item}
                     </li>
                   ))}
                 </ul>
@@ -221,7 +221,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
               <img src="/DSCF7556.webp" className="w-full h-full object-cover" alt="Dental Technology" loading="lazy" width="6044" height="4029" />
             </div>
             <div ref={implantsParallax.targetRef} className="w-full lg:w-1/2 space-y-10">
-              <h2 className="text-6xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter">
+              <h2 className="text-4xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter">
                 <span className="font-light block opacity-40">{t.implants.title_light}</span>
                 {t.implants.title_bold}
               </h2>
@@ -235,7 +235,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
       {/* 5. Expertise Grid */}
       <section id="services" className="bg-black py-32 border-t border-white/5" >
         <div className="container mx-auto px-6 mb-24 flex items-center gap-8">
-          <h2 className="text-6xl md:text-9xl font-bold font-work text-white lowercase tracking-tighter shrink-0">
+          <h2 className="text-4xl md:text-9xl font-bold font-work text-white lowercase tracking-tighter shrink-0">
             {t.our_expertise}
           </h2>
           <div className="h-px flex-1 bg-white/20"></div>
@@ -273,9 +273,9 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-20 items-start">
             <div ref={comfortParallax.targetRef} className="lg:w-1/2">
-              <h2 className="text-6xl md:text-[6vw] font-bold font-work leading-[0.9] tracking-tighter mb-12">
+              <h2 className="text-4xl md:text-[6vw] font-bold font-work leading-[0.9] tracking-tighter mb-12">
                 <span className="lowercase">{t.tech_section.title_main}</span> <br />
-                <span className="font-light opacity-60 italic font-serif text-brand-dark text-3xl md:text-[3vw] block mt-2">{t.tech_section.title_sub}</span>
+                <span className="font-light opacity-60 italic font-serif text-brand-dark text-2xl md:text-[3vw] block mt-2">{t.tech_section.title_sub}</span>
               </h2>
               <div className="max-w-xl space-y-10">
                 <div className="space-y-6">
@@ -326,7 +326,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-20">
             <div className="w-full lg:w-2/5 space-y-12">
-              <h2 className="text-6xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter text-white">{t.contact_team.title_bold} <br /><span className="font-light opacity-50">{t.contact_team.title_light}</span></h2>
+              <h2 className="text-4xl md:text-8xl font-bold font-work leading-none lowercase tracking-tighter text-white">{t.contact_team.title_bold} <br /><span className="font-light opacity-50">{t.contact_team.title_light}</span></h2>
               <div className="space-y-10 text-white">
                 <div className="flex gap-6 items-start">
                   <MapPin className="text-brand-cyan mt-1" size={40} strokeWidth={1} />

@@ -2,7 +2,7 @@
 import { Problem, Testimonial } from './types.ts';
 
 export const PHONE = "0666-061666";
-export const ADDRESS = "Numero 8, Résidence Zainab, Place des Nations, Av. Abou Bakr Errazi\n\nTangier 90010";
+export const ADDRESS = "Place des Nations, Avenue Abou Bakr Errazi, Résidence Zainab – rez-de-chaussée, cabinet n°8, 90000 Tanger, Maroc";
 
 export const TRANSLATIONS = {
   en: {
@@ -97,24 +97,24 @@ export const TRANSLATIONS = {
       discover: "Explore"
     },
     know_doctor: {
-      title_light: "know your",
+      title_light: "Meet your",
       title_bold: "doctor",
-      desc: "Meet Dr. Reda Saoui, a leading dentist in Tanger dedicated to transforming smiles with precision and care.",
+      desc: "Meet Dr. Reda Saoui, a dental surgeon in Tangier, whose practice is part of a modern and demanding vision of dentistry. Driven by precision, aesthetics and respect for the patient, he attaches particular importance to listening, understanding and the quality of each care.",
       list: [
-        "Years of expertise in cosmetic and restorative dentistry",
-        "Committed to providing personalized, compassionate care",
-        "Utilizing cutting-edge technology for optimal results"
+        "In-depth expertise in aesthetic and implant dentistry",
+        "A tailor-made approach, based on trust, transparency and benevolence",
+        "The use of cutting-edge technology for precise, comfortable and durable care"
       ],
-      cta: "learn more about dr. saoui"
+      cta: "Learn more about Dr. Saoui"
     },
     details: {
-      title_light: "it's all in",
+      title_light: "It's all in",
       title_bold: "the details",
-      desc: "Our Tanger dentist office is setting the new standard for first-class care.",
+      desc: "Our dental clinic in Tangier redefines the standards of first-class care, placing requirements, comfort and the human heart at the core of every detail.",
       list: [
-        "Friendly faces who never judge and welcome all ages",
-        "Expertise in transformative cosmetic and restorative procedures",
-        "The latest technology for comfort and results"
+        "Caring professionals, listening and without judgment, welcoming patients of all ages",
+        "Sharp expertise in aesthetic and restorative dentistry, dedicated to natural and sustainable transformations",
+        "Integration of the most advanced technologies for optimal comfort and precise results"
       ]
     },
     insurance: {
@@ -351,13 +351,13 @@ export const TRANSLATIONS = {
         tag: "Rencontrez le Dr. Reda Saoui",
         title_light: "Dédié à",
         title_bold: "Votre Sourire",
-        desc: "Découvrez le fondateur et dentiste principal de notre cabinet à Tanger, son parcours et son engagement envers l'excellence des soins dentaires."
+        desc: "Découvrez le fondateur et dentiste principal de notre clinique à Tanger, son parcours et son engagement envers l'excellence des soins dentaires."
       },
       story: {
-        title_light: "Fondation de",
-        title_bold: "APEX",
-        p1: "Le Dr Reda Saoui a fondé APEX à Tanger avec la vision de révolutionner l'expérience dentaire. Son parcours a commencé par une passion pour la médecine et la technologie, ce qui l'a amené à créer une clinique qui ressemble plus à un sanctuaire moderne qu'à un cabinet dentaire traditionnel.",
-        p2: "Notre objectif était de créer quelque chose de nouveau et d'innovant — un espace où les patients se sentent accueillis comme des amis de longue date, et où nous avons l'autonomie d'investir continuellement dans les dernières technologies pour fournir des soins exceptionnels."
+        title_light: "Création de",
+        title_bold: "APEX DENTAL CLINIC",
+        p1: "Le Dr Med Reda Saoui a fondé APEX à Tanger avec la vision de révolutionner l'expérience du dentiste. Tout d'abord le nom vient du jargon médico-dentaire, l'APEX de la dent c'est son sommet, nous cherchons à devenir les meilleurs dans ce que nous faisons à l'échelle internationale. Choisir APEX DENTAL CLINIC c'est choisir une approche humaine, moderne et personnalisée pour vos besoins. Choisir APEX c'est choisir le sommet de la dentisterie moderne.",
+        p2: "<b>Qui suis-je ?</b><br/><br/>Tangérois depuis l’âge de huit ans, j’ai toujours été animé par une profonde curiosité pour la médecine et les nouvelles technologies. Dès mes dix ans, je passais des heures sur internet à lire, observer, regarder des documentaires et apprendre sans relâche, avec cette envie presque enfantine de découvrir quelque chose de nouveau chaque jour et de le partager le lendemain à la cour de récréation.<br/><br/>Très tôt, cette soif de savoir s’est transformée en une véritable obsession : comprendre, analyser, expliquer. Une obsession saine, tournée vers la maîtrise et la précision. C’est avec cet état d’esprit que j’ai intégré la Faculté de Médecine Dentaire Publique de Rabat, et c’est cette même exigence intellectuelle qui me guide aujourd’hui dans ma pratique quotidienne.<br/><br/>Exercer l’art dentaire est pour moi un plaisir autant qu’une responsabilité. J’aime prendre le temps d’expliquer, de rassurer et de répondre aux questions qui préoccupent mes patients, car je suis convaincu qu’un soin de qualité commence toujours par la compréhension et la confiance.<br/><br/>C’est cette vision qui m’a naturellement conduit à créer une clinique pensée comme un véritable sanctuaire moderne, un espace apaisant et moderne, loin de l’univers stressant et impersonnel que beaucoup associent encore aux soins dentaires."
       },
       approach: {
         title: "L'approche du Dr. Saoui",
@@ -387,7 +387,7 @@ export const TRANSLATIONS = {
       },
       personal: {
         title_light: "En dehors",
-        title_bold: "du Cabinet",
+        title_bold: "de la Clinique",
         desc: "Pendant son temps libre, le Dr Saoui est un passionné de sport. Il aime se mettre au défi à travers le basket-ball, le tennis et l'exploration des paysages magnifiques autour de Tanger. Il accorde une importance primordiale au temps passé en famille et pense qu'une vie équilibrée est essentielle pour prodiguer les meilleurs soins à ses patients.",
         fun_title: "Bon à savoir :",
         fun_list: [
@@ -411,7 +411,7 @@ export const TRANSLATIONS = {
       }
     },
     hero: {
-      tag: "Cabinet Dentaire APEX - Tanger",
+      tag: "Clinique Dentaire APEX - Tanger",
       title_part1: "Redessinez Votre Sourire",
       title_part2: "à Tanger",
       desc: "L'excellence des soins dentaires par le Dr. Reda Saoui. Technologie de pointe à Tanger.",
@@ -420,24 +420,24 @@ export const TRANSLATIONS = {
       discover: "Découvrir"
     },
     know_doctor: {
-      title_light: "découvrez votre",
+      title_light: "Rencontrez votre",
       title_bold: "docteur",
-      desc: "Rencontrez le Dr Reda Saoui, un dentiste de premier plan à Tanger dédié à la transformation des sourires avec précision et soin.",
+      desc: "Rencontrez le Dr Reda Saoui, chirurgien-dentiste à Tanger, dont la pratique s’inscrit dans une vision moderne et exigeante de la dentisterie. Animé par la précision, l’esthétique et le respect du patient, il accorde une importance particulière à l’écoute, à la compréhension et à la qualité de chaque soin.",
       list: [
-        "Des années d'expertise en dentisterie esthétique et restauratrice",
-        "Engagé à fournir des soins personnalisés et compatissants",
-        "Utilisation d'une technologie de pointe pour des résultats optimaux"
+        "Une expertise approfondie en dentisterie esthétique et implantaire",
+        "Une approche sur mesure, fondée sur la confiance, la transparence et la bienveillance",
+        "L’utilisation de technologies de pointe au service de soins précis, confortables et durables"
       ],
-      cta: "en savoir plus sur le dr. saoui"
+      cta: "En savoir plus sur le Dr Saoui"
     },
     details: {
-      title_light: "tout est dans",
+      title_light: "Tout est dans",
       title_bold: "les détails",
-      desc: "Notre cabinet dentaire à Tanger établit la nouvelle norme pour des soins de première classe.",
+      desc: "Notre clinique dentaire à Tanger redéfinit les standards des soins de première classe, en plaçant l’exigence, le confort et l’humain au cœur de chaque détail.",
       list: [
-        "Des visages amicaux qui ne jugent jamais et accueillent tous les âges",
-        "Expertise dans les procédures esthétiques et restauratrices transformatrices",
-        "La dernière technologie pour le confort et les résultats"
+        "Des professionnels bienveillants, à l’écoute et sans jugement, accueillant des patients de tous âges",
+        "Une expertise pointue en dentisterie esthétique et restauratrice, dédiée à des transformations naturelles et durables",
+        "L’intégration des technologies les plus avancées pour un confort optimal et des résultats précis"
       ]
     },
     insurance: {
@@ -446,8 +446,8 @@ export const TRANSLATIONS = {
     },
     implants: {
       title_light: "excellence en",
-      title_bold: "implants complets",
-      desc: "Grâce à la technologie avancée Yomi, le Dr Saoui assure une procédure précise et confortable pour remplacer vos dents naturelles.",
+      title_bold: "implantologie dentaire",
+      desc: "Grâce aux technologies de chirurgie implantaire guidée, le Dr. SAOUI et son équipe vous assure une procédure précise et confortable à 100% pour remplacer vos dents perdues.",
       cta: "explorer les soins chirurgicaux"
     },
     our_expertise: "notre expertise",
@@ -478,19 +478,19 @@ export const TRANSLATIONS = {
       routine: {
         bold: "soins",
         light: "dentaires de routine",
-        desc: "Propre et sain n'a jamais été aussi facile — ou aussi agréable. Nous sommes le partenaire de toute votre famille pour la santé dentaire.",
+        desc: "Prendre soin de votre sourire n’a jamais été aussi simple — ni aussi agréable. Nous accompagnons toute votre famille dans le maintien d’une santé dentaire durable, avec douceur, rigueur et attention.",
         cta: "explorer la dentisterie générale"
       },
       restorative: {
         bold: "procédures",
         light: "restauratrices",
-        desc: "Avec une formation avancée et un accent sur la reconstruction complète de la bouche, nos docteurs fournissent des soins de premier ordre pour ceux qui ont des dents endommagées ou manquantes.",
-        cta: "explorer la dentisterie chirurgicale"
+        desc: "Grâce à une formation avancée et une expertise approfondie en reconstruction bucco-dentaire, nos praticiens proposent des soins de haut niveau destinés à restaurer des dents endommagées ou remplacer des dents manquantes, avec précision, garantie et respect de l’esthétique naturelle.",
+        cta: "explorer nos procédures restauratrices"
       },
       cosmetic: {
         bold: "transformations",
         light: "esthétiques",
-        desc: "Découvrez ce qui est possible grâce aux facettes, au blanchiment GLO ou aux aligneurs transparents. Nous sommes un fournisseur certifié Invisalign et avons conçu des milliers de sourires confiants.",
+        desc: "Découvrez ce qui est possible grâce aux facettes, au blanchiment FLAESH ou aux aligneurs transparents. Nous avons accompagné et transformé des centaines de sourires. Chaque traitement est pensé sur mesure.",
         cta: "explorer la dentisterie esthétique"
       }
     },
@@ -513,14 +513,14 @@ export const TRANSLATIONS = {
       years: "Années d'Expérience",
       satisfaction: "Satisfaction Patient",
       smiles: "Sourires Parfaits",
-      p1: "Votre santé et votre esthétique sont notre mission. En tant que dentiste de référence à Tanger, le Dr. Reda Saoui combine vision artistique et expertise clinique de pointe au sein du cabinet APEX.",
-      p2: "Notre cabinet est conçu pour offrir un environnement serein et luxueux, garantissant que chaque visite soit confortable et sans stress.",
+      p1: "Votre santé et votre esthétique sont notre mission. En tant que dentiste de référence à Tanger, le Dr. Reda Saoui combine vision artistique et expertise clinique de pointe au sein de la clinique APEX.",
+      p2: "Notre clinique est conçue pour offrir un environnement serein et luxueux, garantissant que chaque visite soit confortable et sans stress.",
       p3: "Grâce à la technologie CAD/CAM et aux solutions laser sans douleur, nous redéfinissons l'expérience dentaire au Maroc."
     },
     smile: {
       title_light: "vous aider à",
       title_bold: "sourire à nouveau",
-      desc1: "Au cabinet du Dr. Reda Saoui, nous comprenons la frustration de vivre avec des problèmes dentaires. Mauvaise haleine, gencives qui saignent, dents ébréchées ou cassées, sourires croches – nous avons tout vu, et nous sommes là pour vous aider.",
+      desc1: "À la clinique du Dr. Reda Saoui, nous comprenons la frustration de vivre avec des problèmes dentaires. Mauvaise haleine, gencives qui saignent, dents ébréchées ou cassées, sourires croches – nous avons tout vu, et nous sommes là pour vous aider.",
       desc2: "Notre équipe dévouée est prête à s'attaquer de front à ces problèmes, en proposant des solutions de haute technologie qui restaurent votre confiance et votre bien-être.",
       cta: "Appelez-nous ou envoyez-nous un message au",
       cta_end: "et accueillez un sourire plus éclatant et plus sain."
@@ -614,7 +614,7 @@ export const TRANSLATIONS = {
     },
     contact: {
       our: "notre",
-      office: "cabinet à Tanger",
+      office: "clinique à Tanger",
       directions: "Obtenir l'itinéraire",
       hours: "Lun-Ven: 9h30-18h00 | Sam: 9h30-15h00",
       monday: "Lundi : 09h00 - 18h00",
@@ -641,7 +641,7 @@ export const TRANSLATIONS = {
         tag: "Blog APEX",
         title_light: "Conseils &",
         title_bold: "Expertise",
-        desc: "Restez informé des dernières technologies dentaires, des conseils de santé bucco-dentaire et des actualités du cabinet du Dr Reda Saoui."
+        desc: "Restez informé des dernières technologies dentaires, des conseils de santé bucco-dentaire et des actualités de la clinique du Dr Reda Saoui."
       },
       read_more: "Lire la Suite",
       back_to_blog: "Retour au Blog"

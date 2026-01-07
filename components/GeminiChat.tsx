@@ -48,7 +48,7 @@ const GeminiChat: React.FC<Props> = ({ lang }) => {
             - Doctor: Dr. Reda Saoui.
             - Location: Résidence El Amal, 1er Étage, Bd Mohamed V, Tanger.
             - Phone: +212 539-322132.
-            - Keywords: Dentiste Tanger, Cabinet Dentaire Tanger, Dr. Saoui Reda.
+            - Keywords: Dentiste Tanger, Clinique Dentaire Tanger, Dr. Saoui Reda.
             - Services: Dental Implants, Cosmetic Dentistry (Veneers, Emax), Laser Whitening, Invisalign, Dental Emergencies.
             - Vibe: High-end, luxury, painless, expert, modern Moroccan hospitality.
             - Schedule: Mon-Fri 9-18, Sat 9-14.

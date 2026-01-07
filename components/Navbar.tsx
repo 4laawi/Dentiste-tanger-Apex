@@ -65,7 +65,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
               APEX
             </span>
             <span className="text-white font-work font-light text-[10px] lg:text-[11px] tracking-[0.4em] uppercase -mt-1 opacity-80">
-              CABINET DENTAIRE
+              CLINIQUE DENTAIRE
             </span>
           </Link>
         </div>

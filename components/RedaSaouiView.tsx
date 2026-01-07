@@ -93,13 +93,14 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                 {at.story.title_bold}
               </h2>
               <div className="border-l-2 border-black pl-8 space-y-6">
-                <p className="text-xl font-bold italic font-serif text-brand-dark/90">
+                <p className="text-xl font-bold font-serif text-brand-dark/90">
                   {at.story.p1}
                 </p>
-                <p className="text-lg opacity-70 font-serif italic leading-relaxed">
-                  "{at.story.p2}"
-                </p>
-                <button className="bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none">
+                <div
+                  className="text-lg opacity-70 leading-relaxed space-y-4"
+                  dangerouslySetInnerHTML={{ __html: at.story.p2 }}
+                />
+                <button className="bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none mt-4">
                   {lang === 'fr' ? 'notre philosophie' : 'our philosophy'}
                 </button>
               </div>

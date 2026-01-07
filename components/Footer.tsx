@@ -12,7 +12,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
   const t = {
     fr: {
       services: "Spécialités",
-      info: "Cabinet",
+      info: "Clinique",
       office: "Adresse",
       connect: "Suivez-nous",
       appointment: "Prendre Rendez-vous",
@@ -102,7 +102,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
         </div>
 
         <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/40 font-sans text-sm">
-          <p>© {t.rights} | Cabinet Dentaire Tanger</p>
+          <p>© {t.rights} | Clinique Dentaire Tanger</p>
           <p>
             Made by <a href="https://www.sitepro.ma" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">www.sitepro.ma</a>
           </p>
