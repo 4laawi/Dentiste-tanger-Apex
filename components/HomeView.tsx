@@ -246,7 +246,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
             return (
               <div
                 key={i}
-                className="relative aspect-square border border-white/5 overflow-hidden cursor-pointer"
+                className="relative aspect-[16/9] border border-white/5 overflow-hidden cursor-pointer"
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(0)}
               >
