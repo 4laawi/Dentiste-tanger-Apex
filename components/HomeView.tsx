@@ -9,6 +9,7 @@ import BeautifulSmileSection from './BeautifulSmileSection.tsx';
 import Testimonials from './Testimonials.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import ContactSection from './ContactSection.tsx';
+import SEO from './SEO.tsx';
 
 interface Props {
   t: any;
@@ -16,7 +17,7 @@ interface Props {
   lang?: 'en' | 'fr';
 }
 
-const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
+const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSelectedService }) => {
   // Track which expertise card is hovered (default to first card)
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const location = useLocation();
@@ -26,6 +27,13 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
       const element = document.getElementById('services');
       if (element) {
         const yOffset = -100; // Adjust for fixed navbar
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    } else if (location.hash === '#contact-team') {
+      const element = document.getElementById('contact-team');
+      if (element) {
+        const yOffset = -100;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -67,6 +75,11 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title={t.seo.home.title}
+        description={t.seo.home.description}
+        lang={lang}
+      />
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
@@ -250,6 +263,18 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(0)}
               >
+                <div
+                  className="absolute inset-0 z-10"
+                  onClick={() => {
+                    setSelectedService(item.title);
+                    const element = document.getElementById('contact-team');
+                    if (element) {
+                      const yOffset = -100;
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }}
+                />
                 <img
                   src={item.img}
                   className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isHovered ? 'opacity-60 grayscale-0 scale-110' : 'opacity-30 grayscale'}`}
@@ -390,7 +415,9 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                       name="service"
                       required
                       className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white appearance-none cursor-pointer"
+                      value={selectedService}
                       onChange={(e) => {
+                        setSelectedService(e.target.value);
                         const otherInput = document.getElementById('other-service-input');
                         if (otherInput) {
                           otherInput.style.display = e.target.value === 'other' ? 'block' : 'none';
@@ -402,7 +429,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
                         }
                       }}
                     >
-                      <option value="" disabled selected className="bg-brand-dark">{t.contact_team.placeholders.service}</option>
+                      <option value="" disabled className="bg-brand-dark">{t.contact_team.placeholders.service}</option>
                       {expertiseItems.map((item, i) => (
                         <option key={i} value={item.title} className="bg-brand-dark">{item.title}</option>
                       ))}

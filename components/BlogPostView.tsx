@@ -5,6 +5,8 @@ import { Calendar, User, ChevronLeft } from 'lucide-react';
 import { BLOG_POSTS } from '../blogData.ts';
 import ContactSection from './ContactSection.tsx';
 
+import SEO from './SEO.tsx';
+
 interface Props {
     t: any;
     lang: 'en' | 'fr';
@@ -17,18 +19,10 @@ const BlogPostView: React.FC<Props> = ({ t, lang }) => {
     const post = posts.find(p => p.slug === slug);
 
     useEffect(() => {
-        if (post) {
-            document.title = post.seoTitle;
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription) {
-                metaDescription.setAttribute('content', post.seoDescription);
-            }
-        } else {
-            // If post not found, redirect to blog main page
+        if (!post) {
             navigate('/blog');
         }
     }, [post, navigate]);
-
 
     const getLangPath = (path: string) => {
         if (lang === 'en') {
@@ -41,6 +35,12 @@ const BlogPostView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="bg-white min-h-screen pt-32">
+            <SEO
+                title={post.seoTitle}
+                description={post.seoDescription}
+                image={post.image}
+                lang={lang}
+            />
             <div className="container mx-auto px-6 pb-20">
                 <Link
                     to={getLangPath('/blog')}

@@ -66,6 +66,7 @@ import MobileActionBar from './components/MobileActionBar.tsx';
 const AppContent: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isProblemsOpen, setIsProblemsOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string>('');
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -127,6 +128,7 @@ const AppContent: React.FC = () => {
         t={t}
         onOpenProblems={() => setIsProblemsOpen(true)}
         currentView={currentView}
+        setSelectedService={setSelectedService}
       />
 
       <AnimatePresence>
@@ -152,7 +154,7 @@ const AppContent: React.FC = () => {
               <Routes location={{ ...location, pathname: getRoutingPath() }}>
                 <Route
                   path="/"
-                  element={<HomeView t={t} expertise={t.expertise} lang={lang} />}
+                  element={<HomeView t={t} expertise={t.expertise} lang={lang} selectedService={selectedService} setSelectedService={setSelectedService} />}
                 />
                 <Route
                   path="/problemes-traites"

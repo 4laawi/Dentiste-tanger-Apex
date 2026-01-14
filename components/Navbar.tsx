@@ -15,9 +15,10 @@ interface Props {
   t: any;
   onOpenProblems: () => void;
   currentView: string;
+  setSelectedService: (service: string) => void;
 }
 
-const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, currentView }) => {
+const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, currentView, setSelectedService }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<'about' | 'services' | 'problems' | null>(null);
   const [showUrgency, setShowUrgency] = useState(false);
@@ -172,6 +173,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
             onLinkClick={handleLinkClick}
             lang={lang}
             t={t}
+            setSelectedService={setSelectedService}
           />
         )}
         {activeDropdown === 'problems' && (

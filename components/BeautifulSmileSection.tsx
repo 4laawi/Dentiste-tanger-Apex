@@ -127,12 +127,13 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
       {/* First Row - Routine Dental Care */}
       <div className="smile-section-row">
         <div className="background-layer"></div>
-        <div ref={image1Ref} className="image-layer">
+        <div ref={image1Ref} className="image-layer" style={{ willChange: 'transform' }}>
           <img
             src="/photo5.webp"
             alt="Routine dental care"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
             width="6240"
             height="4160"
           />
@@ -143,7 +144,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             }}
           ></div>
         </div>
-        <div ref={text1Ref} className="text-overlay text-overlay-left">
+        <div ref={text1Ref} className="text-overlay text-overlay-left" style={{ willChange: 'transform, opacity' }}>
           <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.routine.bold}</span>
             <br />
@@ -167,12 +168,13 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
       {/* Second Row - Restorative Procedures */}
       <div className="smile-section-row">
         <div className="background-layer"></div>
-        <div ref={image2Ref} className="image-layer image-layer-left">
+        <div ref={image2Ref} className="image-layer image-layer-left" style={{ willChange: 'transform' }}>
           <img
             src="/photo7.webp"
             alt="Restorative procedures"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
             width="5875"
             height="3917"
           />
@@ -183,7 +185,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             }}
           ></div>
         </div>
-        <div ref={text2Ref} className="text-overlay text-overlay-right">
+        <div ref={text2Ref} className="text-overlay text-overlay-right" style={{ willChange: 'transform, opacity' }}>
           <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.restorative.bold}</span>
             <br />
@@ -207,12 +209,13 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
       {/* Third Row - Cosmetic Transformations */}
       <div className="smile-section-row">
         <div className="background-layer"></div>
-        <div ref={image3Ref} className="image-layer">
+        <div ref={image3Ref} className="image-layer" style={{ willChange: 'transform' }}>
           <img
-            src="/DSCF7556.jpg"
+            src="/DSCF7556.webp"
             alt="Cosmetic transformations"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
             width="6044"
             height="4029"
           />
@@ -223,7 +226,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             }}
           ></div>
         </div>
-        <div ref={text3Ref} className="text-overlay text-overlay-left">
+        <div ref={text3Ref} className="text-overlay text-overlay-left" style={{ willChange: 'transform, opacity' }}>
           <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.cosmetic.bold}</span>
             <br />

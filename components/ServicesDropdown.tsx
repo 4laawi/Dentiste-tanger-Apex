@@ -10,9 +10,10 @@ interface Props {
     onLinkClick: (to: string) => void;
     lang: 'en' | 'fr';
     t: any;
+    setSelectedService: (service: string) => void;
 }
 
-const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t }) => {
+const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t, setSelectedService }) => {
     const expertise = t.expertise;
     const menuItems = [
         { label: expertise.facettes, path: '/#services' },
@@ -79,8 +80,11 @@ const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                                         transition={{ delay: 0.1 + index * 0.05 }}
                                     >
                                         <Link
-                                            to={targetPath}
-                                            onClick={() => onLinkClick(item.path)}
+                                            to={lang === 'en' ? '/en/#contact-team' : '/#contact-team'}
+                                            onClick={() => {
+                                                setSelectedService(item.label);
+                                                onLinkClick(item.path);
+                                            }}
                                             className="group flex items-center gap-4 text-white hover:text-brand-cyan transition-colors"
                                         >
                                             <span className="text-xl lg:text-2xl font-work font-light lowercase group-hover:pl-2 transition-all duration-300">

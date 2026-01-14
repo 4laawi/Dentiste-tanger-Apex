@@ -1,5 +1,7 @@
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 @tailwind base;
@@ -67,7 +69,6 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 0px;

@@ -4,6 +4,7 @@ import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../blogData.ts';
 import ContactSection from './ContactSection.tsx';
+import SEO from './SEO.tsx';
 
 interface Props {
     t: any;
@@ -29,6 +30,11 @@ const BlogView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="bg-white">
+            <SEO
+                title={t.seo.blog.title}
+                description={t.seo.blog.description}
+                lang={lang}
+            />
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0">

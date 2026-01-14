@@ -40,7 +40,7 @@ const AboutDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t 
                     >
                         <div className="aspect-[16/9] overflow-hidden rounded-sm">
                             <img
-                                src="/photo-reda-saoui.png"
+                                src="/photo-reda-saoui.webp"
                                 alt="Dr. Reda Saoui Team"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             />

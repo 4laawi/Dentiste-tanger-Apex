@@ -23,6 +23,28 @@ export const TRANSLATIONS = {
       schedule: "schedule now",
       call: PHONE
     },
+    seo: {
+      home: {
+        title: "APEX Dental Clinic Tangier | Dr. Reda Saoui",
+        description: "Premium dental care in Tangier by Dr. Reda Saoui. Specializing in implants, veneers, and digital dentistry with advanced technology."
+      },
+      about: {
+        title: "About US | Dr. Reda Saoui | APEX Dental Clinic",
+        description: "Meet Dr. Reda Saoui and learn about the philosophy and advanced technology behind APEX Dental Clinic in Tangier."
+      },
+      problems: {
+        title: "Treatments & Solutions | APEX Dental Clinic Tangier",
+        description: "Discover the dental problems we treat at APEX, from emergency care to cosmetic transformations and dental implants."
+      },
+      doctor: {
+        title: "Dr. Reda Saoui - Dental Surgeon Tangier | APEX",
+        description: "Expertise, training, and philosophy of Dr. Reda Saoui, your trusted dentist for high-tech care in Tangier."
+      },
+      blog: {
+        title: "Dental Blog & Tips | APEX Dental Clinic Tangier",
+        description: "Expert advice on oral health, latest dental technologies, and clinic news from Dr. Reda Saoui."
+      }
+    },
     about_page: {
       hero: {
         tag: "Meet Dr. Reda Saoui",
@@ -203,25 +225,31 @@ export const TRANSLATIONS = {
       cta_end: "and welcome a brighter, healthier smile."
     },
     faq: {
-      title_bold: "questions about",
-      title_light: "treating dental problems",
+      title_bold: "Vous avez une question ?",
+      title_light: "On vous répond.",
       q1: {
-        title: "What makes Dr. Saoui different?",
-        desc: "Our Tanger dentists combine modern technology with personalized care. From same-day crowns and laser fillings to advanced dental implants, we make every visit efficient."
+        title: "Puis-je savoir le prix des traitement ?",
+        desc: "Pour avoir un devis détaillé de tout les traitements nous vous invitons à nous visiter pour faire une consultation , qui comprend un examen clinique détaillé et un examen radiologique , ces dernier vont nous aider à poser le bon diagnostic et donc le bon plan de traitement , a la fin notre rendez vous , notre secrétaire d'accueil va vous donner votre dossier qui comprend la radio et le devis personnalisé"
       },
       q2: {
-        title: "How do I know if I have a dental problem that needs treatment?",
-        desc: "If you’re experiencing any oral discomfort, pain, or unusual symptoms, schedule an appointment with us. Our team will assess your condition."
+        title: "Est ce que le détartrage fragilise les dents ?",
+        desc: "Le détartrage dentaire est généralement considéré comme sûr et bénéfique pour la santé bucco-dentaire. En fait, il est recommandé de subir un détartrage régulier chez le dentiste pour prévenir les problèmes dentaires tels que la gingivite (inflammation des gencives) et la maladie parodontale (infection des tissus de soutien des dents). Le détartrage peut sembler agressif, car il implique l'utilisation d'instruments spéciaux, tels qu'un grattoir ou une sonde ultrasonique, pour enlever le tartre. Cependant, lorsqu’il est réalisé par un professionnel qualifié, le détartrage est généralement sûr et ne fragilise pas les dents. Au contraire, il permet de maintenir une bonne santé bucco-dentaire en éliminant les accumulations indésirables. Il est possible que certaines personnes ressentent une légère sensibilité dentaire après un détartrage, mais cela est généralement temporaire et disparaît rapidement."
       },
       q3: {
-        title: "What should I do in a dental emergency?",
-        desc: "In a dental emergency, follow these steps:",
-        list: [
-          "Stay calm and assess the situation.",
-          "For bleeding, rinse gently with water and apply pressure.",
-          "Manage pain with over-the-counter pain relievers."
-        ],
-        footer: "Call us immediately for prompt assistance."
+        title: "Est ce que le blanchiment dentaire fait mal ?",
+        desc: "Le blanchiment dentaire peut parfois entraîner une sensibilité dentaire temporaire, mais il ne devrait pas causer de douleur intense. Certaines personnes peuvent ressentir une légère gêne ou sensibilité pendant ou après le traitement de blanchiment. Cela peut se manifester par une sensibilité accrue aux aliments chauds ou froids, aux boissons sucrées ou acides, ou même à l'air froid. La sensibilité dentaire après un blanchiment est généralement de courte durée et disparaît souvent dans les jours qui suivent le traitement. Il est recommandé d'utiliser un dentifrice pour dents sensibles et d'éviter les aliments et les boissons chauds ou froids pendant un certain temps."
+      },
+      q4: {
+        title: "Est ce qu’on peut utiliser le bain de bouche tout les jours ?",
+        desc: "Les bains de bouche ne sont pas conçus pour être utilisés quotidiennement. Certains bains de bouche contiennent des agents actifs plus puissants et peuvent être recommandés pour une utilisation à court terme, par exemple pour traiter une infection de la bouche ou des gencives. Une utilisation excessive de ces produits peut perturber l'équilibre naturel de la bouche et entraîner des effets indésirables, tels que des taches sur les dents ou une irritation des muqueuses."
+      },
+      q5: {
+        title: "Quelle est la durée d'un traitement orthodontique ?",
+        desc: "La durée d'un traitement orthodontique peut varier considérablement en fonction de plusieurs facteurs, tels que la complexité des problèmes orthodontiques, la méthode de traitement utilisée, la coopération du patient et la réponse individuelle aux traitements. Pour les cas orthodontiques mineurs, tels que des corrections mineures de l'alignement dentaire, un traitement peut durer de 6 à 12 mois. Cependant, pour des problèmes plus complexes, tels que des malocclusions sévères ou des mâchoires désalignées, le traitement peut prendre de 1 à 3 ans, voire plus dans certains cas."
+      },
+      q6: {
+        title: "Quelle est la durée de traitement par facettes dentaires ?",
+        desc: "La durée d'un traitement par facettes dentaires peut varier en fonction de plusieurs facteurs, tels que le nombre de dents à traiter, l'état initial des dents, les techniques utilisées et les objectifs esthétiques spécifiques du patient. En général, le processus de pose de facettes dentaires peut être divisé en plusieurs étapes, qui peuvent s'étaler sur plusieurs semaines."
       }
     },
     tech: {
@@ -345,6 +373,28 @@ export const TRANSLATIONS = {
       problems: "problèmes traités",
       schedule: "prendre rdv",
       call: PHONE
+    },
+    seo: {
+      home: {
+        title: "Clinique Dentaire APEX Tanger | Dr. Reda Saoui",
+        description: "Soins dentaires d'excellence à Tanger par le Dr. Reda Saoui. Spécialiste implants, facettes et dentisterie numérique."
+      },
+      about: {
+        title: "À Propos | Dr. Reda Saoui | Clinique APEX Tanger",
+        description: "Découvrez le Dr. Reda Saoui et la philosophie de soins de la clinique APEX. Excellence et technologie pour votre sourire."
+      },
+      problems: {
+        title: "Problèmes Traités & Soins | APEX Tanger",
+        description: "Découvrez les soins dentaires proposés chez APEX : urgences, esthétique, implants et dentisterie numérique à Tanger."
+      },
+      doctor: {
+        title: "Dr. Reda Saoui - Chirurgien Dentiste Tanger | APEX",
+        description: "Parcours et expertise du Dr. Reda Saoui, votre dentiste de confiance au service de l'innovation dentaire à Tanger."
+      },
+      blog: {
+        title: "Le Blog de l'Expert | Clinique APEX Tanger",
+        description: "Conseils de santé bucco-dentaire et actualités sur les technologies dentaires par le Dr. Reda Saoui."
+      }
     },
     about_page: {
       hero: {
@@ -526,25 +576,31 @@ export const TRANSLATIONS = {
       cta_end: "et accueillez un sourire plus éclatant et plus sain."
     },
     faq: {
-      title_bold: "questions sur",
-      title_light: "le traitement des problèmes dentaires",
+      title_bold: "Vous avez une question ?",
+      title_light: "On vous répond.",
       q1: {
-        title: "Qu'est-ce qui rend le Dr Saoui différent ?",
-        desc: "Nos dentistes à Tanger combinent technologie moderne et soins personnalisés. Des couronnes le jour même aux plombages laser, nous optimisons chaque visite."
+        title: "Puis-je savoir le prix des traitement ?",
+        desc: "Pour avoir un devis détaillé de tout les traitements nous vous invitons à nous visiter pour faire une consultation , qui comprend un examen clinique détaillé et un examen radiologique , ces dernier vont nous aider à poser le bon diagnostic et donc le bon plan de traitement , a la fin notre rendez vous , notre secrétaire d'accueil va vous donner votre dossier qui comprend la radio et le devis personnalisé"
       },
       q2: {
-        title: "How do I know if I have a dental problem that needs treatment?",
-        desc: "Si vous ressentez une gêne buccale, une douleur ou des symptômes inhabituels, prenez rendez-vous. Notre équipe évaluera votre état."
+        title: "Est ce que le détartrage fragilise les dents ?",
+        desc: "Le détartrage dentaire est généralement considéré comme sûr et bénéfique pour la santé bucco-dentaire. En fait, il est recommandé de subir un détartrage régulier chez le dentiste pour prévenir les problèmes dentaires tels que la gingivite (inflammation des gencives) et la maladie parodontale (infection des tissus de soutien des dents). Le détartrage peut sembler agressif, car il implique l'utilisation d'instruments spéciaux, tels qu'un grattoir ou une sonde ultrasonique, pour enlever le tartre. Cependant, lorsqu’il est réalisé par un professionnel qualifié, le détartrage est généralement sûr et ne fragilise pas les dents. Au contraire, il permet de maintenir une bonne santé bucco-dentaire en éliminant les accumulations indésirables. Il est possible que certaines personnes ressentent une légère sensibilité dentaire après un détartrage, mais cela est généralement temporaire et disparaît rapidement."
       },
       q3: {
-        title: "Que faire en cas d'urgence ?",
-        desc: "En cas d'urgence dentaire, suivez ces étapes :",
-        list: [
-          "Restez calme et évaluez la situation.",
-          "Pour les saignements, rincez doucement.",
-          "Gérez la douleur avec des analgésiques."
-        ],
-        footer: "Appelez-nous immédiatement."
+        title: "Est ce que le blanchiment dentaire fait mal ?",
+        desc: "Le blanchiment dentaire peut parfois entraîner une sensibilité dentaire temporaire, mais il ne devrait pas causer de douleur intense. Certaines personnes peuvent ressentir une légère gêne ou sensibilité pendant ou après le traitement de blanchiment. Cela peut se manifester par une sensibilité accrue aux aliments chauds ou froids, aux boissons sucrées ou acides, ou même à l'air froid. La sensibilité dentaire après un blanchiment est généralement de courte durée et disparaît souvent dans les jours qui suivent le traitement. Il est recommandé d'utiliser un dentifrice pour dents sensibles et d'éviter les aliments et les boissons chauds ou froids pendant un certain temps."
+      },
+      q4: {
+        title: "Est ce qu’on peut utiliser le bain de bouche tout les jours ?",
+        desc: "Les bains de bouche ne sont pas conçus pour être utilisés quotidiennement. Certains bains de bouche contiennent des agents actifs plus puissants et peuvent être recommandés pour une utilisation à court terme, par exemple pour traiter une infection de la bouche ou des gencives. Une utilisation excessive de ces produits peut perturber l'équilibre naturel de la bouche et entraîner des effets indésirables, tels que des taches sur les dents ou une irritation des muqueuses."
+      },
+      q5: {
+        title: "Quelle est la durée d'un traitement orthodontique ?",
+        desc: "La durée d'un traitement orthodontique peut varier considérablement en fonction de plusieurs facteurs, tels que la complexité des problèmes orthodontiques, la méthode de traitement utilisée, la coopération du patient et la réponse individuelle aux traitements. Pour les cas orthodontiques mineurs, tels que des corrections mineures de l'alignement dentaire, un traitement peut durer de 6 à 12 mois. Cependant, pour des problèmes plus complexes, tels que des malocclusions sévères ou des mâchoires désalignées, le traitement peut prendre de 1 à 3 ans, voire plus dans certains cas."
+      },
+      q6: {
+        title: "Quelle est la durée de traitement par facettes dentaires ?",
+        desc: "La durée d'un traitement par facettes dentaires peut varier en fonction de plusieurs facteurs, tels que le nombre de dents à traiter, l'état initial des dents, les techniques utilisées et les objectifs esthétiques spécifiques du patient. En général, le processus de pose de facettes dentaires peut être divisé en plusieurs étapes, qui peuvent s'étaler sur plusieurs semaines."
       }
     },
     tech: {

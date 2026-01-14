@@ -19,7 +19,7 @@ const ScheduleBanner: React.FC<Props> = ({ t, lang }) => {
     <section
       className="relative py-20 md:py-32 lg:py-40 bg-cover bg-no-repeat overflow-hidden"
       style={{
-        backgroundImage: 'url(/photo4.png)',
+        backgroundImage: 'url(/photo10.webp)',
         backgroundPosition: 'center'
       }}
     >

@@ -7,6 +7,7 @@ import { useParallax } from '../hooks/useParallax.ts';
 import Testimonials from './Testimonials.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import ContactSection from './ContactSection.tsx';
+import SEO from './SEO.tsx';
 
 interface Props {
   t: any;
@@ -29,11 +30,16 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
 
   return (
     <div className="bg-white overflow-hidden">
+      <SEO
+        title={t.seo.about.title}
+        description={t.seo.about.description}
+        lang={lang}
+      />
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/dr-reda.webp"
+            src="/photo6.webp"
             alt="Dr. Reda Saoui"
             className="w-full h-full object-cover opacity-60"
           />
@@ -102,9 +108,10 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
                   {at.story.p1}
                 </p>
                 <div className="w-20 h-1 bg-brand-cyan" />
-                <p className="text-xl text-brand-dark/70 font-work leading-relaxed">
-                  {at.story.p2}
-                </p>
+                <div
+                  className="text-xl text-brand-dark/70 font-work leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: at.story.p2 }}
+                />
               </div>
             </div>
           </div>

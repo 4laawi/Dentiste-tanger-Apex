@@ -17,22 +17,26 @@ const SEO: React.FC<SEOProps> = ({
     description,
     canonical,
     keywords,
-    image = 'https://www.apexdental.ma/og-image.jpg', // Ensure this exists or use a default
+    image = '/hero-image.webp', // Use a standard representative image
     type = 'website',
     schema,
     lang = 'fr'
 }) => {
+    // Ensure absolute URL for image
+    const siteUrl = 'https://www.apexdental.ma';
+    const finalImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
     const siteTitle = "APEX | Dr. Reda Saoui - Dentiste à Tanger";
     const finalTitle = title ? `${title} | APEX` : siteTitle;
     const finalDescription = description || "APEX - Clinique dentaire du Dr. Reda Saoui à Tanger. Votre dentiste de confiance pour des soins dentaires d'excellence : implants, facettes, blanchiment et Invisalign.";
-    const finalCanonical = canonical || "https://www.apexdental.ma/";
+    const finalCanonical = canonical || siteUrl;
 
     const jsonLd = schema ? JSON.stringify(schema) : JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Dentist",
         "name": "APEX Dental Clinic - Dr. Reda Saoui",
-        "image": image,
-        "url": "https://www.apexdental.ma",
+        "image": finalImage,
+        "url": siteUrl,
         "telephone": "+212666061666",
         "address": {
             "@type": "PostalAddress",

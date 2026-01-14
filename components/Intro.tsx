@@ -23,7 +23,7 @@ const Intro: React.FC<Props> = ({ t }) => {
           >
             <div className="h-full rounded-sm overflow-hidden shadow-[0_12px_18px_-6px_rgba(0,0,0,0.3)]">
               <img
-                src="/photo-problems.png"
+                src="/photo-problems.webp"
                 alt="Patient care"
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                 loading="lazy"

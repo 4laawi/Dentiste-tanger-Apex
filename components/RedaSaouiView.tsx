@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PHONE } from "../constants";
 import { useParallax } from "../hooks/useParallax";
+import SEO from "./SEO";
 
 const bannerImage = "/DSCF7556.webp";
 
@@ -27,6 +28,11 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
 
   return (
     <div className="overflow-hidden bg-white font-sans text-brand-dark">
+      <SEO
+        title={t.seo.doctor.title}
+        description={t.seo.doctor.description}
+        lang={lang}
+      />
       {/* Hero Section - Aligned with Home Page */}
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
