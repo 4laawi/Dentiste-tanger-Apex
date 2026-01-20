@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { PHONE } from "../constants";
 import { useParallax } from "../hooks/useParallax";
 import SEO from "./SEO";
@@ -67,7 +68,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={getLangPath('/#contact')}
+                href={getLangPath('/#contact-team')}
                 className="bg-brand-cyan text-black px-10 py-4 font-bold uppercase hover:bg-white transition-all text-lg rounded-none shadow-xl text-center"
               >
                 {t.hero.cta_schedule}
@@ -99,16 +100,20 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                 {at.story.title_bold}
               </h2>
               <div className="border-l-2 border-black pl-8 space-y-6">
-                <p className="text-xl font-bold font-serif text-brand-dark/90">
-                  {at.story.p1}
-                </p>
+                <p
+                  className="text-xl font-bold font-serif text-brand-dark/90"
+                  dangerouslySetInnerHTML={{ __html: at.story.p1 }}
+                />
                 <div
                   className="text-lg opacity-70 leading-relaxed space-y-4"
                   dangerouslySetInnerHTML={{ __html: at.story.p2 }}
                 />
-                <button className="bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none mt-4">
+                <Link
+                  to={getLangPath('/about')}
+                  className="bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none mt-4 inline-block text-center"
+                >
                   {lang === 'fr' ? 'notre philosophie' : 'our philosophy'}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -237,7 +242,14 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/Photo3.png" className="w-full h-[500px] object-cover shadow-2xl rounded-sm" alt="Dr. Reda Personal" loading="lazy" width="1371" height="839" />
+                <img
+                  src="/Photo3.webp"
+                  className="w-full h-[500px] object-cover shadow-2xl rounded-sm"
+                  alt="Dr. Reda Saoui"
+                  loading="lazy"
+                  width="1371"
+                  height="839"
+                />
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">
@@ -281,7 +293,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
               <a
-                href={getLangPath('/#contact')}
+                href={getLangPath('/#contact-team')}
                 className="bg-black text-brand-cyan px-16 py-6 font-bold uppercase hover:bg-white hover:text-black transition-all text-2xl rounded-none shadow-2xl text-center"
               >
                 {t.nav.schedule}

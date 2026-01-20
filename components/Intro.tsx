@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { PHONE } from '../constants';
 
 interface Props {
@@ -8,9 +9,22 @@ interface Props {
 }
 
 const Intro: React.FC<Props> = ({ t }) => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && (href.startsWith('/') || href.startsWith(window.location.origin))) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  };
+
   return (
     <section className="py-20 lg:py-32 bg-white relative overflow-hidden font-sans">
-      <div className="container mx-auto px-4 md:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-12 relative z-10" onClick={handleLinkClick}>
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
 
           {/* Image Column */}
@@ -56,12 +70,8 @@ const Intro: React.FC<Props> = ({ t }) => {
             <div className="w-20 h-[2px] bg-brand-cyan mb-8"></div>
 
             <div className="space-y-6 font-sans text-lg md:text-xl text-brand-dark leading-relaxed">
-              <p>
-                {t.smile.desc1}
-              </p>
-              <p>
-                {t.smile.desc2}
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: t.smile.desc1 }} />
+              <p dangerouslySetInnerHTML={{ __html: t.smile.desc2 }} />
               <p>
                 {t.smile.cta} <a
                   href={`tel:${PHONE.replace(/\D/g, '')}`}

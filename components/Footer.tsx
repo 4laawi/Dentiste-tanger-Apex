@@ -71,7 +71,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
               <li><Link to={getLangPath('/dentiste-reda-saoui')} className="hover:text-brand-cyan transition-colors">{t.i1}</Link></li>
               <li><Link to={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i2}</Link></li>
               <li><Link to={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
-              <li><Link to={getLangPath('/#contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
+              <li><Link to={getLangPath('/contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
             </ul>
           </div>
 
@@ -95,9 +95,9 @@ const Footer: React.FC<Props> = ({ lang }) => {
                 <Instagram size={24} />
               </a>
             </div>
-            <button className="w-full bg-brand-teal text-white py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-sm">
+            <Link to={getLangPath('/contact')} className="w-full bg-brand-teal text-white py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-sm block text-center">
               {t.appointment}
-            </button>
+            </Link>
           </div>
         </div>
 

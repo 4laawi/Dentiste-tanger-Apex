@@ -100,6 +100,14 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                 {nt.problems} <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'problems' ? 'rotate-180' : 'opacity-50'}`} />
               </button>
             </div>
+
+            <Link
+              to={getLangPath('/contact')}
+              onClick={() => handleLinkClick('/contact')}
+              className={`font-work font-medium text-lg lowercase transition-colors ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+            >
+              contact
+            </Link>
           </div>
 
           <div className="flex items-center gap-8 border-l border-white/20 pl-8">
@@ -134,9 +142,13 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
               </AnimatePresence>
             </a>
 
-            <button className="bg-brand-cyan text-black px-8 py-3.5 font-work font-bold text-lg lowercase tracking-tight hover:bg-white transition-all rounded-none shadow-xl">
+            <Link
+              to={getLangPath('/contact')}
+              onClick={() => handleLinkClick('/contact')}
+              className="bg-brand-cyan text-black px-8 py-3.5 font-work font-bold text-lg lowercase tracking-tight hover:bg-white transition-all rounded-none shadow-xl inline-block"
+            >
               {nt.schedule}
-            </button>
+            </Link>
 
             <button
               onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
@@ -202,6 +214,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                 <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{lang === 'fr' ? 'à propos' : 'about'}</Link>
                 <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work lowercase text-left">services</Link>
                 <Link to={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
+                <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>contact</Link>
 
                 <div className="mt-8 pt-8 border-t border-white/10">
                   <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">

@@ -11,6 +11,7 @@ const AboutView = lazy(() => import('./components/AboutView.tsx'));
 const RedaSaouiView = lazy(() => import('./components/RedaSaouiView.tsx'));
 const BlogView = lazy(() => import('./components/BlogView.tsx'));
 const BlogPostView = lazy(() => import('./components/BlogPostView.tsx'));
+const ContactView = lazy(() => import('./components/ContactView.tsx'));
 
 import Footer from './components/Footer.tsx';
 import ContactFloatingButton from './components/ContactFloatingButton.tsx';
@@ -175,6 +176,10 @@ const AppContent: React.FC = () => {
                 <Route
                   path="/blog/:slug"
                   element={<BlogPostView t={t} lang={lang} />}
+                />
+                <Route
+                  path="/contact"
+                  element={<ContactView t={t} lang={lang} />}
                 />
                 <Route path="*" element={<NotFound />} />
               </Routes>

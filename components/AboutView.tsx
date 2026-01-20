@@ -70,9 +70,8 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto font-work font-light leading-relaxed"
-          >
-            {at.hero.desc}
-          </motion.p>
+            dangerouslySetInnerHTML={{ __html: at.hero.desc }}
+          />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -108,9 +107,10 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
                 {at.story.title_bold}
               </h2>
               <div className="border-l-2 border-black pl-10 space-y-8">
-                <p className="text-2xl font-bold italic font-serif text-brand-dark/90">
-                  {at.story.p1}
-                </p>
+                <p
+                  className="text-xl font-medium font-serif text-brand-dark/90"
+                  dangerouslySetInnerHTML={{ __html: at.story.p1 }}
+                />
                 <div className="w-20 h-1 bg-brand-cyan" />
                 <div
                   className="text-xl text-brand-dark/70 font-work leading-relaxed"

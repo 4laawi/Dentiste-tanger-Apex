@@ -43,6 +43,10 @@ export const TRANSLATIONS = {
       blog: {
         title: "Dental Blog & Tips | APEX Dental Clinic Tangier",
         description: "Expert advice on oral health, latest dental technologies, and clinic news from Dr. Reda Saoui."
+      },
+      contact: {
+        title: "Contact Us | APEX Dental Clinic Tangier | Dr. Reda Saoui",
+        description: "Contact APEX Dental Clinic in Tangier for appointments, inquiries, or emergencies. Our expert team is here to help you achieve your perfect smile."
       }
     },
     about_page: {
@@ -50,12 +54,12 @@ export const TRANSLATIONS = {
         tag: "Meet Dr. Reda Saoui",
         title_light: "Dedicated to",
         title_bold: "Your Smile",
-        desc: "Learn about the founder and lead dentist of our Tangier practice, his journey, and his commitment to excellence in dental care."
+        desc: "Learn about the founder and lead dentist of our <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>Tangier practice</a>, his journey, and his commitment to excellence in dental care."
       },
       story: {
         title_light: "Founding",
         title_bold: "APEX",
-        p1: "Dr. Reda Saoui founded APEX in Tangier with a vision to revolutionize the dental experience. His journey began with a passion for both medicine and technology, leading him to create a clinic that feels like a modern sanctuary rather than a traditional dental office.",
+        p1: "Dr. Reda Saoui founded <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>APEX in Tangier</a> with a vision to revolutionize the dental experience. His journey began with a passion for both medicine and technology, leading him to create a clinic that feels like a modern sanctuary rather than a traditional dental office.",
         p2: "Our goal was to create something new and innovative—a space where patients feel welcomed like old friends, and where we have the autonomy to continually invest in the latest technology to provide exceptional care."
       },
       approach: {
@@ -219,7 +223,7 @@ export const TRANSLATIONS = {
     smile: {
       title_light: "helping you",
       title_bold: "smile again",
-      desc1: "At Dr. Reda Saoui's clinic, we understand the frustration of living with dental problems. Bad breath, bleeding gums, chipped or cracked teeth, crooked smiles – we’ve seen it all, and we’re here to help.",
+      desc1: "At Dr. Reda Saoui's clinic, <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>your dentist in Tangier</a>, we understand the frustration of living with dental problems. Bad breath, bleeding gums, chipped or cracked teeth, crooked smiles – we’ve seen it all, and we’re here to help.",
       desc2: "Our dedicated team is ready to tackle these issues head-on, providing high-tech solutions that restore your confidence and well-being.",
       cta: "Call or text us at",
       cta_end: "and welcome a brighter, healthier smile."
@@ -255,7 +259,7 @@ export const TRANSLATIONS = {
     tech: {
       anxiety: "suffer from dental anxiety?",
       title: "discover our Solea Laser solution",
-      desc: "We address dental anxiety with the innovative Solea Laser, a pain-free solution that eliminates the need for drills, needles, scalpels, or loud noises during treatments. With this technology, you can experience dental care without stress or discomfort!"
+      desc: "In our <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>dental practice in Tangier</a>, we address dental anxiety with the innovative Solea Laser, a pain-free solution that eliminates the need for drills, needles, scalpels, or loud noises during treatments. With this technology, you can experience dental care without stress or discomfort!"
     },
     schedule_banner: {
       title_bold: "schedule",
@@ -394,6 +398,10 @@ export const TRANSLATIONS = {
       blog: {
         title: "Le Blog de l'Expert | Clinique APEX Tanger",
         description: "Conseils de santé bucco-dentaire et actualités sur les technologies dentaires par le Dr. Reda Saoui."
+      },
+      contact: {
+        title: "Contactez-nous | Clinique APEX Tanger | Dr. Reda Saoui",
+        description: "Contactez la clinique dentaire APEX à Tanger pour vos rendez-vous, questions ou urgences. Notre équipe d'experts est là pour vous accompagner."
       }
     },
     about_page: {
@@ -401,12 +409,12 @@ export const TRANSLATIONS = {
         tag: "Rencontrez le Dr. Reda Saoui",
         title_light: "Dédié à",
         title_bold: "Votre Sourire",
-        desc: "Découvrez le fondateur et dentiste principal de notre clinique à Tanger, son parcours et son engagement envers l'excellence des soins dentaires."
+        desc: "Découvrez le fondateur et dentiste principal de <a href='/' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>notre clinique à Tanger</a>, son parcours et son engagement envers l'excellence des soins dentaires."
       },
       story: {
         title_light: "Création de",
         title_bold: "APEX DENTAL CLINIC",
-        p1: "Le Dr Med Reda Saoui a fondé APEX à Tanger avec la vision de révolutionner l'expérience du dentiste. Tout d'abord le nom vient du jargon médico-dentaire, l'APEX de la dent c'est son sommet, nous cherchons à devenir les meilleurs dans ce que nous faisons à l'échelle internationale. Choisir APEX DENTAL CLINIC c'est choisir une approche humaine, moderne et personnalisée pour vos besoins. Choisir APEX c'est choisir le sommet de la dentisterie moderne.",
+        p1: "Le Dr Med Reda Saoui a fondé <a href='/' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>APEX à Tanger</a> avec la vision de révolutionner l'expérience du dentiste. Tout d'abord le nom vient du jargon médico-dentaire, l'APEX de la dent c'est son sommet, nous cherchons à devenir les meilleurs dans ce que nous faisons à l'échelle internationale. Choisir APEX DENTAL CLINIC c'est choisir une approche humaine, moderne et personnalisée pour vos besoins. Choisir APEX c'est choisir le sommet de la dentisterie moderne.",
         p2: "<b>Qui suis-je ?</b><br/><br/>Tangérois depuis l’âge de huit ans, j’ai toujours été animé par une profonde curiosité pour la médecine et les nouvelles technologies. Dès mes dix ans, je passais des heures sur internet à lire, observer, regarder des documentaires et apprendre sans relâche, avec cette envie presque enfantine de découvrir quelque chose de nouveau chaque jour et de le partager le lendemain à la cour de récréation.<br/><br/>Très tôt, cette soif de savoir s’est transformée en une véritable obsession : comprendre, analyser, expliquer. Une obsession saine, tournée vers la maîtrise et la précision. C’est avec cet état d’esprit que j’ai intégré la Faculté de Médecine Dentaire Publique de Rabat, et c’est cette même exigence intellectuelle qui me guide aujourd’hui dans ma pratique quotidienne.<br/><br/>Exercer l’art dentaire est pour moi un plaisir autant qu’une responsabilité. J’aime prendre le temps d’expliquer, de rassurer et de répondre aux questions qui préoccupent mes patients, car je suis convaincu qu’un soin de qualité commence toujours par la compréhension et la confiance.<br/><br/>C’est cette vision qui m’a naturellement conduit à créer une clinique pensée comme un véritable sanctuaire moderne, un espace apaisant et moderne, loin de l’univers stressant et impersonnel que beaucoup associent encore aux soins dentaires."
       },
       approach: {
@@ -570,7 +578,7 @@ export const TRANSLATIONS = {
     smile: {
       title_light: "vous aider à",
       title_bold: "sourire à nouveau",
-      desc1: "À la clinique du Dr. Reda Saoui, nous comprenons la frustration de vivre avec des problèmes dentaires. Mauvaise haleine, gencives qui saignent, dents ébréchées ou cassées, sourires croches – nous avons tout vu, et nous sommes là pour vous aider.",
+      desc1: "À la clinique du Dr. Reda Saoui, <a href='/' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>votre dentiste à Tanger</a>, nous comprenons la frustration de vivre avec des problèmes dentaires. Mauvaise haleine, gencives qui saignent, dents ébréchées ou cassées, sourires croches – nous avons tout vu, et nous sommes là pour vous aider.",
       desc2: "Notre équipe dévouée est prête à s'attaquer de front à ces problèmes, en proposant des solutions de haute technologie qui restaurent votre confiance et votre bien-être.",
       cta: "Appelez-nous ou envoyez-nous un message au",
       cta_end: "et accueillez un sourire plus éclatant et plus sain."
@@ -606,12 +614,12 @@ export const TRANSLATIONS = {
     tech: {
       anxiety: "souffrez-vous d'anxiété dentaire ?",
       title: "découvrez notre solution Solea Laser",
-      desc: "Nous traitons l'anxiété dentaire avec le Solea Laser innovant, une solution sans douleur qui élimine le besoin de fraises, d'aiguilles, de scalpels ou de bruits forts pendant les traitements. Avec cette technologie, vous pouvez bénéficier de soins dentaires sans stress ni inconfort !"
+      desc: "Au sein de notre <a href='/' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>cabinet dentaire à Tanger</a>, nous traitons l'anxiété dentaire grâce au Solea Laser innovant, une solution sans douleur qui élimine le besoin de fraises, d'aiguilles, de scalpels ou de bruits forts pendant les traitements. Avec cette technologie, vous pouvez bénéficier de soins dentaires sans stress ni inconfort !"
     },
     schedule_banner: {
       title_bold: "planifiez",
       title_light: "votre première visite",
-      btn: "Prendre RDV"
+      btn: "Prendre Rendez-vous"
     },
     more_problems: {
       title_bold: "plus de",

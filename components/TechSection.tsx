@@ -1,16 +1,31 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   t: any;
 }
 
 const TechSection: React.FC<Props> = ({ t }) => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A') {
+      const href = target.getAttribute('href');
+      if (href && (href.startsWith('/') || href.startsWith(window.location.origin))) {
+        e.preventDefault();
+        navigate(href);
+      }
+    }
+  };
+
   return (
-    <section 
-      className="relative bg-fixed bg-cover bg-center overflow-hidden" 
-      style={{ 
+    <section
+      className="relative bg-fixed bg-cover bg-center overflow-hidden"
+      onClick={handleLinkClick}
+      style={{
         backgroundImage: 'url(https://jacksonfamilydentalonline.com/wp-content/uploads/2020/05/jackson-solea-background.jpg)',
         backgroundBlendMode: 'overlay',
         paddingTop: '18px',
@@ -18,19 +33,19 @@ const TechSection: React.FC<Props> = ({ t }) => {
       }}
     >
       <div className="absolute inset-0" style={{ backgroundColor: 'rgba(54, 54, 54, 0.8)' }}></div>
-      
+
       <div className="relative z-10" style={{ width: '80%', maxWidth: '1080px', margin: 'auto', padding: '2% 0' }}>
         {/* First Row - Heading */}
         <div style={{ paddingBottom: '0', marginBottom: '4%' }}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-left"
           >
-            <h2 
+            <h2
               className="font-work text-white leading-[1.1em] mb-0"
-              style={{ 
+              style={{
                 fontSize: '3em',
                 color: '#FFFFFF',
                 lineHeight: '1.1em',
@@ -44,12 +59,12 @@ const TechSection: React.FC<Props> = ({ t }) => {
               {t.title}
             </h2>
           </motion.div>
-          
+
           {/* White Divider */}
           <div style={{ width: '80px', height: '23px', marginTop: '0', marginBottom: '0' }}>
-            <div style={{ 
-              width: '100%', 
-              height: '2px', 
+            <div style={{
+              width: '100%',
+              height: '2px',
               borderTop: '2px solid #FFF',
               position: 'relative'
             }}></div>
@@ -58,19 +73,19 @@ const TechSection: React.FC<Props> = ({ t }) => {
 
         {/* Second Row - Description */}
         <div className="pt-0 flex flex-col md:flex-row" style={{ gap: '0px', height: '209px' }}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="w-full md:w-[46%] text-left"
-            style={{ 
+            style={{
               paddingBottom: '3%',
               marginBottom: '8.696%'
             }}
           >
-            <p 
+            <p
               className="text-white"
-              style={{ 
+              style={{
                 fontSize: '18px',
                 color: '#ffffff',
                 fontFamily: "'Sen', Helvetica, Arial, Lucida, sans-serif",
@@ -78,9 +93,8 @@ const TechSection: React.FC<Props> = ({ t }) => {
                 margin: 0,
                 paddingBottom: '0px'
               }}
-            >
-              {t.desc}
-            </p>
+              dangerouslySetInnerHTML={{ __html: t.desc }}
+            />
           </motion.div>
           <div className="w-full md:w-[46%] hidden md:block"></div>
         </div>

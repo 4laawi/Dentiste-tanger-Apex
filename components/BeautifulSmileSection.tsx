@@ -155,7 +155,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/general-dentistry')}
+              to={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >
@@ -196,7 +196,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/dental-surgery')}
+              to={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >
@@ -237,7 +237,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/cosmetic-dentistry')}
+              to={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >

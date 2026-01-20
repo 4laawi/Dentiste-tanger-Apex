@@ -118,7 +118,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={getLangPath('/#contact')}
+                href={getLangPath('/#contact-team')}
                 className="bg-brand-cyan text-black px-10 py-4 font-bold uppercase hover:bg-white transition-all text-lg rounded-none shadow-xl text-center"
               >
                 {t.hero.cta_schedule}
@@ -239,7 +239,12 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
                 {t.implants.title_bold}
               </h2>
               <p className="text-2xl opacity-60 font-serif italic max-w-xl leading-relaxed">{t.implants.desc}</p>
-              <button className="bg-brand-cyan text-black px-12 py-5 font-bold uppercase hover:bg-white transition-all text-xl rounded-none">{t.implants.cta}</button>
+              <Link
+                to={getLangPath('/problemes-traites')}
+                className="inline-block bg-brand-cyan text-black px-12 py-5 font-bold uppercase hover:bg-white transition-all text-xl rounded-none text-center"
+              >
+                {t.implants.cta}
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface Props {
   t: any;
@@ -49,12 +50,12 @@ const ScheduleBanner: React.FC<Props> = ({ t, lang }) => {
               whileTap={{ scale: 0.95 }}
               className="inline-block"
             >
-              <a
-                href={getLangPath('/#contact')}
+              <Link
+                to={getLangPath('/contact')}
                 className="inline-block bg-brand-cyan text-black px-10 py-4 text-xl font-bold uppercase tracking-tight hover:bg-black hover:text-white transition-all duration-300 rounded-sm"
               >
                 {t.btn}
-              </a>
+              </Link>
             </motion.div>
           </div>
         </motion.div>
