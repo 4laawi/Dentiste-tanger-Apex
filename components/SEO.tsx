@@ -71,6 +71,11 @@ const SEO: React.FC<SEOProps> = ({
             {keywords && <meta name="keywords" content={keywords} />}
             <link rel="canonical" href={finalCanonical} />
 
+            {/* Language Alternates */}
+            <link rel="alternate" hrefLang="fr" href={finalCanonical.replace('/en', '') || siteUrl} />
+            <link rel="alternate" hrefLang="en" href={finalCanonical.includes('/en') ? finalCanonical : `${siteUrl}/en${finalCanonical.replace(siteUrl, '') === '/' ? '' : finalCanonical.replace(siteUrl, '')}`} />
+            <link rel="alternate" hrefLang="x-default" href={siteUrl} />
+
             {/* Open Graph */}
             <meta property="og:site_name" content="APEX Dental Clinic" />
             <meta property="og:title" content={finalTitle} />

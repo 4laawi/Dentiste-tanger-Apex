@@ -1,72 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Static Pages (French - Default) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- French (Default) -->
   <url>
     <loc>https://www.apexdental.ma/</loc>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexdental.ma/"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.apexdental.ma/about</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.apexdental.ma/problemes-traites</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/problemes-traites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/problemes-traites"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.apexdental.ma/problemes-traites</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.apexdental.ma/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/about"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.apexdental.ma/dentiste-reda-saoui</loc>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/dentiste-reda-saoui"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/dentiste-reda-saoui"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.apexdental.ma/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/blog"/>
+    <lastmod>2024-03-20</lastmod>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Static Pages (English) -->
+  <!-- English -->
   <url>
     <loc>https://www.apexdental.ma/en</loc>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.apexdental.ma/"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.apexdental.ma/en/about</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.apexdental.ma/en/problemes-traites</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/problemes-traites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/problemes-traites"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.apexdental.ma/en/problemes-traites</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.apexdental.ma/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/about"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.apexdental.ma/en/dentiste-reda-saoui</loc>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/dentiste-reda-saoui"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/dentiste-reda-saoui"/>
+    <lastmod>2024-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.apexdental.ma/en/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.apexdental.ma/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.apexdental.ma/en/blog"/>
+    <lastmod>2024-03-20</lastmod>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Blog Posts (French) -->
-  <url><loc>https://www.apexdental.ma/blog/avenir-dentisterie-numerique-tanger</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/blog/invisalign-meilleur-choix-adultes-tanger</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/blog/entretenir-votre-sourire-soins-post-implantaires-tanger</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/blog/comment-choisir-meilleur-dentiste-tanger</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/blog/tourisme-dentaire-tanger-soins-qualite</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/blog/urgences-dentaires-tanger-que-faire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Blog Posts FR -->
+  <url>
+    <loc>https://www.apexdental.ma/blog/avenir-dentisterie-numerique-tanger</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/blog/invisalign-meilleur-choix-adultes-tanger</loc>
+    <lastmod>2024-02-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/blog/entretenir-votre-sourire-soins-post-implantaires-tanger</loc>
+    <lastmod>2024-03-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/blog/comment-choisir-meilleur-dentiste-tanger</loc>
+    <lastmod>2024-04-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/blog/tourisme-dentaire-tanger-soins-qualite</loc>
+    <lastmod>2024-05-12</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/blog/urgences-dentaires-tanger-que-faire</loc>
+    <lastmod>2024-06-20</lastmod>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- Blog Posts (English) -->
-  <url><loc>https://www.apexdental.ma/en/blog/future-of-digital-dentistry-tangier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/en/blog/invisalign-best-choice-adults-tangier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/en/blog/maintaining-smile-post-implant-care-tangier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/en/blog/how-to-choose-best-dentist-tangier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/en/blog/dental-tourism-tangier-quality-care</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.apexdental.ma/en/blog/emergency-dental-care-tangier-what-to-do</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Blog Posts EN -->
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/future-of-digital-dentistry-tangier</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/invisalign-best-choice-adults-tangier</loc>
+    <lastmod>2024-02-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/maintaining-smile-post-implant-care-tangier</loc>
+    <lastmod>2024-03-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/how-to-choose-best-dentist-tangier</loc>
+    <lastmod>2024-04-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/dental-tourism-tangier-quality-care</loc>
+    <lastmod>2024-05-12</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.apexdental.ma/en/blog/emergency-dental-care-tangier-what-to-do</loc>
+    <lastmod>2024-06-20</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
