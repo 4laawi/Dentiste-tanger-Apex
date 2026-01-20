@@ -26,7 +26,7 @@ export const TRANSLATIONS = {
     seo: {
       home: {
         title: "APEX Dental Clinic Tangier | Dr. Reda Saoui",
-        description: "Premium dental care in Tangier by Dr. Reda Saoui. Specializing in implants, veneers, and digital dentistry with advanced technology."
+        description: "Experience premium dental care in Tangier with Dr. Reda Saoui. Expert specialists in dental implants, aesthetic veneers, and Invisalign clear aligners. High-tech dentistry clinic in Tangier for a perfect smile."
       },
       about: {
         title: "About US | Dr. Reda Saoui | APEX Dental Clinic",
@@ -377,7 +377,7 @@ export const TRANSLATIONS = {
     seo: {
       home: {
         title: "Clinique Dentaire APEX Tanger | Dr. Reda Saoui",
-        description: "Soins dentaires d'excellence à Tanger par le Dr. Reda Saoui. Spécialiste implants, facettes et dentisterie numérique."
+        description: "Découvrez l'excellence des soins dentaires à Tanger avec le Dr. Reda Saoui. Spécialiste en implants dentaires, facettes esthétiques et Invisalign. Clinique de haute technologie pour votre santé bucco-dentaire."
       },
       about: {
         title: "À Propos | Dr. Reda Saoui | Clinique APEX Tanger",
