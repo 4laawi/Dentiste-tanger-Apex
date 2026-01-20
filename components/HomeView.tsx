@@ -92,12 +92,10 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
             height="4160"
           />
           <img
-            src="/photo5.webp"
+            src="/homepage-hero-mobiles (1).webp"
             alt="Dr. Reda Saoui - Dental Consultation Mobile"
             className="block md:hidden w-full h-full object-cover"
             style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
-            width="6240"
-            height="4160"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>

@@ -293,7 +293,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
               <a
-                href={getLangPath('/#contact-team')}
+                href={getLangPath('/contact')}
                 className="bg-black text-brand-cyan px-16 py-6 font-bold uppercase hover:bg-white hover:text-black transition-all text-2xl rounded-none shadow-2xl text-center"
               >
                 {t.nav.schedule}

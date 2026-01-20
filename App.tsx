@@ -66,6 +66,7 @@ import MobileActionBar from './components/MobileActionBar.tsx';
 
 const AppContent: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [showMobileBar, setShowMobileBar] = useState(false);
   const [isProblemsOpen, setIsProblemsOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<string>('');
   const location = useLocation();
@@ -77,7 +78,10 @@ const AppContent: React.FC = () => {
   const t = TRANSLATIONS[lang];
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      setShowMobileBar(window.scrollY > window.innerHeight * 0.8);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -195,7 +199,7 @@ const AppContent: React.FC = () => {
 
       <Footer lang={lang} />
       <ContactFloatingButton lang={lang} />
-      <MobileActionBar t={t} lang={lang} />
+      <MobileActionBar t={t} lang={lang} isVisible={showMobileBar} />
     </div>
   );
 };
