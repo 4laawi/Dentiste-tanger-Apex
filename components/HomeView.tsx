@@ -214,12 +214,12 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
             </h3>
             <div className="pt-8 overflow-x-auto no-scrollbar">
               <div className="flex flex-nowrap items-center gap-6 md:gap-12 min-w-max px-4 mx-auto justify-center">
-                <img src="/cnss.webp" alt="CNSS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
-                <img src="/cnops.webp" alt="CNOPS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
-                <img src="/axa.webp" alt="AXA" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
-                <img src="/wafa.webp" alt="Wafa Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
-                <img src="/sanlam1.webp" alt="Sanlam" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
-                <img src="/ROYALE-MAROCAINE-DASSURANCE.webp" alt="Royal Marocaine d'Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" />
+                <img src="/cnss.webp" alt="CNSS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="200" height="80" />
+                <img src="/cnops.webp" alt="CNOPS" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="200" height="80" />
+                <img src="/axa.webp" alt="AXA" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="160" height="80" />
+                <img src="/wafa.webp" alt="Wafa Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="200" height="80" />
+                <img src="/sanlam1.webp" alt="Sanlam" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="200" height="80" />
+                <img src="/ROYALE-MAROCAINE-DASSURANCE.webp" alt="Royal Marocaine d'Assurance" className="h-10 md:h-16 w-auto object-contain flex-shrink-0" loading="lazy" width="240" height="80" />
               </div>
             </div>
           </div>

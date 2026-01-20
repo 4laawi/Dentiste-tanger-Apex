@@ -43,6 +43,8 @@ const AboutDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t 
                                 src="/photo-reda-saoui.webp"
                                 alt="Dr. Reda Saoui Team"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                width="1200"
+                                height="675"
                             />
                         </div>
                         <div className="absolute inset-0 border border-brand-cyan/20 pointer-events-none -m-4 rounded-sm" />

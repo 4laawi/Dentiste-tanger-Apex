@@ -42,6 +42,8 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
             src="/photo6.webp"
             alt="Dr. Reda Saoui"
             className="w-full h-full object-cover opacity-60"
+            width="6240"
+            height="4160"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black" />
         </div>
@@ -95,6 +97,8 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
                   className="w-full h-[650px] object-cover shadow-2xl rounded-sm"
                   alt="Dr. Reda Saoui"
                   loading="lazy"
+                  width="1696"
+                  height="2528"
                 />
               </div>
             </div>
@@ -121,7 +125,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
       {/* 3. Approach Section (Dark & Cinematic) */}
       <section className="py-32 bg-black text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src="/background-ursmile.webp" className="w-full h-full object-cover grayscale" alt="" loading="lazy" />
+          <img src="/background-ursmile.webp" className="w-full h-full object-cover grayscale" alt="" loading="lazy" width="1920" height="1080" />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -226,8 +230,8 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
           <div className="flex flex-col lg:flex-row-reverse items-center gap-20 lg:gap-40">
             <div className="w-full lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                <img src="/PHoto1.webp" alt="Lifestyle 1" className="w-full h-[400px] object-cover rounded-sm shadow-xl" loading="lazy" />
-                <img src="/DSCF7518.webp" alt="Lifestyle 2" className="w-full h-[400px] object-cover rounded-sm shadow-xl mt-12" loading="lazy" />
+                <img src="/PHoto1.webp" alt="Lifestyle 1" className="w-full h-[400px] object-cover rounded-sm shadow-xl" loading="lazy" width="2560" height="1707" />
+                <img src="/DSCF7518.webp" alt="Lifestyle 2" className="w-full h-[400px] object-cover rounded-sm shadow-xl mt-12" loading="lazy" width="5757" height="3838" />
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">

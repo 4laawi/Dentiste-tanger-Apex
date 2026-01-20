@@ -90,7 +90,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative h-full">
                 <div className="absolute inset-0 bg-brand-cyan/5 -translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/photo-reda-saoui.webp" className="w-full h-full object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" />
+                <img src="/photo-reda-saoui.webp" className="w-full h-full object-cover shadow-2xl rounded-sm" alt="Dr. Reda Saoui" loading="lazy" width="1696" height="2528" />
               </div>
             </div>
             <div ref={storyParallax.targetRef} className="w-full lg:w-1/2">
@@ -188,6 +188,8 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                     alt={service.title}
                     className="w-full h-full object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
+                    width="80"
+                    height="80"
                   />
                 </div>
                 <h3 className="text-2xl font-bold font-work lowercase tracking-tighter leading-tight">
@@ -215,6 +217,8 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                     alt={service.title}
                     className="w-full h-full object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
+                    width="80"
+                    height="80"
                   />
                 </div>
                 <h3 className="text-2xl font-bold font-work lowercase tracking-tighter leading-tight">
@@ -233,7 +237,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 translate-x-6 translate-y-6 -z-10"></div>
-                <img src="/Photo3.png" className="w-full h-[500px] object-cover shadow-2xl rounded-sm" alt="Dr. Reda Personal" loading="lazy" />
+                <img src="/Photo3.png" className="w-full h-[500px] object-cover shadow-2xl rounded-sm" alt="Dr. Reda Personal" loading="lazy" width="1371" height="839" />
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">

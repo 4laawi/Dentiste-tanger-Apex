@@ -27,6 +27,8 @@ const Intro: React.FC<Props> = ({ t }) => {
                 alt="Patient care"
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                 loading="lazy"
+                width="1200"
+                height="800"
               />
             </div>
           </motion.div>
