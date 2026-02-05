@@ -251,12 +251,12 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                   <button onClick={() => setIsOpen(false)} className="text-brand-cyan"><X size={40} /></button>
                 </div>
                 <div className="flex flex-col gap-8 flex-1">
-                  <Link to={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">Home</Link>
-                  <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{lang === 'fr' ? 'À Propos' : 'About'}</Link>
-                  <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">Services</Link>
+                  <Link to={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.home}</Link>
+                  <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.about.label}</Link>
+                  <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.services.label}</Link>
                   <Link to={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
                   <Link to={getLangPath('/urgence-dentaire-tanger')} onClick={() => handleLinkClick('/urgence-dentaire-tanger')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.urgence}</Link>
-                  <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>Contact</Link>
+                  <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.contact_label}</Link>
 
                   <div className="mt-8 pt-8 border-t border-white/10">
                     <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">

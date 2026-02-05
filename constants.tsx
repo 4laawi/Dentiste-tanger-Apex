@@ -7,6 +7,8 @@ export const ADDRESS = "Place des Nations, Avenue Abou Bakr Errazi, Résidence Z
 export const TRANSLATIONS = {
   en: {
     nav: {
+      home: "Home",
+      contact_label: "Contact",
       about: {
         label: "About",
         sub: ["Meet the doctor", "English Speaking Dentist", "New patients", "Payment options", "Technology", "Blog"]
@@ -644,6 +646,8 @@ export const TRANSLATIONS = {
   },
   fr: {
     nav: {
+      home: "Accueil",
+      contact_label: "Contact",
       about: {
         label: "À propos",
         sub: ["Rencontrer le docteur", "Nouveaux patients", "Options de paiement", "Technologie", "Blog"]
