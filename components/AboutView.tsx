@@ -62,7 +62,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
             transition={{ delay: 0.2, duration: 1 }}
             className="text-6xl md:text-8xl lg:text-9xl font-work font-bold text-white mb-8 leading-[0.8] tracking-tighter"
           >
-            <span className="font-light block opacity-50 lowercase">{at.hero.title_light}</span>
+            <span className="font-light block opacity-50">{at.hero.title_light}</span>
             <span className="italic font-serif text-brand-cyan">{at.hero.title_bold}</span>
           </motion.h1>
           <motion.p
@@ -102,7 +102,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               </div>
             </div>
             <div ref={storyParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
+              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 tracking-tighter">
                 <span className="font-light block opacity-40">{at.story.title_light}</span>
                 {at.story.title_bold}
               </h2>
@@ -113,9 +113,12 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
                 />
                 <div className="w-20 h-1 bg-brand-cyan" />
                 <div
-                  className="text-xl text-brand-dark/70 font-work leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: at.story.p2 }}
-                />
+                  className="text-xl text-brand-dark/70 font-work leading-relaxed space-y-6"
+                >
+                  <p dangerouslySetInnerHTML={{ __html: at.story.p2 }} />
+                  {at.story.p3 && <p dangerouslySetInnerHTML={{ __html: at.story.p3 }} />}
+                  {at.story.p4 && <p dangerouslySetInnerHTML={{ __html: at.story.p4 }} />}
+                </div>
               </div>
             </div>
           </div>
@@ -130,7 +133,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div {...fadeInUp} className="mb-12">
-              <h2 className="text-4xl md:text-6xl font-work font-bold mb-16 lowercase tracking-tighter">
+              <h2 className="text-4xl md:text-6xl font-work font-bold mb-16 tracking-tighter">
                 <span className="font-light opacity-40 block mb-4">our philosophy</span>
                 {at.approach.title}
               </h2>
@@ -155,7 +158,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
       <section className="py-32 bg-[#fcfcfc]">
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="mb-24 flex items-center gap-8">
-            <h2 className="text-6xl md:text-8xl font-bold font-work text-brand-dark lowercase tracking-tighter shrink-0">
+            <h2 className="text-6xl md:text-8xl font-bold font-work text-brand-dark tracking-tighter shrink-0">
               <span className="font-light opacity-30">his</span> credentials
             </h2>
             <div className="h-px flex-1 bg-brand-dark/10"></div>
@@ -170,7 +173,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               <div className="w-12 h-12 text-brand-cyan mb-8 group-hover:scale-110 transition-transform">
                 <GraduationCap size={48} strokeWidth={1} />
               </div>
-              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8 lowercase">{at.education.edu_label}</h3>
+              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8">{at.education.edu_label}</h3>
               <ul className="space-y-6">
                 {at.education.edu_list.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-4 text-brand-dark/70 font-work text-lg">
@@ -190,7 +193,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               <div className="w-12 h-12 text-brand-cyan mb-8 group-hover:scale-110 transition-transform">
                 <Users size={48} strokeWidth={1} />
               </div>
-              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8 lowercase">{at.education.assoc_label}</h3>
+              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8">{at.education.assoc_label}</h3>
               <ul className="space-y-6">
                 {at.education.assoc_list.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-4 text-brand-dark/70 font-work text-lg">
@@ -210,7 +213,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               <div className="w-12 h-12 text-brand-cyan mb-8 group-hover:scale-110 transition-transform">
                 <Award size={48} strokeWidth={1} />
               </div>
-              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8 lowercase">{at.education.cert_label}</h3>
+              <h3 className="text-3xl font-work font-bold text-brand-dark mb-8">{at.education.cert_label}</h3>
               <ul className="space-y-6">
                 {at.education.cert_list.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-4 text-brand-dark/70 font-work text-lg">
@@ -235,7 +238,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 lowercase tracking-tighter">
+              <h2 className="text-6xl md:text-8xl lg:text-[7vw] font-bold font-work leading-[0.8] mb-12 tracking-tighter">
                 <span className="font-light block opacity-40">{at.personal.title_light}</span>
                 {at.personal.title_bold}
               </h2>
@@ -246,7 +249,7 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
 
                 <div className="bg-brand-dark text-white p-12 rounded-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/10 rounded-full translate-x-16 -translate-y-16" />
-                  <h4 className="text-2xl font-work font-bold mb-8 lowercase text-brand-cyan">{at.personal.fun_title}</h4>
+                  <h4 className="text-2xl font-work font-bold mb-8 text-brand-cyan">{at.personal.fun_title}</h4>
                   <ul className="grid md:grid-cols-1 gap-6">
                     {at.personal.fun_list.map((item: string, i: number) => (
                       <li key={i} className="flex items-center gap-4 text-white/80 font-work text-lg">

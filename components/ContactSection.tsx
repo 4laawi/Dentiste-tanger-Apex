@@ -20,7 +20,7 @@ const ContactSection: React.FC<Props> = ({ t }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-white font-work font-bold leading-none mb-4 lowercase tracking-tighter flex flex-col md:flex-row md:items-baseline md:gap-4">
+            <h2 className="text-white font-work font-bold leading-none mb-4 tracking-tighter flex flex-col md:flex-row md:items-baseline md:gap-4">
               <span className="text-3xl md:text-5xl font-light opacity-80">{t.our}</span>
               <span className="text-5xl md:text-7xl">{t.office}</span>
             </h2>
@@ -74,6 +74,7 @@ const ContactSection: React.FC<Props> = ({ t }) => {
                 </div>
                 <div className="text-white text-lg md:text-xl font-sans opacity-90 pt-1">
                   <p>{t.hours}</p>
+                  <p className="text-brand-cyan font-bold mt-2">{t.emergency_24h}</p>
                 </div>
               </div>
             </div>

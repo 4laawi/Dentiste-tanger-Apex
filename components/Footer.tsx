@@ -61,7 +61,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
               <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
               <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
               <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
-              <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
+              <li><Link to={getLangPath('/urgence-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
             </ul>
           </div>
 

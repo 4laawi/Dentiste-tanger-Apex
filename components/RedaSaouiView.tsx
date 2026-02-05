@@ -95,7 +95,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
               </div>
             </div>
             <div ref={storyParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-5xl md:text-7xl lg:text-[5.5vw] font-bold font-work leading-[0.8] mb-8 lowercase tracking-tighter">
+              <h2 className="text-5xl md:text-7xl lg:text-[5.5vw] font-bold font-work leading-[0.8] mb-8 tracking-tighter">
                 <span className="font-light block opacity-40">{at.story.title_light}</span>
                 {at.story.title_bold}
               </h2>
@@ -124,7 +124,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
       <section className="bg-black py-32 border-t border-white/5">
         <div className="container mx-auto px-6">
           <div className="mb-24 flex items-center gap-8">
-            <h2 className="text-6xl md:text-8xl font-bold font-work text-white lowercase tracking-tighter shrink-0">
+            <h2 className="text-6xl md:text-8xl font-bold font-work text-white tracking-tighter shrink-0">
               <span className="font-light opacity-30">notre</span> expertise
             </h2>
             <div className="h-px flex-1 bg-white/20"></div>
@@ -140,7 +140,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                 key={idx}
                 className="bg-black p-12 space-y-8 hover:bg-white/5 transition-colors"
               >
-                <h3 className="text-3xl font-bold font-work text-brand-cyan lowercase tracking-tighter">{box.title}</h3>
+                <h3 className="text-3xl font-bold font-work text-brand-cyan tracking-tighter">{box.title}</h3>
                 <ul className="space-y-4">
                   {box.list.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-xl text-white/60 font-medium group">
@@ -163,7 +163,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-6xl md:text-8xl font-bold font-work lowercase tracking-tighter mb-8"
+              className="text-6xl md:text-8xl font-bold font-work tracking-tighter mb-8"
             >
               {at.areas_of_focus.title}
             </motion.h2>
@@ -197,7 +197,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                     height="80"
                   />
                 </div>
-                <h3 className="text-2xl font-bold font-work lowercase tracking-tighter leading-tight">
+                <h3 className="text-2xl font-bold font-work tracking-tighter leading-tight">
                   {service.title}
                 </h3>
               </motion.div>
@@ -226,7 +226,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                     height="80"
                   />
                 </div>
-                <h3 className="text-2xl font-bold font-work lowercase tracking-tighter leading-tight">
+                <h3 className="text-2xl font-bold font-work tracking-tighter leading-tight">
                   {service.title}
                 </h3>
               </motion.div>
@@ -253,7 +253,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
               </div>
             </div>
             <div ref={personalParallax.targetRef} className="w-full lg:w-1/2">
-              <h2 className="text-5xl md:text-7xl lg:text-[5.5vw] font-bold font-work leading-[0.8] mb-8 lowercase tracking-tighter">
+              <h2 className="text-5xl md:text-7xl lg:text-[5.5vw] font-bold font-work leading-[0.8] mb-8 tracking-tighter">
                 <span className="font-light block opacity-40">{at.personal.title_light}</span>
                 {at.personal.title_bold}
               </h2>
@@ -284,7 +284,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto space-y-12"
           >
-            <h2 className="text-5xl md:text-8xl lg:text-[7vw] font-bold font-work lowercase tracking-tighter text-black leading-none">
+            <h2 className="text-5xl md:text-8xl lg:text-[7vw] font-bold font-work tracking-tighter text-black leading-none">
               <span className="font-light opacity-60 block mb-4">
                 {lang === 'fr' ? 'réservez une consultation,' : 'book a consultation,'}
               </span>
@@ -298,7 +298,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
               >
                 {t.nav.schedule}
               </a>
-              <p className="text-2xl font-work lowercase text-black/70">
+              <p className="text-2xl font-work text-black/70">
                 {lang === 'fr' ? 'ou appelez-nous au' : 'or call us at'} <span className="text-black font-bold border-b-2 border-black">{PHONE}</span>
               </p>
             </div>

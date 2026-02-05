@@ -23,9 +23,9 @@ const Intro: React.FC<Props> = ({ t }) => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden font-sans">
+    <section className="pt-0 pb-10 md:py-20 lg:py-32 bg-white relative overflow-hidden font-sans">
       <div className="container mx-auto px-4 md:px-12 relative z-10" onClick={handleLinkClick}>
-        <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-stretch gap-0 md:gap-12 lg:gap-20">
 
           {/* Image Column */}
           <motion.div
@@ -43,6 +43,7 @@ const Intro: React.FC<Props> = ({ t }) => {
                 loading="lazy"
                 width="1200"
                 height="800"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
           </motion.div>
@@ -57,10 +58,10 @@ const Intro: React.FC<Props> = ({ t }) => {
           >
             <div className="mb-4">
               <h2 className="text-black font-work font-semibold leading-[1.1] flex flex-col">
-                <span className="text-4xl md:text-5xl lg:text-6xl font-light opacity-80 lowercase leading-tight">
+                <span className="text-4xl md:text-5xl lg:text-6xl font-light opacity-80 leading-tight">
                   {t.smile.title_light}
                 </span>
-                <span className="text-5xl md:text-7xl lg:text-8xl lowercase">
+                <span className="text-5xl md:text-7xl lg:text-8xl">
                   {t.smile.title_bold}
                 </span>
               </h2>

@@ -15,6 +15,7 @@ interface Props {
 const AboutDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t }) => {
     const menuItems = [
         { label: lang === 'fr' ? 'À propos' : 'About', path: '/about' },
+        { label: lang === 'fr' ? 'English Speaking Dentist' : 'English Speaking Dentist', path: '/english-speaking-dentist-tangier' },
         { label: lang === 'fr' ? 'Rencontrer le Dr. Reda Saoui' : 'Meet Dr. Reda Saoui', path: '/dentiste-reda-saoui' },
         { label: lang === 'fr' ? 'Blog' : 'Blog', path: '/blog' },
         { label: lang === 'fr' ? 'Technologie' : 'Technology', path: '#' },
@@ -79,7 +80,7 @@ const AboutDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t 
                                             onClick={() => onLinkClick(item.path)}
                                             className="group flex items-center gap-4 text-white hover:text-brand-cyan transition-colors"
                                         >
-                                            <span className="text-xl lg:text-2xl font-work font-light lowercase group-hover:pl-2 transition-all duration-300">
+                                            <span className="text-xl lg:text-2xl font-work font-light group-hover:pl-2 transition-all duration-300">
                                                 {item.label}
                                             </span>
                                             <ChevronRight size={18} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-cyan" />

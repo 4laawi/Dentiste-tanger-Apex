@@ -23,13 +23,17 @@ const SEO: React.FC<SEOProps> = ({
     lang = 'fr'
 }) => {
     // Ensure absolute URL for image
-    const siteUrl = 'https://www.apexdental.ma';
+    const siteUrl = 'https://apexdental.ma';
     const finalImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
     const siteTitle = "APEX | Dr. Reda Saoui - Dentiste à Tanger";
     const finalTitle = title ? `${title} | APEX` : siteTitle;
     const finalDescription = description || "APEX - Clinique dentaire du Dr. Reda Saoui à Tanger. Votre dentiste de confiance pour des soins dentaires d'excellence : implants, facettes, blanchiment et Invisalign.";
-    const finalCanonical = canonical || siteUrl;
+
+    // Improved canonical logic
+    let finalCanonical = canonical || `${siteUrl}${window.location.pathname}`;
+    // Remove any trailing slashes and ensure it uses the final domain
+    finalCanonical = finalCanonical.replace('www.apexdental.ma', 'apexdental.ma').replace(/\/$/, '') || siteUrl;
 
     const jsonLd = schema ? JSON.stringify(schema) : JSON.stringify({
         "@context": "https://schema.org",
@@ -44,6 +48,15 @@ const SEO: React.FC<SEOProps> = ({
             "addressLocality": "Tanger",
             "postalCode": "90000",
             "addressCountry": "MA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.7756234,
+            "longitude": -5.8047095
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Tanger"
         },
         "openingHoursSpecification": [
             {
@@ -63,7 +76,7 @@ const SEO: React.FC<SEOProps> = ({
     });
 
     return (
-        <Helmet>
+        <Helmet defer={false}>
             {/* Standard Metadata */}
             <html lang={lang} />
             <title>{finalTitle}</title>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { PHONE } from '../constants';
 
 interface Props {
@@ -12,7 +13,7 @@ const ProblemsHero: React.FC<Props> = ({ t, lang }) => {
 
   return (
     <section
-      className="relative pt-[12vh] pb-[12vh] overflow-hidden"
+      className="relative pt-20 pb-0 md:pt-[12vh] md:pb-[12vh] overflow-hidden"
       style={{
         position: 'relative'
       }}
@@ -44,23 +45,26 @@ const ProblemsHero: React.FC<Props> = ({ t, lang }) => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 items-start">
-              <motion.a
-                href="#"
-                whileHover={{ backgroundColor: '#FFF', color: '#000' }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-block bg-brand-cyan text-black px-8 py-3 text-lg font-bold uppercase tracking-tight hover:bg-white transition-all duration-300 rounded-none"
-                style={{
-                  fontFamily: "'Karla', Helvetica, Arial, Lucida, sans-serif",
-                  fontSize: '18px',
-                  paddingTop: '12px',
-                  paddingRight: '30px',
-                  paddingBottom: '12px',
-                  paddingLeft: '30px',
-                  marginRight: '20px'
-                }}
+              <Link
+                to={lang === 'en' ? '/en/contact' : '/contact'}
               >
-                {lang === 'fr' ? 'Prendre RDV' : 'schedule now'}
-              </motion.a>
+                <motion.div
+                  whileHover={{ backgroundColor: '#FFF', color: '#000' }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-block bg-brand-cyan text-black px-8 py-3 text-lg font-bold uppercase tracking-tight hover:bg-white transition-all duration-300 rounded-none"
+                  style={{
+                    fontFamily: "'Karla', Helvetica, Arial, Lucida, sans-serif",
+                    fontSize: '18px',
+                    paddingTop: '12px',
+                    paddingRight: '30px',
+                    paddingBottom: '12px',
+                    paddingLeft: '30px',
+                    marginRight: '20px'
+                  }}
+                >
+                  {lang === 'fr' ? 'Prendre RDV' : 'schedule now'}
+                </motion.div>
+              </Link>
 
               <motion.a
                 href={`tel:${PHONE.replace(/\D/g, '')}`}

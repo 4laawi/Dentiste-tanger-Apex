@@ -82,8 +82,8 @@ const Testimonials: React.FC<Props> = ({ t }) => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-black font-work font-bold leading-tight flex flex-col mb-8">
-              <span className="text-5xl md:text-7xl lg:text-8xl lowercase">{t.kind}</span>
-              <span className="text-3xl md:text-5xl lg:text-6xl font-light lowercase opacity-70 italic font-serif">
+              <span className="text-5xl md:text-7xl lg:text-8xl">{t.kind}</span>
+              <span className="text-3xl md:text-5xl lg:text-6xl font-light opacity-70 italic font-serif">
                 {t.from}
               </span>
             </h2>

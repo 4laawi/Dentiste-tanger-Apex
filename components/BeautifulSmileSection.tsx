@@ -136,6 +136,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             decoding="async"
             width="6240"
             height="4160"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div
             className="image-gradient-overlay"
@@ -145,7 +146,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           ></div>
         </div>
         <div ref={text1Ref} className="text-overlay text-overlay-left" style={{ willChange: 'transform, opacity' }}>
-          <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
+          <h3 className="font-work font-bold text-3xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.routine.bold}</span>
             <br />
             <span className="font-light">{t.routine.light}</span>
@@ -177,6 +178,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             decoding="async"
             width="5875"
             height="3917"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div
             className="image-gradient-overlay"
@@ -186,7 +188,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           ></div>
         </div>
         <div ref={text2Ref} className="text-overlay text-overlay-right" style={{ willChange: 'transform, opacity' }}>
-          <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
+          <h3 className="font-work font-bold text-3xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.restorative.bold}</span>
             <br />
             <span className="font-light">{t.restorative.light}</span>
@@ -218,6 +220,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
             decoding="async"
             width="6044"
             height="4029"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <div
             className="image-gradient-overlay"
@@ -227,7 +230,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           ></div>
         </div>
         <div ref={text3Ref} className="text-overlay text-overlay-left" style={{ willChange: 'transform, opacity' }}>
-          <h3 className="font-work font-bold text-4xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
+          <h3 className="font-work font-bold text-3xl md:text-6xl lg:text-[3.5em] text-black leading-tight">
             <span className="font-bold">{t.cosmetic.bold}</span>
             <br />
             <span className="font-light">{t.cosmetic.light}</span>

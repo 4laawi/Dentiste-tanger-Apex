@@ -37,10 +37,10 @@ const ScheduleBanner: React.FC<Props> = ({ t, lang }) => {
         >
           <div className="space-y-8">
             <h2 className="text-black leading-none font-work flex flex-col items-center">
-              <span className="text-5xl md:text-7xl lg:text-8xl font-bold lowercase">
+              <span className="text-5xl md:text-7xl lg:text-8xl font-bold">
                 {t.title_bold}
               </span>
-              <span className="text-3xl md:text-5xl lg:text-6xl font-light lowercase opacity-80 mt-2">
+              <span className="text-3xl md:text-5xl lg:text-6xl font-light opacity-80 mt-2">
                 {t.title_light}
               </span>
             </h2>

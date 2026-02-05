@@ -74,7 +74,7 @@ const ProblemsDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                                             onClick={() => onLinkClick('/problemes-traites')}
                                             className="group flex items-center gap-4 text-white hover:text-brand-cyan transition-colors"
                                         >
-                                            <span className="text-xl lg:text-2xl font-work font-light lowercase group-hover:pl-2 transition-all duration-300">
+                                            <span className="text-xl lg:text-2xl font-work font-light group-hover:pl-2 transition-all duration-300">
                                                 {problem}
                                             </span>
                                             <ChevronRight size={18} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-cyan" />

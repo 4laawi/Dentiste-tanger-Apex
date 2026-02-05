@@ -55,7 +55,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                         transition={{ duration: 1 }}
                         className="mb-16"
                     >
-                        <h1 className="text-5xl md:text-8xl font-bold text-white font-work leading-none lowercase tracking-tighter">
+                        <h1 className="text-5xl md:text-8xl font-bold text-white font-work leading-none tracking-tighter">
                             <span className="font-light opacity-50 block md:inline">{t.contact.our}</span> {t.contact.office}
                         </h1>
                         <div className="w-24 h-1 bg-brand-cyan mt-8"></div>
@@ -67,7 +67,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                 <div className="flex gap-6 items-start">
                                     <MapPin className="text-brand-cyan shrink-0" size={40} strokeWidth={1} />
                                     <div>
-                                        <p className="text-2xl text-white font-work lowercase mb-4">{ADDRESS}</p>
+                                        <p className="text-2xl text-white font-work mb-4">{ADDRESS}</p>
                                         <a
                                             href="https://www.google.com/maps/search/?api=1&query=Apex+Dental+Clinic+Tanger"
                                             target="_blank"
@@ -90,6 +90,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                     <Clock className="text-brand-cyan shrink-0" size={32} strokeWidth={1} />
                                     <div className="text-lg text-white/70 font-sans italic">
                                         <p>{t.contact.hours}</p>
+                                        <p className="text-brand-cyan font-bold not-italic mt-2">{t.contact.emergency_24h}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -120,14 +121,12 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                     <div className="flex flex-col lg:flex-row gap-20">
                         <div className="w-full lg:w-1/3">
                             <motion.div {...fadeInUp} className="sticky top-40">
-                                <h2 className="text-4xl md:text-7xl font-bold font-work text-black lowercase tracking-tighter mb-8 leading-none">
+                                <h2 className="text-4xl md:text-7xl font-bold font-work text-black tracking-tighter mb-8 leading-none">
                                     {t.contact_team.title_bold} <br />
                                     <span className="font-light opacity-40">{t.contact_team.title_light}</span>
                                 </h2>
                                 <p className="text-xl text-black/60 font-serif italic max-w-sm leading-relaxed">
-                                    {lang === 'fr'
-                                        ? "Notre équipe dédiée est à votre écoute pour répondre à toutes vos questions et vous accompagner vers votre plus beau sourire."
-                                        : "Our dedicated team is here to answer your questions and guide you toward your most beautiful smile."}
+                                    {t.contact_team.desc}
                                 </p>
                                 <div className="mt-12 space-y-4">
                                     <div className="flex items-center gap-3">
@@ -168,7 +167,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                                 type="text"
                                                 placeholder={t.contact_team.placeholders.name}
                                                 required
-                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
+                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
                                             />
                                         </div>
                                         <div className="relative group">
@@ -177,7 +176,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                                 type="text"
                                                 placeholder={t.contact_team.placeholders.lastName}
                                                 required
-                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
+                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
                                             />
                                         </div>
                                     </div>
@@ -186,7 +185,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                         <select
                                             name="service"
                                             required
-                                            className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white appearance-none cursor-pointer"
+                                            className="w-full bg-transparent border-b border-white/20 p-4 font-work outline-none focus:border-brand-cyan transition-colors text-white appearance-none cursor-pointer"
                                             value={selectedService}
                                             onChange={(e) => {
                                                 setSelectedService(e.target.value);
@@ -214,7 +213,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
                                                 type="text"
                                                 placeholder={t.contact_team.placeholders.specify}
                                                 required
-                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work lowercase outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
+                                                className="w-full bg-transparent border-b border-white/20 p-4 font-work outline-none focus:border-brand-cyan transition-colors text-white placeholder-white/30"
                                             />
                                         </motion.div>
                                     )}

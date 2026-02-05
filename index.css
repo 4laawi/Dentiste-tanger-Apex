@@ -159,6 +159,10 @@ body {
 
 /* Mobile styles */
 @media (max-width: 1023px) {
+  .smile-section-heading {
+    padding: 30px 0;
+  }
+
   .smile-section-row {
     min-height: auto;
   }

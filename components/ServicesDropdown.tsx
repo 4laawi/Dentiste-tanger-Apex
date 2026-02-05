@@ -20,7 +20,7 @@ const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
         { label: expertise.aligneurs, path: '/#services' },
         { label: expertise.couronnes, path: '/#services' },
         { label: expertise.blanchimentFlash, path: '/#services' },
-        { label: expertise.implant, path: '/#services' },
+        { label: expertise.implant, path: '/dental-implants-morocco' },
         { label: expertise.pedodontie, path: '/#services' },
         { label: expertise.traitementsCanalaires, path: '/#services' },
         { label: expertise.parodontie, path: '/#services' },
@@ -82,14 +82,20 @@ const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                                         transition={{ delay: 0.1 + index * 0.05 }}
                                     >
                                         <Link
-                                            to={lang === 'en' ? '/en/#contact-team' : '/#contact-team'}
-                                            onClick={() => {
-                                                setSelectedService(item.label);
-                                                onLinkClick(item.path);
+                                            to={targetPath}
+                                            onClick={(e) => {
+                                                if (item.path.startsWith('/#')) {
+                                                    // For section links, we might want custom handling or just let Router handle it if on same page
+                                                    setSelectedService(item.label);
+                                                    onLinkClick(item.path);
+                                                } else {
+                                                    // For page links, just navigate
+                                                    onLinkClick(item.path);
+                                                }
                                             }}
                                             className="group flex items-center gap-4 text-white hover:text-brand-cyan transition-colors"
                                         >
-                                            <span className="text-xl lg:text-2xl font-work font-light lowercase group-hover:pl-2 transition-all duration-300">
+                                            <span className="text-xl lg:text-2xl font-work font-light group-hover:pl-2 transition-all duration-300">
                                                 {item.label}
                                             </span>
                                             <ChevronRight size={18} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-cyan" />

@@ -12,6 +12,9 @@ const RedaSaouiView = lazy(() => import('./components/RedaSaouiView.tsx'));
 const BlogView = lazy(() => import('./components/BlogView.tsx'));
 const BlogPostView = lazy(() => import('./components/BlogPostView.tsx'));
 const ContactView = lazy(() => import('./components/ContactView.tsx'));
+const UrgenceView = lazy(() => import('./components/UrgenceView.tsx'));
+const EnglishDentistView = lazy(() => import('./components/EnglishDentistView.tsx'));
+const DentalImplantsView = lazy(() => import('./components/DentalImplantsView.tsx'));
 
 import Footer from './components/Footer.tsx';
 import ContactFloatingButton from './components/ContactFloatingButton.tsx';
@@ -109,7 +112,7 @@ const AppContent: React.FC = () => {
     if (newLang === 'en') {
       newPath = `/en${location.pathname === '/' ? '' : location.pathname}`;
     } else {
-      newPath = location.pathname.replace(/^\/en/, '') || '/';
+      newPath = location.pathname.replace(/^\/en(\/|$)/, '$1') || '/';
     }
     navigate(newPath);
   };
@@ -119,7 +122,7 @@ const AppContent: React.FC = () => {
   // Helper to strip /en from path for routing
   const getRoutingPath = () => {
     if (lang === 'en') {
-      return location.pathname.replace(/^\/en/, '') || '/';
+      return location.pathname.replace(/^\/en(\/|$)/, '$1') || '/';
     }
     return location.pathname;
   };
@@ -185,13 +188,21 @@ const AppContent: React.FC = () => {
                   path="/contact"
                   element={<ContactView t={t} lang={lang} />}
                 />
+                <Route
+                  path="/urgence-dentaire-tanger"
+                  element={<UrgenceView t={t} lang={lang} />}
+                />
+                <Route
+                  path="/english-speaking-dentist-tangier"
+                  element={<EnglishDentistView t={t} lang={lang} />}
+                />
+                <Route
+                  path="/dental-implants-morocco"
+                  element={<DentalImplantsView t={t} lang={lang} />}
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
 
-              <SEO
-                lang={lang}
-                canonical={`https://www.apexdental.ma${location.pathname}`}
-              />
             </Suspense>
           </motion.div>
         </AnimatePresence>
@@ -205,7 +216,6 @@ const AppContent: React.FC = () => {
 };
 
 import { HelmetProvider } from 'react-helmet-async';
-import SEO from './components/SEO.tsx';
 import NotFound from './components/NotFound.tsx';
 
 // ... other imports ...

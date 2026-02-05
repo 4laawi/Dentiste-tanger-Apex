@@ -10,14 +10,12 @@ interface Props {
 const FAQAccordion: React.FC<Props> = ({ t }) => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const faqItems = [
-        { title: t.q1.title, content: t.q1.desc },
-        { title: t.q2.title, content: t.q2.desc },
-        { title: t.q3.title, content: t.q3.desc },
-        { title: t.q4.title, content: t.q4.desc },
-        { title: t.q5.title, content: t.q5.desc },
-        { title: t.q6.title, content: t.q6.desc },
-    ];
+    const faqItems = Object.keys(t)
+        .filter(key => key.startsWith('q') && t[key])
+        .map(key => ({
+            title: t[key].title,
+            content: t[key].desc
+        }));
 
     const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);

@@ -41,10 +41,10 @@ const SmileSection: React.FC<Props> = ({ t }) => {
           >
             <div className="mb-4">
               <h2 className="text-black font-work font-semibold leading-[1.1] flex flex-col">
-                <span className="text-4xl md:text-5xl lg:text-6xl font-light opacity-80 lowercase leading-tight">
+                <span className="text-4xl md:text-5xl lg:text-6xl font-light opacity-80 leading-tight">
                   {t.title_light}
                 </span>
-                <span className="text-5xl md:text-7xl lg:text-8xl lowercase">
+                <span className="text-5xl md:text-7xl lg:text-8xl">
                   {t.title_bold}
                 </span>
               </h2>

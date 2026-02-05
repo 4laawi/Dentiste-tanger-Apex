@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { PHONE } from '../constants.tsx';
@@ -52,6 +53,29 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
     return () => clearInterval(interval);
   }, []);
 
+  React.useEffect(() => {
+    let initialScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (isOpen) {
+        const currentScrollY = window.scrollY;
+        // Only close if scrolled more than 10px to avoid accidental closes or initial layout shifts
+        if (Math.abs(currentScrollY - initialScrollY) > 10) {
+          setIsOpen(false);
+        }
+      }
+    };
+
+    if (isOpen) {
+      initialScrollY = window.scrollY;
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
+
   const isAboutActive = location.pathname === getLangPath('/about');
   const isProblemsActive = location.pathname === getLangPath('/problemes-traites');
 
@@ -77,36 +101,44 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('about')}
-                className={`flex items-center gap-1.5 font-work font-medium text-lg lowercase transition-colors ${activeDropdown === 'about' || isAboutActive ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+                className={`flex items-center gap-1.5 font-work font-medium text-lg transition-colors ${activeDropdown === 'about' || isAboutActive ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
               >
-                {lang === 'fr' ? 'à propos' : 'about'} <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'about' ? 'rotate-180' : 'opacity-50'}`} />
+                {lang === 'fr' ? 'À Propos' : 'About'} <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'about' ? 'rotate-180' : 'opacity-50'}`} />
               </button>
             </div>
 
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className={`flex items-center gap-1.5 font-work font-medium text-lg lowercase transition-colors ${activeDropdown === 'services' ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+                className={`flex items-center gap-1.5 font-work font-medium text-lg transition-colors ${activeDropdown === 'services' ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
               >
-                services <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'services' ? 'rotate-180' : 'opacity-50'}`} />
+                Services <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'services' ? 'rotate-180' : 'opacity-50'}`} />
               </button>
             </div>
 
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('problems')}
-                className={`flex items-center gap-1.5 font-work font-medium text-lg lowercase transition-colors ${activeDropdown === 'problems' || isProblemsActive ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+                className={`flex items-center gap-1.5 font-work font-medium text-lg transition-colors ${activeDropdown === 'problems' || isProblemsActive ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
               >
                 {nt.problems} <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === 'problems' ? 'rotate-180' : 'opacity-50'}`} />
               </button>
             </div>
 
             <Link
+              to={getLangPath('/urgence-dentaire-tanger')}
+              onClick={() => handleLinkClick('/urgence-dentaire-tanger')}
+              className={`font-work font-medium text-lg transition-colors ${location.pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+            >
+              {nt.urgence}
+            </Link>
+
+            <Link
               to={getLangPath('/contact')}
               onClick={() => handleLinkClick('/contact')}
-              className={`font-work font-medium text-lg lowercase transition-colors ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+              className={`font-work font-medium text-lg transition-colors ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
             >
-              contact
+              Contact
             </Link>
           </div>
 
@@ -135,7 +167,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                     className="flex items-center justify-center"
                   >
                     <span className="text-red-500 font-work font-black text-lg uppercase tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-red-400 to-red-600 animate-pulse">
-                      {lang === 'fr' ? 'urgences 24/7' : 'emergencies 24/7'}
+                      {lang === 'fr' ? 'Urgences 24/7' : 'Emergencies 24/7'}
                     </span>
                   </motion.div>
                 )}
@@ -145,7 +177,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
             <Link
               to={getLangPath('/contact')}
               onClick={() => handleLinkClick('/contact')}
-              className="bg-brand-cyan text-black px-8 py-3.5 font-work font-bold text-lg lowercase tracking-tight hover:bg-white transition-all rounded-none shadow-xl inline-block"
+              className="bg-brand-cyan text-black px-8 py-3.5 font-work font-bold text-lg tracking-tight hover:bg-white transition-all rounded-none shadow-xl inline-block"
             >
               {nt.schedule}
             </Link>
@@ -159,10 +191,18 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
           </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="lg:hidden text-brand-cyan p-2" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? (lang === 'fr' ? "Fermer le menu" : "Close menu") : (lang === 'fr' ? "Ouvrir le menu" : "Open menu")}>
-          {isOpen ? <X size={36} strokeWidth={1.5} /> : <Menu size={36} strokeWidth={1.5} />}
-        </button>
+        {/* Mobile Controls */}
+        <div className="lg:hidden flex items-center gap-4">
+          <button
+            onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+            className="text-white/80 font-bold uppercase text-sm hover:text-brand-cyan transition-colors"
+          >
+            {lang === 'fr' ? 'EN' : 'FR'}
+          </button>
+          <button className="text-brand-cyan p-2" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? (lang === 'fr' ? "Fermer le menu" : "Close menu") : (lang === 'fr' ? "Ouvrir le menu" : "Open menu")}>
+            {isOpen ? <X size={36} strokeWidth={1.5} /> : <Menu size={36} strokeWidth={1.5} />}
+          </button>
+        </div>
       </div>
 
       {/* Dropdowns */}
@@ -201,62 +241,66 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
       </AnimatePresence>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div initial={{ opacity: 0, x: '100%' }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: '100%' }} className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto">
-            <div className="p-6 flex flex-col min-h-full">
-              <div className="flex justify-between items-center mb-12">
-                <span className="text-white font-work font-bold text-xl uppercase tracking-tighter">APEX</span>
-                <button onClick={() => setIsOpen(false)} className="text-brand-cyan"><X size={40} /></button>
-              </div>
-              <div className="flex flex-col gap-8 flex-1">
-                <Link to={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work lowercase text-left">home</Link>
-                <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{lang === 'fr' ? 'à propos' : 'about'}</Link>
-                <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work lowercase text-left">services</Link>
-                <Link to={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
-                <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work lowercase text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>contact</Link>
-
-                <div className="mt-8 pt-8 border-t border-white/10">
-                  <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">
-                    <AnimatePresence mode="wait">
-                      {!showUrgency ? (
-                        <motion.div
-                          key="phone-mobile"
-                          initial={{ y: 40, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          exit={{ y: -40, opacity: 0 }}
-                          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                          className="flex items-center gap-4"
-                        >
-                          <div className="w-12 h-12 rounded-full bg-brand-cyan/10 flex items-center justify-center">
-                            <Phone size={24} className="text-brand-cyan" fill="currentColor" />
-                          </div>
-                          <span className="text-white font-work font-bold text-2xl tracking-tight">{PHONE}</span>
-                        </motion.div>
-                      ) : (
-                        <motion.div
-                          key="urgency-mobile"
-                          initial={{ y: 40, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          exit={{ y: -40, opacity: 0 }}
-                          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                          className="flex items-center"
-                        >
-                          <span className="text-red-500 font-work font-black text-2xl uppercase tracking-tighter">
-                            {lang === 'fr' ? 'urgences 24/7' : 'emergencies 24/7'}
-                          </span>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </a>
+      {typeof document !== 'undefined' && createPortal(
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div initial={{ opacity: 0, x: '100%' }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: '100%' }} className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto">
+              <div className="p-6 flex flex-col min-h-full">
+                <div className="flex justify-between items-center mb-12">
+                  <span className="text-white font-work font-bold text-xl uppercase tracking-tighter">APEX</span>
+                  <button onClick={() => setIsOpen(false)} className="text-brand-cyan"><X size={40} /></button>
                 </div>
+                <div className="flex flex-col gap-8 flex-1">
+                  <Link to={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">Home</Link>
+                  <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{lang === 'fr' ? 'À Propos' : 'About'}</Link>
+                  <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">Services</Link>
+                  <Link to={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
+                  <Link to={getLangPath('/urgence-dentaire-tanger')} onClick={() => handleLinkClick('/urgence-dentaire-tanger')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.urgence}</Link>
+                  <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>Contact</Link>
 
-                <button onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')} className="text-brand-cyan text-xl font-bold uppercase text-left mt-auto">language: {lang}</button>
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">
+                      <AnimatePresence mode="wait">
+                        {!showUrgency ? (
+                          <motion.div
+                            key="phone-mobile"
+                            initial={{ y: 40, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -40, opacity: 0 }}
+                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                            className="flex items-center gap-4"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-brand-cyan/10 flex items-center justify-center">
+                              <Phone size={24} className="text-brand-cyan" fill="currentColor" />
+                            </div>
+                            <span className="text-white font-work font-bold text-2xl tracking-tight">{PHONE}</span>
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key="urgency-mobile"
+                            initial={{ y: 40, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -40, opacity: 0 }}
+                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                            className="flex items-center"
+                          >
+                            <span className="text-red-500 font-work font-black text-2xl uppercase tracking-tighter">
+                              {lang === 'fr' ? 'urgences 24/7' : 'emergencies 24/7'}
+                            </span>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </a>
+                  </div>
+
+
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </nav>
   );
 };
