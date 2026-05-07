@@ -36,7 +36,7 @@ const GeminiChat: React.FC<Props> = ({ lang }) => {
     setIsLoading(true);
 
     try {
-      const genAI = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
+      const genAI = new GoogleGenAI({ apiKey: (process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY || '') as string });
       const response = await genAI.models.generateContent({
         model: 'gemini-2.0-flash',
         contents: userMessage,
