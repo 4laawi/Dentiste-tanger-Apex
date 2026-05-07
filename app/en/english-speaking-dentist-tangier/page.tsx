@@ -6,6 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.english_dentist.title,
   description: TRANSLATIONS.en.seo.english_dentist.description,
+  alternates: {
+    canonical: '/en/english-speaking-dentist-tangier',
+    languages: {
+      'en': '/en/english-speaking-dentist-tangier',
+      'fr': '/english-speaking-dentist-tangier',
+    },
+  },
 };
 
 export default function Page() {

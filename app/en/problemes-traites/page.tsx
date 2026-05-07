@@ -6,6 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.problems.title,
   description: TRANSLATIONS.en.seo.problems.description,
+  alternates: {
+    canonical: '/en/problemes-traites',
+    languages: {
+      'en': '/en/problemes-traites',
+      'fr': '/problemes-traites',
+    },
+  },
 };
 
 export default function Page() {

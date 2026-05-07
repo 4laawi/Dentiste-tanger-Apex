@@ -6,10 +6,20 @@ import { PHONE, ADDRESS } from '../constants.tsx';
 interface Props {
     t: any;
     lang: 'en' | 'fr';
+    selectedService?: string;
+    setSelectedService?: (service: string) => void;
 }
 
-const ContactView: React.FC<Props> = ({ t, lang }) => {
-    const [selectedService, setSelectedService] = useState<string>('');
+const ContactView: React.FC<Props> = ({ 
+    t, 
+    lang, 
+    selectedService: externalSelectedService, 
+    setSelectedService: externalSetSelectedService 
+}) => {
+    const [internalSelectedService, internalSetSelectedService] = useState<string>('');
+    
+    const selectedService = externalSelectedService !== undefined ? externalSelectedService : internalSelectedService;
+    const setSelectedService = externalSetSelectedService !== undefined ? externalSetSelectedService : internalSetSelectedService;
 
     const fadeInUp = {
         initial: { opacity: 0, y: 30 },

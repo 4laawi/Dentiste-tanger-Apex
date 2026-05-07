@@ -35,6 +35,21 @@ export const metadata: Metadata = {
   title: "APEX | Dr. Reda Saoui - Dentiste à Tanger",
   description: "Bienvenue chez APEX Dental Clinic. Le Dr. Reda Saoui, votre dentiste de confiance à Tanger, propose des soins d'excellence : implants, facettes et Invisalign.",
   metadataBase: new URL('https://apexdental.ma'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/en',
+      'fr': '/',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport = {
+  themeColor: '#6AE0F2',
 };
 
 export default function RootLayout({

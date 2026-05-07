@@ -15,10 +15,21 @@ interface Props {
   t: any;
   expertise?: any;
   lang?: 'en' | 'fr';
+  selectedService?: string;
+  setSelectedService?: (service: string) => void;
 }
 
-const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
-  const [selectedService, setSelectedService] = useState<string>('');
+const HomeView: React.FC<Props> = ({ 
+  t, 
+  expertise, 
+  lang, 
+  selectedService: externalSelectedService, 
+  setSelectedService: externalSetSelectedService 
+}) => {
+  const [internalSelectedService, internalSetSelectedService] = useState<string>('');
+  
+  const selectedService = externalSelectedService !== undefined ? externalSelectedService : internalSelectedService;
+  const setSelectedService = externalSetSelectedService !== undefined ? externalSetSelectedService : internalSetSelectedService;
   // Track which expertise card is hovered (default to first card)
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const pathname = usePathname();

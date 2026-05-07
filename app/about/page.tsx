@@ -6,6 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.about.title,
   description: TRANSLATIONS.fr.seo.about.description,
+  alternates: {
+    canonical: '/about',
+    languages: {
+      'en': '/en/about',
+      'fr': '/about',
+    },
+  },
 };
 
 export default function AboutPage() {

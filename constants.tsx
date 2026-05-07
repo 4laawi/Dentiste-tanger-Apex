@@ -58,6 +58,10 @@ export const TRANSLATIONS = {
       english_dentist: {
         title: "English Speaking Dentist in Tangier | Dr. Reda Saoui | APEX",
         description: "Looking for an English speaking dentist in Tangier? Dr. Reda Saoui provides premium dental care for international patients and expats."
+      },
+      implants: {
+        title: "Dental Implants Morocco | Best Dentist in Tangier | Dr. Reda Saoui",
+        description: "Looking for dental implants in Morocco? APEX Dental Clinic offers robot-assisted Yomi technology for precise and affordable implant solutions in Tangier."
       }
     },
     about_page: {
@@ -346,13 +350,14 @@ export const TRANSLATIONS = {
       our: "Our",
       office: "Tangier Office",
       directions: "Get Directions",
-      hours: "Mon-Fri: 9:30AM-6:00PM | Sat: 9:30AM-3:00PM",
+      hours: "Mon-Sat: (Friday Closed)",
       emergency_24h: "24/7 Open for Emergencies",
-      monday: "Monday: 9AM - 6PM",
-      tuesday: "Tuesday: 9AM - 6PM",
-      wednesday: "Wednesday: 9AM - 6PM",
-      thursday: "Thursday: 9AM - 6PM",
+      monday: "Monday: 9:30AM - 6:00PM",
+      tuesday: "Tuesday: 9:30AM - 6:00PM",
+      wednesday: "Wednesday: 9:30AM - 6:00PM",
+      thursday: "Thursday: 9:30AM - 6:00PM",
       friday: "Friday: Closed",
+      saturday: "Saturday: 9:30AM - 3:00PM",
       call_text: "Call / Text",
       whatsapp: "WhatsApp"
     },
@@ -693,6 +698,10 @@ export const TRANSLATIONS = {
       urgence: {
         title: "Urgence Dentaire à Tanger | Dr. Reda Saoui",
         description: "Besoin d'un dentiste à Tanger ? APEX Dental offre des soins dentaires d'urgence avec le Dr. Reda Saoui. Contactez-nous pour toute urgence dentaire à Tanger."
+      },
+      implants: {
+        title: "Implant Dentaire Maroc | Meilleur Dentiste Tanger | Dr. Reda Saoui",
+        description: "Spécialiste de l'implant dentaire à Tanger. APEX Clinic utilise la technologie Yomi pour des implants précis, sans douleur et durables au Maroc."
       }
     },
     about_page: {
@@ -981,13 +990,14 @@ export const TRANSLATIONS = {
       our: "Notre",
       office: "Clinique à Tanger",
       directions: "Obtenir l'itinéraire",
-      hours: "Lun-Ven: 9h30-18h00 | Sam: 9h30-15h00",
+      hours: "Lun-Sam: (Vendredi Fermé)",
       emergency_24h: "Ouvert 24h/24 et 7j/7 pour les urgences",
-      monday: "Lundi : 09h00 - 18h00",
-      tuesday: "Mardi : 09h00 - 18h00",
-      wednesday: "Mercredi : 09h00 - 18h00",
-      thursday: "Jeudi : 09h00 - 18h00",
+      monday: "Lundi : 09h30 - 18h00",
+      tuesday: "Mardi : 09h30 - 18h00",
+      wednesday: "Mercredi : 09h30 - 18h00",
+      thursday: "Jeudi : 09h30 - 18h00",
       friday: "Vendredi : Fermé",
+      saturday: "Samedi : 09h30 - 15h00",
       call_text: "Appel / SMS",
       whatsapp: "WhatsApp"
     },

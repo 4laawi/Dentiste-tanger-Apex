@@ -4,8 +4,15 @@ import ClientPageLayout from "@/components/ClientPageLayout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: TRANSLATIONS.fr.seo.home.title,
-  description: TRANSLATIONS.fr.seo.home.description,
+  title: TRANSLATIONS.fr.seo.english_dentist.title,
+  description: TRANSLATIONS.fr.seo.english_dentist.description,
+  alternates: {
+    canonical: '/english-speaking-dentist-tangier',
+    languages: {
+      'en': '/en/english-speaking-dentist-tangier',
+      'fr': '/english-speaking-dentist-tangier',
+    },
+  },
 };
 
 export default function Page() {

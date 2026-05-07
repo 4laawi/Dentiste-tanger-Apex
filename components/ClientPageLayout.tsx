@@ -76,7 +76,7 @@ export default function ClientPageLayout({ children, lang, t, currentView = 'hom
         {/* We pass these down via children if they are cloned, or just use context */}
         {/* For now, we'll assume children might need these props */}
         {React.Children.map(children, child => {
-          if (React.isValidElement(child)) {
+          if (React.isValidElement(child) && typeof child.type !== 'string') {
             return React.cloneElement(child as React.ReactElement<any>, { 
               selectedService, 
               setSelectedService 

@@ -6,6 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.urgence.title,
   description: TRANSLATIONS.en.seo.urgence.description,
+  alternates: {
+    canonical: '/en/urgence-dentaire-tanger',
+    languages: {
+      'en': '/en/urgence-dentaire-tanger',
+      'fr': '/urgence-dentaire-tanger',
+    },
+  },
 };
 
 export default function Page() {

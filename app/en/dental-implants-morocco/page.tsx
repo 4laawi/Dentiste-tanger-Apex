@@ -4,8 +4,15 @@ import ClientPageLayout from "@/components/ClientPageLayout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: TRANSLATIONS.en.seo.problems.title,
-  description: TRANSLATIONS.en.seo.problems.description,
+  title: TRANSLATIONS.en.seo.implants.title,
+  description: TRANSLATIONS.en.seo.implants.description,
+  alternates: {
+    canonical: '/en/dental-implants-morocco',
+    languages: {
+      'en': '/en/dental-implants-morocco',
+      'fr': '/dental-implants-morocco',
+    },
+  },
 };
 
 export default function Page() {

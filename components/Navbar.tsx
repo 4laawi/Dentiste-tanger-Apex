@@ -98,7 +98,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
         </div>
 
         {/* Right Side: Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="sr-safe-hidden lg:sr-safe-visible lg:flex items-center gap-10">
           <div className="flex items-center gap-8">
             <div className="relative">
               <button

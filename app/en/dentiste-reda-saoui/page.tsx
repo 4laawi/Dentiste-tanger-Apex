@@ -6,6 +6,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.doctor.title,
   description: TRANSLATIONS.en.seo.doctor.description,
+  alternates: {
+    canonical: '/en/dentiste-reda-saoui',
+    languages: {
+      'en': '/en/dentiste-reda-saoui',
+      'fr': '/dentiste-reda-saoui',
+    },
+  },
 };
 
 export default function Page() {

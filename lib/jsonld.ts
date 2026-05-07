@@ -35,6 +35,10 @@ export function getHomeJsonLd(lang: 'en' | 'fr') {
     ],
     "sameAs": [
       "https://www.instagram.com/dr_reda_saoui/"
-    ]
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Faculty of Dental Medicine of Rabat"
+    }
   };
 }
