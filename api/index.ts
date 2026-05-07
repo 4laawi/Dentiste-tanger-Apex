@@ -113,14 +113,26 @@ export default async function handler(request: Request) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
+  // Determine target path for pre-rendered content
+  let targetPath = pathname;
+  if (!targetPath.endsWith('.html')) {
+    targetPath = targetPath.endsWith('/') ? targetPath + 'index.html' : targetPath + '/index.html';
+  }
+
   // Safety: If the request is specifically for index.html, always passthrough
   if (pathname === '/index.html') {
     return fetch(new URL('/index.html', request.url));
   }
 
-  // If not a bot, serve the normal index.html with x-edge-hit header
+  // If not a bot, serve the pre-rendered file or fallback to normal index.html
   if (!isBot) {
-    const response = await fetch(new URL('/index.html', request.url));
+    let response = await fetch(new URL(targetPath, request.url));
+    
+    // Fallback to SPA shell if pre-rendered file not found
+    if (response.status === 404 && targetPath !== '/index.html') {
+      response = await fetch(new URL('/index.html', request.url));
+    }
+
     const newHeaders = new Headers(response.headers);
     newHeaders.set('x-edge-hit', 'true');
     return new Response(response.body, {
@@ -179,7 +191,13 @@ export default async function handler(request: Request) {
   const ogImage = metadata.image.startsWith('http') ? metadata.image : `${SITE_URL}${metadata.image}`;
 
   try {
-    const response = await fetch(new URL('/index.html', request.url));
+    let response = await fetch(new URL(targetPath, request.url));
+    
+    // Fallback to SPA shell if pre-rendered file not found
+    if (response.status === 404 && targetPath !== '/index.html') {
+      response = await fetch(new URL('/index.html', request.url));
+    }
+    
     let html = await response.text();
 
     const metaTags = [
