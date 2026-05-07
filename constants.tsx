@@ -655,7 +655,7 @@ export const TRANSLATIONS = {
       contact_label: "Contact",
       about: {
         label: "À propos",
-        sub: ["Rencontrer le docteur", "Nouveaux patients", "Options de paiement", "Technologie", "Blog"]
+        sub: ["Rencontrer le docteur", "Dentiste Anglophone", "Nouveaux patients", "Options de paiement", "Technologie", "Blog"]
       },
       services: {
         label: "Services",
@@ -698,6 +698,10 @@ export const TRANSLATIONS = {
       urgence: {
         title: "Urgence Dentaire à Tanger | Dr. Reda Saoui",
         description: "Besoin d'un dentiste à Tanger ? APEX Dental offre des soins dentaires d'urgence avec le Dr. Reda Saoui. Contactez-nous pour toute urgence dentaire à Tanger."
+      },
+      english_dentist: {
+        title: "Dentiste Anglophone à Tanger | Dr. Reda Saoui | APEX",
+        description: "Vous cherchez un dentiste parlant anglais à Tanger ? Le Dr Reda Saoui offre des soins dentaires de qualité pour les patients internationaux et les expatriés."
       },
       implants: {
         title: "Implant Dentaire Maroc | Meilleur Dentiste Tanger | Dr. Reda Saoui",
@@ -1175,6 +1179,116 @@ export const TRANSLATIONS = {
           { title: "Scanner CBCT", desc: "Imagerie 3D pour une planification précise du traitement." },
           { title: "Centre de Stérilisation", desc: "Stérilisation de grade hospitalier pour votre sécurité." },
           { title: "Salle de Réveil", desc: "Détendez-vous confortablement après votre intervention." }
+        ]
+      }
+    },
+    english_dentist_page: {
+      hero: {
+        tag: "Dentiste Anglophone Tanger",
+        title_light: "Soins Premium pour les",
+        title_bold: "Anglophones",
+        desc: "Services dentaires de classe mondiale au cœur de Tanger. Le Dr Reda Saoui et son équipe proposent des soins complets adaptés aux patients internationaux, expatriés et voyageurs."
+      },
+      intro: {
+        title: "Votre Dentiste Parlant Anglais à Tanger",
+        p1: "Naviguer dans le système de santé d'un pays étranger peut être un défi. À la Clinique APEX, nous supprimons la barrière de la langue, offrant une communication claire et des soins exceptionnels en anglais.",
+        p2: "Le Dr Reda Saoui et son personnel hautement qualifié s'engagent à garantir que votre expérience dentaire soit confortable, transparente et conforme aux normes internationales les plus élevées."
+      },
+      why_choose: {
+        title: "Pourquoi Choisir Notre Clinique Internationale ?",
+        desc: "Nous sommes spécialisés dans le traitement des patients internationaux et des expatriés vivant à Tanger. Notre clinique combine l'expertise dentaire marocaine avancée avec un standard mondial de soins aux patients.",
+        badges: ["Communication Fluide en Anglais", "Services Adaptés aux Expatriés", "Normes Internationales", "Technologie Numérique Avancée"]
+      },
+      coverage: {
+        title: "Au Service de la Communauté Internationale",
+        desc: "Nous sommes le choix privilégié de la communauté anglophone de Tanger, des nomades numériques aux résidents de longue durée.",
+        locations: ["Malabata", "Centre-Ville", "Marshan", "District California", "Iberia", "Gzenaya"],
+        highlight: "La destination phare pour les soins dentaires anglophones dans le nord du Maroc."
+      },
+      services: {
+        title: "Solutions Dentaires Complètes",
+        list: [
+          { title: "Dentisterie Générale", desc: "Examens de routine, nettoyages et soins préventifs fournis avec des explications claires en anglais." },
+          { title: "Dentisterie Esthétique", desc: "Transformez votre sourire avec des facettes, un blanchiment ou Invisalign par un expert anglophone." },
+          { title: "Implants Dentaires", desc: "Implantologie avancée utilisant la dernière technologie de robot assisté Yomi pour plus de précision." },
+          { title: "Chirurgie Orale", desc: "Procédures chirurgicales expertes dans un environnement confortable et de haute technologie." },
+          { title: "Soins d'Urgence", desc: "Assistance immédiate pour les urgences dentaires avec une priorité 24h/24 et 7j/7 pour les cas urgents." },
+          { title: "Soins Pédiatriques", desc: "Des soins dentaires doux pour toute la famille, garantissant une expérience positive pour vos enfants." }
+        ]
+      },
+      tips: {
+        title: "Conseils Dentaires pour Voyageurs",
+        list: [
+          { title: "Restez Hydraté", desc: "Le climat marocain peut être sec. Buvez beaucoup d'eau pour maintenir votre santé bucco-dentaire." },
+          { title: "Préparation aux Urgences", desc: "Gardez nos coordonnées à portée de main pendant votre voyage à Tanger pour avoir l'esprit tranquille." },
+          { title: "Cuisine Locale", desc: "Profitez de la nourriture, mais n'oubliez pas de maintenir votre routine de brossage et de fil dentaire." },
+          { title: "Check-ups Réguliers", desc: "Prévoyez une visite avant de longs voyages pour éviter des problèmes dentaires inattendus." }
+        ],
+        cta_call: "Appelez-nous Aujourd'hui",
+        cta_whatsapp: "WhatsApp"
+      },
+      faq: {
+        title_bold: "Questions Expatriés",
+        title_light: "& Voyageurs",
+        q1: {
+          title: "Parlez-vous vraiment anglais ?",
+          desc: "Oui, le Dr Saoui et les membres clés de l'équipe parlent couramment anglais, assurant une communication claire concernant votre diagnostic et vos options de traitement."
+        },
+        q2: {
+          title: "Acceptez-vous les assurances internationales ?",
+          desc: "Nous travaillons avec de nombreux prestataires d'assurances internationales. Veuillez nous contacter avec vos coordonnées, et nous pourrons vous aider avec la documentation nécessaire pour votre réclamation."
+        },
+        q3: {
+          title: "Puis-je prendre rendez-vous à court terme ?",
+          desc: "Nous donnons la priorité aux voyageurs internationaux et aux urgences. Contactez-nous via WhatsApp pour la réponse la plus rapide sur la disponibilité."
+        },
+        q4: {
+          title: "Quelle technologie utilisez-vous ?",
+          desc: "Nous utilisons les derniers outils de dentisterie numérique, notamment des scanners 3D, le laser Solea pour un traitement sans douleur et la chirurgie implantaire assistée par robot Yomi."
+        }
+      },
+      journey: {
+        title: "Le Parcours Patient APEX",
+        desc: "Conçu pour votre confort et votre tranquillité d'esprit. Voici ce à quoi vous pouvez vous attendre en nous rendant visite en tant que patient international.",
+        steps: [
+          {
+            title: "Premier Contact",
+            desc: "Contactez-nous via WhatsApp ou par téléphone. Notre coordinateur anglophone vous aidera pour la planification et toute question initiale."
+          },
+          {
+            title: "Consultation Virtuelle",
+            desc: "Pour les procédures majeures, nous pouvons organiser un appel vidéo pour discuter de vos besoins et fournir un plan de traitement préliminaire avant votre arrivée."
+          },
+          {
+            title: "Accueil Personnalisé",
+            desc: "À votre arrivée à notre clinique de Tanger, vous serez accueilli dans notre environnement moderne et tranquille par notre personnel amical."
+          },
+          {
+            title: "Soins Avancés",
+            desc: "Vivez des traitements dentaires sans douleur et de haute technologie utilisant l'équipement le plus avancé au monde, le tout expliqué clairement en anglais."
+          }
+        ]
+      },
+      environment: {
+        title: "Un Environnement de Clinique Premium",
+        desc: "Nous avons conçu APEX pour être un sanctuaire de santé et de confort, combinant une esthétique de luxe avec l'équipement dentaire le plus avancé au monde.",
+        features: [
+          {
+            title: "Soins Laser sans Douleur",
+            desc: "Le laser Solea élimine le besoin de fraises et d'aiguilles dans de nombreuses procédures."
+          },
+          {
+            title: "Flux de Travail Numérique",
+            desc: "Numérisation et impression 3D pour des résultats précis en un temps record."
+          },
+          {
+            title: "Maîtrise Assistée par Robot",
+            desc: "Chirurgie implantaire assistée par Yomi pour une précision chirurgicale inégalée."
+          },
+          {
+            title: "Sérénité de Luxe",
+            desc: "Un environnement calme et sans stress conçu pour votre confort ultime."
+          }
         ]
       }
     }
