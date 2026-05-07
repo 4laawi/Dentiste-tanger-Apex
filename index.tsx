@@ -21,6 +21,13 @@ if (typeof window !== 'undefined' && (navigator.userAgent.includes('jsdom') || n
   };
 
   // @ts-ignore
+  window.requestAnimationFrame = window.requestAnimationFrame || ((callback) => setTimeout(callback, 0));
+  // @ts-ignore
+  window.cancelAnimationFrame = window.cancelAnimationFrame || ((id) => clearTimeout(id));
+  // @ts-ignore
+  window.scrollTo = window.scrollTo || (() => {});
+
+  // @ts-ignore
   global.IntersectionObserver = class IntersectionObserver {
     constructor() {}
     observe() { return null; }
@@ -35,8 +42,6 @@ if (typeof window !== 'undefined' && (navigator.userAgent.includes('jsdom') || n
     unobserve() { return null; }
     disconnect() { return null; }
   };
-  // @ts-ignore
-  window.scrollTo = window.scrollTo || (() => {});
 }
 
 const rootElement = document.getElementById('root');

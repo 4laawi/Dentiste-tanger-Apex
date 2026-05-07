@@ -2,7 +2,7 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import prerender from '@prerenderer/rollup-plugin';
-import JSDOMRenderer from '@prerenderer/renderer-jsdom';
+import PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
@@ -13,7 +13,9 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [
         react(),
-        prerender({
+        // Only prerender locally. On Vercel, it skips to avoid missing library errors.
+        // We push the 'dist' folder to Vercel instead.
+        !process.env.VERCEL && prerender({
           // Path to the directory where the compiled assets are
           staticDir: path.resolve('./dist'),
           // List of routes to prerender
@@ -51,8 +53,10 @@ export default defineConfig(({ mode }) => {
             '/en/blog/dental-tourism-tangier-quality-care',
             '/en/blog/emergency-dental-care-tangier-what-to-do',
           ],
-          renderer: new JSDOMRenderer({
+          renderer: new PuppeteerRenderer({
             renderAfterTime: 5000,
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
           }),
         }),
       ].filter(Boolean),

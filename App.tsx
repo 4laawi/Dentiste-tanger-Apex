@@ -21,9 +21,44 @@ import ContactFloatingButton from './components/ContactFloatingButton.tsx';
 import ProblemsOverlay from './components/ProblemsOverlay.tsx';
 import { TRANSLATIONS } from './constants.tsx';
 
+const isPrerendering = typeof window !== 'undefined' && (navigator.userAgent.includes('jsdom') || navigator.userAgent.includes('Node.js'));
+
 const AnimatedRoutes: React.FC<{ t: any; lang: 'en' | 'fr' }> = ({ t, lang }) => {
   const location = useLocation();
   const normalizedPathname = location.pathname.replace(/\/+/g, '/');
+
+  if (isPrerendering) {
+    return (
+      <div key={normalizedPathname}>
+        <Routes location={{ ...location, pathname: normalizedPathname }}>
+          <Route
+            path="/"
+            element={<HomeView t={t} expertise={t.expertise} lang={lang} />}
+          />
+          <Route
+            path="/problemes-traites"
+            element={<ProblemsView t={t} lang={lang} />}
+          />
+          <Route
+            path="/about"
+            element={<AboutView t={t} lang={lang} />}
+          />
+          <Route
+            path="/dentiste-reda-saoui"
+            element={<RedaSaouiView t={t} lang={lang} />}
+          />
+          <Route
+            path="/blog"
+            element={<BlogView t={t} lang={lang} />}
+          />
+          <Route
+            path="/blog/:slug"
+            element={<BlogPostView t={t} lang={lang} />}
+          />
+        </Routes>
+      </div>
+    );
+  }
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -150,62 +185,109 @@ const AppContent: React.FC = () => {
       </AnimatePresence>
 
       <main>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Suspense fallback={<div className="min-h-screen bg-white" />}>
-              <Routes location={{ ...location, pathname: getRoutingPath() }}>
-                <Route
-                  path="/"
-                  element={<HomeView t={t} expertise={t.expertise} lang={lang} selectedService={selectedService} setSelectedService={setSelectedService} />}
-                />
-                <Route
-                  path="/problemes-traites"
-                  element={<ProblemsView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/about"
-                  element={<AboutView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/dentiste-reda-saoui"
-                  element={<RedaSaouiView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/blog"
-                  element={<BlogView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/blog/:slug"
-                  element={<BlogPostView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/contact"
-                  element={<ContactView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/urgence-dentaire-tanger"
-                  element={<UrgenceView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/english-speaking-dentist-tangier"
-                  element={<EnglishDentistView t={t} lang={lang} />}
-                />
-                <Route
-                  path="/dental-implants-morocco"
-                  element={<DentalImplantsView t={t} lang={lang} />}
-                />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-
-            </Suspense>
-          </motion.div>
-        </AnimatePresence>
+        {isPrerendering ? (
+          <div key={location.pathname}>
+            <Routes location={{ ...location, pathname: getRoutingPath() }}>
+              <Route
+                path="/"
+                element={<HomeView t={t} expertise={t.expertise} lang={lang} selectedService={selectedService} setSelectedService={setSelectedService} />}
+              />
+              <Route
+                path="/problemes-traites"
+                element={<ProblemsView t={t} lang={lang} />}
+              />
+              <Route
+                path="/about"
+                element={<AboutView t={t} lang={lang} />}
+              />
+              <Route
+                path="/dentiste-reda-saoui"
+                element={<RedaSaouiView t={t} lang={lang} />}
+              />
+              <Route
+                path="/blog"
+                element={<BlogView t={t} lang={lang} />}
+              />
+              <Route
+                path="/blog/:slug"
+                element={<BlogPostView t={t} lang={lang} />}
+              />
+              <Route
+                path="/contact"
+                element={<ContactView t={t} lang={lang} />}
+              />
+              <Route
+                path="/urgence-dentaire-tanger"
+                element={<UrgenceView t={t} lang={lang} />}
+              />
+              <Route
+                path="/english-speaking-dentist-tangier"
+                element={<EnglishDentistView t={t} lang={lang} />}
+              />
+              <Route
+                path="/dental-implants-morocco"
+                element={<DentalImplantsView t={t} lang={lang} />}
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        ) : (
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Suspense fallback={<div className="min-h-screen bg-white" />}>
+                <Routes location={{ ...location, pathname: getRoutingPath() }}>
+                  <Route
+                    path="/"
+                    element={<HomeView t={t} expertise={t.expertise} lang={lang} selectedService={selectedService} setSelectedService={setSelectedService} />}
+                  />
+                  <Route
+                    path="/problemes-traites"
+                    element={<ProblemsView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/about"
+                    element={<AboutView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/dentiste-reda-saoui"
+                    element={<RedaSaouiView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/blog"
+                    element={<BlogView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/blog/:slug"
+                    element={<BlogPostView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/contact"
+                    element={<ContactView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/urgence-dentaire-tanger"
+                    element={<UrgenceView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/english-speaking-dentist-tangier"
+                    element={<EnglishDentistView t={t} lang={lang} />}
+                  />
+                  <Route
+                    path="/dental-implants-morocco"
+                    element={<DentalImplantsView t={t} lang={lang} />}
+                  />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </motion.div>
+          </AnimatePresence>
+        )}
       </main>
 
       <Footer lang={lang} />
