@@ -12,7 +12,9 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [
         react(),
-        prerender({
+        // Skip prerendering on Vercel to avoid browser dependency issues
+        // The Edge function handles SEO for bots dynamically
+        !process.env.VERCEL && prerender({
           // Path to the directory where the compiled assets are
           staticDir: path.join(__dirname, 'dist'),
           // List of routes to prerender
@@ -52,11 +54,12 @@ export default defineConfig(({ mode }) => {
           ],
           renderer: '@prerenderer/renderer-puppeteer',
           rendererOptions: {
-            renderAfterTime: 500,
+            renderAfterTime: 1000,
             headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
           },
         }),
-      ],
+      ].filter(Boolean),
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
