@@ -168,41 +168,58 @@ export function middleware(request: Request) {
     metadata.description = SEO_DATA[lang].dental_implants.description;
   }
 
+  console.log(`[Middleware] Bot detected: ${userAgent} | Path: ${pathname}`);
+  console.log(`[Middleware] Metadata:`, JSON.stringify(metadata));
+
   // Ensure absolute image URL
   const ogImage = metadata.image.startsWith('http') ? metadata.image : `${SITE_URL}${metadata.image}`;
 
   // Inject meta tags into index.html
-  // We fetch the original index.html from the origin
   return fetch(new URL('/index.html', request.url))
     .then(async (response) => {
       let html = await response.text();
+      console.log(`[Middleware] index.html fetched, length: ${html.length}`);
 
-      const metaTags = `
-    <!-- Server-Side Injected SEO for Bots -->
-    <title>${metadata.title}</title>
-    <meta name="description" content="${metadata.description}" />
-    <link rel="canonical" href="${metadata.url}" />
-    <meta property="og:site_name" content="APEX Dental Clinic" />
-    <meta property="og:title" content="${metadata.title}" />
-    <meta property="og:description" content="${metadata.description}" />
-    <meta property="og:image" content="${ogImage}" />
-    <meta property="og:url" content="${metadata.url}" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${metadata.title}" />
-    <meta name="twitter:description" content="${metadata.description}" />
-    <meta name="twitter:image" content="${ogImage}" />
-  `;
+      const metaTags = [
+        '<!-- Server-Side Injected SEO for Bots -->',
+        `<title>${metadata.title}</title>`,
+        `<meta name="description" content="${metadata.description}" />`,
+        `<link rel="canonical" href="${metadata.url}" />`,
+        '<meta property="og:site_name" content="APEX Dental Clinic" />',
+        `<meta property="og:title" content="${metadata.title}" />`,
+        `<meta property="og:description" content="${metadata.description}" />`,
+        `<meta property="og:image" content="${ogImage}" />`,
+        `<meta property="og:url" content="${metadata.url}" />`,
+        '<meta property="og:type" content="website" />',
+        '<meta name="twitter:card" content="summary_large_image" />',
+        `<meta name="twitter:title" content="${metadata.title}" />`,
+        `<meta name="twitter:description" content="${metadata.description}" />`,
+        `<meta name="twitter:image" content="${ogImage}" />`
+      ].join('\n    ');
 
-      // Insert before </head>
-      html = html.replace('</head>', `${metaTags}\n</head>`);
+      // Remove existing title and description to avoid duplicates
+      html = html.replace(/<title>.*?<\/title>/gi, '');
+      html = html.replace(/<meta name="description" content=".*?"\s*\/?>/gi, '');
+
+      // Insert before </head> (case-insensitive)
+      const headEndIndex = html.toLowerCase().indexOf('</head>');
+      if (headEndIndex !== -1) {
+        html = html.slice(0, headEndIndex) + metaTags + '\n  ' + html.slice(headEndIndex);
+        console.log('[Middleware] Successfully injected meta tags');
+      } else {
+        console.warn('[Middleware] Could not find </head> tag in index.html');
+      }
 
       return new Response(html, {
-        headers: { 'content-type': 'text/html; charset=UTF-8' },
+        headers: { 
+          'content-type': 'text/html; charset=UTF-8',
+          'x-middleware-hit': 'true',
+          'x-bot-detected': userAgent.split(' ')[0]
+        },
       });
     })
-    .catch(() => {
-        // Fallback to continue with the request if fetch fails
+    .catch((err) => {
+        console.error('[Middleware] Error fetching index.html:', err);
         return;
     });
 }
