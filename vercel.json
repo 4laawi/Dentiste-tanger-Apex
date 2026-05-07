@@ -1,9 +1,8 @@
 {
-    "cleanUrls": true,
-    "rewrites": [
-        {
-            "source": "/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js|.*\\.html).*)",
-            "destination": "/api/index"
-        }
+    "routes": [
+        { "src": "/assets/(.*)", "dest": "/assets/$1" },
+        { "src": "/favicon.ico", "dest": "/favicon.ico" },
+        { "src": "/(.*\\.(png|jpg|svg|webp|ico|css|js|json|txt|xml|mjs))", "dest": "/$1" },
+        { "src": "/(.*)", "dest": "/api/index" }
     ]
 }
