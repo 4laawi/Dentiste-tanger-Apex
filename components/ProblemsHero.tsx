@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { PHONE } from '../constants';
 
 interface Props {
@@ -46,7 +46,7 @@ const ProblemsHero: React.FC<Props> = ({ t, lang }) => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 items-start">
               <Link
-                to={lang === 'en' ? '/en/contact' : '/contact'}
+                href={lang === 'en' ? '/en/contact' : '/contact'}
               >
                 <motion.div
                   whileHover={{ backgroundColor: '#FFF', color: '#000' }}

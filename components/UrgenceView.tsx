@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import Intro from './Intro.tsx';
 import TechSection from './TechSection.tsx';
@@ -6,7 +6,6 @@ import FAQAccordion from './FAQAccordion.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import Testimonials from './Testimonials.tsx';
 import ContactSection from './ContactSection.tsx';
-import SEO from './SEO.tsx';
 import { motion } from 'framer-motion';
 import { PHONE } from '../constants';
 
@@ -21,11 +20,7 @@ const UrgenceView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="pt-0">
-            <SEO
-                title={t.seo.urgence.title}
-                description={t.seo.urgence.description}
-                lang={lang}
-            />
+            
 
             {/* Urgence Hero */}
             <section className="relative pt-[12vh] pb-[12vh] overflow-hidden">

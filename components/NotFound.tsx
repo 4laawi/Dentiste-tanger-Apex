@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const NotFound: React.FC = () => {
     return (
@@ -10,7 +10,7 @@ const NotFound: React.FC = () => {
                 We couldn't find the page you're looking for. It might have been moved or deleted.
             </p>
             <Link
-                to="/"
+                href="/"
                 className="px-8 py-3 bg-brand-dark text-white rounded-full hover:bg-brand-primary transition-colors duration-300"
             >
                 Back to Home

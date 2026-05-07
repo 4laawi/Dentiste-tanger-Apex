@@ -1,6 +1,7 @@
-
+"use client";
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { PHONE, ADDRESS } from '../constants.tsx';
 import { Instagram, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
@@ -9,30 +10,29 @@ import BeautifulSmileSection from './BeautifulSmileSection.tsx';
 import Testimonials from './Testimonials.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import ContactSection from './ContactSection.tsx';
-import SEO from './SEO.tsx';
 
 interface Props {
   t: any;
   expertise?: any;
   lang?: 'en' | 'fr';
-  selectedService: string;
-  setSelectedService: (service: string) => void;
 }
 
-const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSelectedService }) => {
+const HomeView: React.FC<Props> = ({ t, expertise, lang }) => {
+  const [selectedService, setSelectedService] = useState<string>('');
   // Track which expertise card is hovered (default to first card)
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (location.hash === '#services') {
+    const hash = window.location.hash;
+    if (hash === '#services') {
       const element = document.getElementById('services');
       if (element) {
         const yOffset = -100; // Adjust for fixed navbar
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
-    } else if (location.hash === '#contact-team') {
+    } else if (hash === '#contact-team') {
       const element = document.getElementById('contact-team');
       if (element) {
         const yOffset = -100;
@@ -40,7 +40,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
-  }, [location.hash]);
+  }, [pathname]);
 
   // Desktop-only parallax hooks
   const doctorParallax = useParallax(15);
@@ -77,11 +77,6 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
 
   return (
     <div className="bg-white">
-      <SEO
-        title={t.seo.home.title}
-        description={t.seo.home.description}
-        lang={lang}
-      />
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
@@ -176,7 +171,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
                 </ul>
                 <div className="pt-6 md:pt-10">
                   <Link
-                    to={getLangPath('/dentiste-reda-saoui')}
+                    href={getLangPath('/dentiste-reda-saoui')}
                     className="inline-block bg-brand-dark text-brand-cyan px-8 py-3 md:px-10 md:py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none"
                   >
                     {t.know_doctor.cta}
@@ -274,7 +269,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
               </h2>
               <p className="text-xl md:text-2xl opacity-60 font-serif italic max-w-xl leading-relaxed">{t.implants.desc}</p>
               <Link
-                to={getLangPath('/problemes-traites')}
+                href={getLangPath('/problemes-traites')}
                 className="inline-block bg-brand-cyan text-black px-8 py-4 md:px-12 md:py-5 font-bold uppercase hover:bg-white transition-all text-lg md:text-xl rounded-none text-center"
               >
                 {t.implants.cta}
@@ -324,7 +319,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
                 onMouseLeave={() => setHoveredIndex(0)}
               >
                 {isImplant ? (
-                  <Link to={getLangPath('/dental-implants-morocco')} className="block w-full h-full">
+                  <Link href={getLangPath('/dental-implants-morocco')} className="block w-full h-full">
                     <CardContent />
                   </Link>
                 ) : (
@@ -369,7 +364,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
                     </div>
                   ))}
                 </div>
-                <Link to={getLangPath('/about')} className="inline-block bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none">{t.tech_section.cta}</Link>
+                <Link href={getLangPath('/about')} className="inline-block bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none">{t.tech_section.cta}</Link>
               </div>
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4 h-[300px] md:h-[700px]">
@@ -407,7 +402,7 @@ const HomeView: React.FC<Props> = ({ t, expertise, lang, selectedService, setSel
                 <p>{t.why_choose.p2}</p>
                 <div className="pt-8 flex justify-center">
                   <Link
-                    to={getLangPath('/about')}
+                    href={getLangPath('/about')}
                     className="group flex items-center gap-3 text-brand-dark font-bold uppercase tracking-widest text-sm hover:text-brand-cyan transition-colors"
                   >
                     {t.why_choose.cta}

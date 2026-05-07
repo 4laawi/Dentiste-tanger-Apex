@@ -1,29 +1,18 @@
-import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+"use client";
+import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
-import { BLOG_POSTS } from '../blogData.ts';
+import { BlogPost } from '../blogData.ts';
 import ContactSection from './ContactSection.tsx';
-
-import SEO from './SEO.tsx';
 
 interface Props {
     t: any;
     lang: 'en' | 'fr';
+    post: BlogPost;
 }
 
-const BlogPostView: React.FC<Props> = ({ t, lang }) => {
-    const { slug } = useParams<{ slug: string }>();
-    const navigate = useNavigate();
-    const posts = BLOG_POSTS[lang];
-    const post = posts.find(p => p.slug === slug);
-
-    useEffect(() => {
-        if (!post) {
-            navigate('/blog');
-        }
-    }, [post, navigate]);
-
+const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
     const getLangPath = (path: string) => {
         if (lang === 'en') {
             return `/en${path === '/' ? '' : path}`;
@@ -35,15 +24,9 @@ const BlogPostView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="bg-white min-h-screen pt-32">
-            <SEO
-                title={post.seoTitle}
-                description={post.seoDescription}
-                image={post.image}
-                lang={lang}
-            />
             <div className="container mx-auto px-6 pb-20">
                 <Link
-                    to={getLangPath('/blog')}
+                    href={getLangPath('/blog')}
                     className="flex items-center gap-2 text-brand-dark/60 hover:text-brand-cyan transition-colors mb-12 group w-fit"
                 >
                     <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />

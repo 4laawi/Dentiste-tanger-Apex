@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import Intro from './Intro.tsx';
 import TechSection from './TechSection.tsx';
@@ -6,7 +6,6 @@ import FAQAccordion from './FAQAccordion.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import Testimonials from './Testimonials.tsx';
 import ContactSection from './ContactSection.tsx';
-import SEO from './SEO.tsx';
 import { motion } from 'framer-motion';
 import { PHONE, TRANSLATIONS } from '../constants';
 
@@ -25,11 +24,7 @@ const EnglishDentistView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="pt-0">
-            <SEO
-                title={t.seo.english_dentist ? t.seo.english_dentist.title : t.seo.home.title}
-                description={t.seo.english_dentist ? t.seo.english_dentist.description : t.seo.home.description}
-                lang={lang}
-            />
+            
 
             {/* Hero Section */}
             <section className="relative pt-[12vh] pb-[12vh] overflow-hidden">

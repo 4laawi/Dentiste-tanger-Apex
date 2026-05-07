@@ -1,9 +1,8 @@
-import React from "react";
+"use client";import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import { PHONE } from "../constants";
 import { useParallax } from "../hooks/useParallax";
-import SEO from "./SEO";
 
 const bannerImage = "/DSCF7556.webp";
 
@@ -29,11 +28,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
 
   return (
     <div className="overflow-hidden bg-white font-sans text-brand-dark">
-      <SEO
-        title={t.seo.doctor.title}
-        description={t.seo.doctor.description}
-        lang={lang}
-      />
+      
       {/* Hero Section - Aligned with Home Page */}
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
@@ -109,7 +104,7 @@ const RedaSaouiView: React.FC<Props> = ({ t, lang }) => {
                   dangerouslySetInnerHTML={{ __html: at.story.p2 }}
                 />
                 <Link
-                  to={getLangPath('/about')}
+                  href={getLangPath('/about')}
                   className="bg-brand-dark text-brand-cyan px-10 py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none mt-4 inline-block text-center"
                 >
                   {lang === 'fr' ? 'notre philosophie' : 'our philosophy'}

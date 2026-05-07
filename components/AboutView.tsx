@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, CheckCircle2, Star, Award, GraduationCap, Users, ArrowRight } from 'lucide-react';
@@ -7,7 +7,6 @@ import { useParallax } from '../hooks/useParallax.ts';
 import Testimonials from './Testimonials.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import ContactSection from './ContactSection.tsx';
-import SEO from './SEO.tsx';
 
 interface Props {
   t: any;
@@ -30,11 +29,6 @@ const AboutView: React.FC<Props> = ({ t, lang }) => {
 
   return (
     <div className="bg-white overflow-hidden">
-      <SEO
-        title={t.seo.about.title}
-        description={t.seo.about.description}
-        lang={lang}
-      />
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">

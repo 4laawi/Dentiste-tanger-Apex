@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { X, ChevronRight } from 'lucide-react';
 
 interface Props {
@@ -82,7 +82,7 @@ const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                                         transition={{ delay: 0.1 + index * 0.05 }}
                                     >
                                         <Link
-                                            to={targetPath}
+                                            href={targetPath}
                                             onClick={(e) => {
                                                 if (item.path.startsWith('/#')) {
                                                     // For section links, we might want custom handling or just let Router handle it if on same page

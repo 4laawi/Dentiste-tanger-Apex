@@ -1,7 +1,8 @@
-
-import React, { useState } from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { PHONE } from '../constants.tsx';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -23,7 +24,8 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<'about' | 'services' | 'problems' | null>(null);
   const [showUrgency, setShowUrgency] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
+  const router = useRouter();
   const nt = t.nav;
 
   const toggleDropdown = (dropdown: 'about' | 'services' | 'problems') => {
@@ -41,7 +43,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
     setIsOpen(false);
     setActiveDropdown(null);
     const targetPath = getLangPath(to);
-    if (location.pathname === targetPath) {
+    if (pathname === targetPath) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -76,8 +78,8 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
     };
   }, [isOpen]);
 
-  const isAboutActive = location.pathname === getLangPath('/about');
-  const isProblemsActive = location.pathname === getLangPath('/problemes-traites');
+  const isAboutActive = pathname === getLangPath('/about');
+  const isProblemsActive = pathname === getLangPath('/problemes-traites');
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled || activeDropdown ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4'}`}>
@@ -85,7 +87,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
 
         {/* Left Side: Logo */}
         <div className="flex-shrink-0">
-          <Link to={getLangPath('/')} className="flex flex-col items-start group text-left" onClick={() => handleLinkClick('/')}>
+          <Link href={getLangPath('/')} className="flex flex-col items-start group text-left" onClick={() => handleLinkClick('/')}>
             <span className="text-white font-work font-bold text-2xl lg:text-3xl tracking-tighter uppercase group-hover:text-brand-cyan transition-colors">
               APEX
             </span>
@@ -126,17 +128,17 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
             </div>
 
             <Link
-              to={getLangPath('/urgence-dentaire-tanger')}
+              href={getLangPath('/urgence-dentaire-tanger')}
               onClick={() => handleLinkClick('/urgence-dentaire-tanger')}
-              className={`font-work font-medium text-lg transition-colors ${location.pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+              className={`font-work font-medium text-lg transition-colors ${pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
             >
               {nt.urgence}
             </Link>
 
             <Link
-              to={getLangPath('/contact')}
+              href={getLangPath('/contact')}
               onClick={() => handleLinkClick('/contact')}
-              className={`font-work font-medium text-lg transition-colors ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
+              className={`font-work font-medium text-lg transition-colors ${pathname === getLangPath('/contact') ? 'text-brand-cyan' : 'text-white/90 hover:text-brand-cyan'}`}
             >
               Contact
             </Link>
@@ -175,7 +177,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
             </a>
 
             <Link
-              to={getLangPath('/contact')}
+              href={getLangPath('/contact')}
               onClick={() => handleLinkClick('/contact')}
               className="bg-brand-cyan text-black px-8 py-3.5 font-work font-bold text-lg tracking-tight hover:bg-white transition-all rounded-none shadow-xl inline-block"
             >
@@ -251,12 +253,12 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                   <button onClick={() => setIsOpen(false)} className="text-brand-cyan"><X size={40} /></button>
                 </div>
                 <div className="flex flex-col gap-8 flex-1">
-                  <Link to={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.home}</Link>
-                  <Link to={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.about.label}</Link>
-                  <Link to={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.services.label}</Link>
-                  <Link to={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
-                  <Link to={getLangPath('/urgence-dentaire-tanger')} onClick={() => handleLinkClick('/urgence-dentaire-tanger')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.urgence}</Link>
-                  <Link to={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${location.pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.contact_label}</Link>
+                  <Link href={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.home}</Link>
+                  <Link href={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.about.label}</Link>
+                  <Link href={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.services.label}</Link>
+                  <Link href={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work text-left ${pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
+                  <Link href={getLangPath('/urgence-dentaire-tanger')} onClick={() => handleLinkClick('/urgence-dentaire-tanger')} className={`text-3xl font-work text-left ${pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.urgence}</Link>
+                  <Link href={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.contact_label}</Link>
 
                   <div className="mt-8 pt-8 border-t border-white/10">
                     <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Facebook, Instagram } from 'lucide-react';
 import { ADDRESS, PHONE } from '../constants';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface Props {
   lang: 'en' | 'fr';
@@ -58,20 +58,20 @@ const Footer: React.FC<Props> = ({ lang }) => {
           <div>
             <h4 className="text-2xl font-bold mb-6 text-brand-cyan">{t.services}</h4>
             <ul className="space-y-4 font-sans text-white/70">
-              <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
-              <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
-              <li><Link to={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
-              <li><Link to={getLangPath('/urgence-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
+              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
+              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
+              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
+              <li><Link href={getLangPath('/urgence-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-2xl font-bold mb-6 text-brand-cyan">{t.info}</h4>
             <ul className="space-y-4 font-sans text-white/70">
-              <li><Link to={getLangPath('/dentiste-reda-saoui')} className="hover:text-brand-cyan transition-colors">{t.i1}</Link></li>
-              <li><Link to={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i2}</Link></li>
-              <li><Link to={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
-              <li><Link to={getLangPath('/contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
+              <li><Link href={getLangPath('/dentiste-reda-saoui')} className="hover:text-brand-cyan transition-colors">{t.i1}</Link></li>
+              <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i2}</Link></li>
+              <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
+              <li><Link href={getLangPath('/contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
             </ul>
           </div>
 
@@ -95,7 +95,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
                 <Instagram size={24} />
               </a>
             </div>
-            <Link to={getLangPath('/contact')} className="w-full bg-brand-teal text-white py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-sm block text-center">
+            <Link href={getLangPath('/contact')} className="w-full bg-brand-teal text-white py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-sm block text-center">
               {t.appointment}
             </Link>
           </div>

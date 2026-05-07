@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   t: any;
 }
 
 const TechSection: React.FC<Props> = ({ t }) => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleLinkClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -16,7 +16,7 @@ const TechSection: React.FC<Props> = ({ t }) => {
       const href = target.getAttribute('href');
       if (href && (href.startsWith('/') || href.startsWith(window.location.origin))) {
         e.preventDefault();
-        navigate(href);
+        router.push(href);
       }
     }
   };

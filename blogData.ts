@@ -31,7 +31,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>At APEX, we are committed to staying at the forefront of dental technology to ensure our patients receive the best care possible in Tangier.</p>
             `,
-            date: 'Jan 15, 2024',
+            date: '2024-01-15',
             author: 'Dr. Reda Saoui',
             image: '/photo4.webp',
             category: 'Technology',
@@ -56,7 +56,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>If you're looking for a dentiste Tanger to help you achieve the smile you've always wanted, Invisalign might be the perfect solution.</p>
             `,
-            date: 'Feb 02, 2024',
+            date: '2024-02-02',
             author: 'Dr. Reda Saoui',
             image: '/orthodontie.webp',
             category: 'Cosmetic',
@@ -79,7 +79,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>By following these simple steps, you can enjoy your beautiful new smile for many years to come.</p>
             `,
-            date: 'Mar 10, 2024',
+            date: '2024-03-10',
             author: 'Dr. Reda Saoui',
             image: '/implant.webp',
             category: 'Care',
@@ -101,7 +101,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 <p>Check online reviews and ask for recommendations from friends and family. A dentist with a strong reputation in Tangier is more likely to provide high-quality care.</p>
                 <p>At APEX, Dr. Reda Saoui is dedicated to providing exceptional dental care in a modern and welcoming environment. Contact us today to schedule your consultation.</p>
             `,
-            date: 'Apr 05, 2024',
+            date: '2024-04-05',
             author: 'Dr. Reda Saoui',
             image: '/PHoto1.webp',
             category: 'Guide',
@@ -124,7 +124,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>If you're considering dental tourism, APEX is here to provide you with the highest quality care in Tangier.</p>
             `,
-            date: 'May 12, 2024',
+            date: '2024-05-12',
             author: 'Dr. Reda Saoui',
             image: '/Photo3.webp',
             category: 'Tourism',
@@ -150,7 +150,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 <p>At APEX, we prioritize dental emergencies and will do our best to see you as soon as possible. Our team is equipped to handle a wide range of urgent dental issues with care and efficiency.</p>
                 <p>Don't wait if you're in pain. Contact APEX for emergency dental care in Tangier.</p>
             `,
-            date: 'Jun 20, 2024',
+            date: '2024-06-20',
             author: 'Dr. Reda Saoui',
             image: '/photo6.webp',
             category: 'Emergency',
@@ -176,7 +176,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>Chez APEX, nous nous engageons à rester à la pointe de la technologie pour offrir les meilleurs soins dentaires à Tanger.</p>
             `,
-            date: '15 Jan, 2024',
+            date: '2024-01-15',
             author: 'Dr. Reda Saoui',
             image: '/photo4.webp',
             category: 'Technologie',
@@ -201,7 +201,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>Si vous cherchez un dentiste Tanger pour obtenir le sourire dont vous avez toujours rêvé, Invisalign est la solution idéale.</p>
             `,
-            date: '02 Fév, 2024',
+            date: '2024-02-02',
             author: 'Dr. Reda Saoui',
             image: '/orthodontie.webp',
             category: 'Esthétique',
@@ -224,7 +224,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>En suivant ces conseils simples, vous profiterez de votre nouveau sourire pendant de nombreuses années.</p>
             `,
-            date: '10 Mar, 2024',
+            date: '2024-03-10',
             author: 'Dr. Reda Saoui',
             image: '/implant.webp',
             category: 'Soins',
@@ -246,7 +246,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 <p>Consultez les avis en ligne et demandez des recommandations. Un dentiste avec une solide réputation à Tanger est un gage de qualité.</p>
                 <p>Chez APEX, le Dr Reda Saoui s'engage à fournir des soins d'exception dans un cadre moderne. Contactez-nous pour une consultation.</p>
             `,
-            date: '05 Avr, 2024',
+            date: '2024-04-05',
             author: 'Dr. Reda Saoui',
             image: '/PHoto1.webp',
             category: 'Guide',
@@ -269,7 +269,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 </ul>
                 <p>Si vous envisagez le tourisme dentaire, APEX vous garantit la meilleure qualité de soins à Tanger.</p>
             `,
-            date: '12 Mai, 2024',
+            date: '2024-05-12',
             author: 'Dr. Reda Saoui',
             image: '/Photo3.webp',
             category: 'Tourisme',
@@ -295,7 +295,7 @@ export const BLOG_POSTS: Record<'en' | 'fr', BlogPost[]> = {
                 <p>Chez APEX, nous traitons les urgences en priorité. Notre équipe est équipée pour gérer vos problèmes dentaires urgents avec soin et rapidité.</p>
                 <p>N'attendez pas si vous souffrez. Contactez APEX pour vos urgences dentaires à Tanger.</p>
             `,
-            date: '20 Juin, 2024',
+            date: '2024-06-20',
             author: 'Dr. Reda Saoui',
             image: '/photo6.webp',
             category: 'Urgence',

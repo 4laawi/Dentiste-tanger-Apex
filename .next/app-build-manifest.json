@@ -1,0 +1,257 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/app/_not-found/page-137bf9f1b5ff9b5a.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/css/e7a0965e696d06f4.css",
+      "static/chunks/app/layout-463dc7906a3e4ace.js"
+    ],
+    "/sitemap.xml/route": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/app/sitemap.xml/route-068ba3586843ea10.js"
+    ],
+    "/robots.txt/route": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/app/robots.txt/route-068ba3586843ea10.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/889-b8577f72ab9b723d.js",
+      "static/chunks/app/about/page-3e97c271ba1e685f.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/672-4c7a03602c8ed38b.js",
+      "static/chunks/app/contact/page-e29c5ee264c29a1a.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/480-684d369af8b81c35.js",
+      "static/chunks/app/blog/page-9182ae5bdb94b482.js"
+    ],
+    "/blog/[slug]/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/750-19a1ddc58f73e984.js",
+      "static/chunks/app/blog/[slug]/page-75f9604e989893a8.js"
+    ],
+    "/dental-implants-morocco/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/708-92f156b2a7f11f41.js",
+      "static/chunks/app/dental-implants-morocco/page-e02c082b37016429.js"
+    ],
+    "/en/about/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/889-b8577f72ab9b723d.js",
+      "static/chunks/app/en/about/page-c0f739dc084391f4.js"
+    ],
+    "/dentiste-reda-saoui/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/235-951fecea626d6e04.js",
+      "static/chunks/app/dentiste-reda-saoui/page-3115656317f0deb8.js"
+    ],
+    "/en/blog/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/480-684d369af8b81c35.js",
+      "static/chunks/app/en/blog/page-22c3ab2a34238ce3.js"
+    ],
+    "/en/dental-implants-morocco/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/708-92f156b2a7f11f41.js",
+      "static/chunks/app/en/dental-implants-morocco/page-00b0cc0e29f85e6f.js"
+    ],
+    "/en/blog/[slug]/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/750-19a1ddc58f73e984.js",
+      "static/chunks/app/en/blog/[slug]/page-69cf4ecb35b6746a.js"
+    ],
+    "/en/contact/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/672-4c7a03602c8ed38b.js",
+      "static/chunks/app/en/contact/page-21ed73d000650f59.js"
+    ],
+    "/en/dentiste-reda-saoui/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/235-951fecea626d6e04.js",
+      "static/chunks/app/en/dentiste-reda-saoui/page-228140ab0981e849.js"
+    ],
+    "/en/english-speaking-dentist-tangier/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/981-a5cd8e42b07767b2.js",
+      "static/chunks/app/en/english-speaking-dentist-tangier/page-6248a863e0ca3572.js"
+    ],
+    "/en/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/901-df7354a4016fe5f8.js",
+      "static/chunks/app/en/page-6372f5bb9d880211.js"
+    ],
+    "/en/problemes-traites/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/435-d11b431784a856e5.js",
+      "static/chunks/app/en/problemes-traites/page-431e53f1d5c1d865.js"
+    ],
+    "/en/urgence-dentaire-tanger/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/989-7a45d70949a5fff3.js",
+      "static/chunks/app/en/urgence-dentaire-tanger/page-1819a04af6047bf9.js"
+    ],
+    "/english-speaking-dentist-tangier/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/981-a5cd8e42b07767b2.js",
+      "static/chunks/app/english-speaking-dentist-tangier/page-dbd88e6caa995f75.js"
+    ],
+    "/problemes-traites/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/435-d11b431784a856e5.js",
+      "static/chunks/app/problemes-traites/page-7c6720b43332926a.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/c15bf2b0-f7282d455f9c4cd9.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/674-ffef0384a0b08edb.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/901-df7354a4016fe5f8.js",
+      "static/chunks/app/page-aa6c899c0831f590.js"
+    ],
+    "/urgence-dentaire-tanger/page": [
+      "static/chunks/webpack-7627d4a932bfd14b.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-226bd5918a99f1a2.js",
+      "static/chunks/main-app-d40ebd6b898dc231.js",
+      "static/chunks/846-a70bee5f4091f500.js",
+      "static/chunks/76-a1217a1a702be32e.js",
+      "static/chunks/154-a48c2d38c38e2ea8.js",
+      "static/chunks/989-7a45d70949a5fff3.js",
+      "static/chunks/app/urgence-dentaire-tanger/page-7e5a503dd05bc327.js"
+    ]
+  }
+}

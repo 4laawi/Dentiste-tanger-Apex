@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -156,7 +156,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/problemes-traites')}
+              href={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >
@@ -198,7 +198,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/problemes-traites')}
+              href={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >
@@ -240,7 +240,7 @@ const BeautifulSmileSection: React.FC<BeautifulSmileSectionProps> = ({ t, lang }
           </p>
           <div className="text-button-wrapper">
             <Link
-              to={getLangPath('/problemes-traites')}
+              href={getLangPath('/problemes-traites')}
               className="inline-block bg-[#6AE0F2] text-black px-8 py-3 text-lg hover:bg-white transition-all duration-300"
               style={{ borderRadius: '0', fontFamily: 'Karla, sans-serif', fontWeight: '500' }}
             >

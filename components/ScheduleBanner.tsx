@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface Props {
   t: any;
@@ -51,7 +51,7 @@ const ScheduleBanner: React.FC<Props> = ({ t, lang }) => {
               className="inline-block"
             >
               <Link
-                to={getLangPath('/contact')}
+                href={getLangPath('/contact')}
                 className="inline-block bg-brand-cyan text-black px-10 py-4 text-xl font-bold uppercase tracking-tight hover:bg-black hover:text-white transition-all duration-300 rounded-sm"
               >
                 {t.btn}

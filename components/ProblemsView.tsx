@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import Intro from './Intro.tsx';
 import TechSection from './TechSection.tsx';
@@ -9,7 +9,6 @@ import MoreProblems from './MoreProblems.tsx';
 import Testimonials from './Testimonials.tsx';
 import ContactSection from './ContactSection.tsx';
 import ProblemsHero from './ProblemsHero.tsx';
-import SEO from './SEO.tsx';
 
 interface Props {
   t: any;
@@ -19,11 +18,7 @@ interface Props {
 const ProblemsView: React.FC<Props> = ({ t, lang }) => {
   return (
     <div className="pt-0">
-      <SEO
-        title={t.seo.problems.title}
-        description={t.seo.problems.description}
-        lang={lang}
-      />
+      
       <ProblemsHero t={t} lang={lang} />
       <div className="pt-0 md:pt-20"> {/* Offset for sticky nav */}
         <Intro t={t} />

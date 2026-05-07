@@ -1,10 +1,9 @@
-import React from 'react';
+"use client";import React from 'react';
 import TechSection from './TechSection.tsx';
 import FAQAccordion from './FAQAccordion.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
 import Testimonials from './Testimonials.tsx';
 import ContactSection from './ContactSection.tsx';
-import SEO from './SEO.tsx';
 import { motion } from 'framer-motion';
 import { PHONE, TRANSLATIONS } from '../constants.tsx';
 
@@ -22,11 +21,7 @@ const DentalImplantsView: React.FC<Props> = ({ t, lang }) => {
     return (
         <div className="pt-0">
             {/* Dynamic SEO title/desc from constants if available, else fallback */}
-            <SEO
-                title={ut.hero.tag + " - " + ut.intro.title}
-                description={ut.hero.desc}
-                lang={lang}
-            />
+            
 
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center overflow-hidden">

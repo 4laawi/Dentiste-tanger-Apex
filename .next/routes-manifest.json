@@ -1,0 +1,184 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/en/blog/[slug]",
+      "regex": "^/en/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/en/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/dental-implants-morocco",
+      "regex": "^/dental\\-implants\\-morocco(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dental\\-implants\\-morocco(?:/)?$"
+    },
+    {
+      "page": "/dentiste-reda-saoui",
+      "regex": "^/dentiste\\-reda\\-saoui(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dentiste\\-reda\\-saoui(?:/)?$"
+    },
+    {
+      "page": "/en",
+      "regex": "^/en(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en(?:/)?$"
+    },
+    {
+      "page": "/en/about",
+      "regex": "^/en/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/about(?:/)?$"
+    },
+    {
+      "page": "/en/blog",
+      "regex": "^/en/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/blog(?:/)?$"
+    },
+    {
+      "page": "/en/contact",
+      "regex": "^/en/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/contact(?:/)?$"
+    },
+    {
+      "page": "/en/dental-implants-morocco",
+      "regex": "^/en/dental\\-implants\\-morocco(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/dental\\-implants\\-morocco(?:/)?$"
+    },
+    {
+      "page": "/en/dentiste-reda-saoui",
+      "regex": "^/en/dentiste\\-reda\\-saoui(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/dentiste\\-reda\\-saoui(?:/)?$"
+    },
+    {
+      "page": "/en/english-speaking-dentist-tangier",
+      "regex": "^/en/english\\-speaking\\-dentist\\-tangier(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/english\\-speaking\\-dentist\\-tangier(?:/)?$"
+    },
+    {
+      "page": "/en/problemes-traites",
+      "regex": "^/en/problemes\\-traites(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/problemes\\-traites(?:/)?$"
+    },
+    {
+      "page": "/en/urgence-dentaire-tanger",
+      "regex": "^/en/urgence\\-dentaire\\-tanger(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/en/urgence\\-dentaire\\-tanger(?:/)?$"
+    },
+    {
+      "page": "/english-speaking-dentist-tangier",
+      "regex": "^/english\\-speaking\\-dentist\\-tangier(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/english\\-speaking\\-dentist\\-tangier(?:/)?$"
+    },
+    {
+      "page": "/problemes-traites",
+      "regex": "^/problemes\\-traites(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/problemes\\-traites(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/urgence-dentaire-tanger",
+      "regex": "^/urgence\\-dentaire\\-tanger(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/urgence\\-dentaire\\-tanger(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

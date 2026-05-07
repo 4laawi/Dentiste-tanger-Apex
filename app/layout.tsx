@@ -1,0 +1,57 @@
+import type { Metadata } from "next";
+import { Sen, Work_Sans, Amiri, Karla } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ContactFloatingButton from "@/components/ContactFloatingButton";
+import MobileActionBar from "@/components/MobileActionBar";
+import { TRANSLATIONS } from "@/constants";
+
+const sen = Sen({
+  subsets: ["latin"],
+  weight: ["400", "700", "800"],
+  variable: "--font-sen",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-work-sans",
+});
+
+const amiri = Amiri({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+});
+
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-karla",
+});
+
+export const metadata: Metadata = {
+  title: "APEX | Dr. Reda Saoui - Dentiste à Tanger",
+  description: "Bienvenue chez APEX Dental Clinic. Le Dr. Reda Saoui, votre dentiste de confiance à Tanger, propose des soins d'excellence : implants, facettes et Invisalign.",
+  metadataBase: new URL('https://apexdental.ma'),
+};
+
+export default function RootLayout({
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ lang?: string }>;
+}>) {
+  // This is a global layout. In App Router, params might not be available in root layout
+  // if not using [lang] at root. We'll handle lang at page level or via middleware.
+  
+  return (
+    <html lang="fr" className={`${sen.variable} ${workSans.variable} ${amiri.variable} ${karla.variable}`}>
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}

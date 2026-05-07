@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { X, ChevronRight } from 'lucide-react';
 
 interface Props {
@@ -70,7 +70,7 @@ const ProblemsDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang,
                                         transition={{ delay: 0.1 + index * 0.05 }}
                                     >
                                         <Link
-                                            to={targetPath}
+                                            href={targetPath}
                                             onClick={() => onLinkClick('/problemes-traites')}
                                             className="group flex items-center gap-4 text-white hover:text-brand-cyan transition-colors"
                                         >

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+"use client";import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 import { PHONE, ADDRESS } from '../constants.tsx';
-import SEO from './SEO.tsx';
 
 interface Props {
     t: any;
@@ -40,11 +39,7 @@ const ContactView: React.FC<Props> = ({ t, lang }) => {
 
     return (
         <div className="bg-white">
-            <SEO
-                title={t.seo.contact.title}
-                description={t.seo.contact.description}
-                lang={lang}
-            />
+            
 
             {/* 1. Notre Clinique à Tanger (Hero/Map Section) */}
             <section className="relative pt-32 pb-20 bg-black overflow-hidden">
