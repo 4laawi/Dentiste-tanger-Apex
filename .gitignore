@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-# dist (Removed to allow pushing pre-rendered files)
+.next
+dist
 dist-ssr
 *.local
 
