@@ -2,6 +2,7 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import prerender from '@prerenderer/rollup-plugin';
+import JSDOMRenderer from '@prerenderer/renderer-jsdom';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
@@ -12,11 +13,9 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [
         react(),
-        // Skip prerendering on Vercel to avoid browser dependency issues
-        // The Edge function handles SEO for bots dynamically
-        !process.env.VERCEL && prerender({
+        prerender({
           // Path to the directory where the compiled assets are
-          staticDir: path.join(__dirname, 'dist'),
+          staticDir: path.resolve('./dist'),
           // List of routes to prerender
           routes: [
             '/',
@@ -52,12 +51,9 @@ export default defineConfig(({ mode }) => {
             '/en/blog/dental-tourism-tangier-quality-care',
             '/en/blog/emergency-dental-care-tangier-what-to-do',
           ],
-          renderer: '@prerenderer/renderer-puppeteer',
-          rendererOptions: {
-            renderAfterTime: 1000,
-            headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
-          },
+          renderer: new JSDOMRenderer({
+            renderAfterTime: 5000,
+          }),
         }),
       ].filter(Boolean),
       define: {

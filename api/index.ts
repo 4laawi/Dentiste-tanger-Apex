@@ -106,7 +106,7 @@ export default async function handler(request: Request) {
     'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot',
     'facebookexternalhit', 'twitterbot', 'rogerbot', 'linkedinbot', 'embedly',
     'quora link preview', 'showyoubot', 'outbrain', 'pinterest/0.',
-    'slackbot', 'vkShare', 'W3C_Validator', 'whatsapp', 'telegrambot', 'threads'
+    'slackbot', 'vkShare', 'W3C_Validator', 'whatsapp', 'telegrambot', 'threads', 'curl'
   ];
 
   const isBot = bots.some(bot => userAgent.toLowerCase().includes(bot));

@@ -35,6 +35,8 @@ if (typeof window !== 'undefined' && (navigator.userAgent.includes('jsdom') || n
     unobserve() { return null; }
     disconnect() { return null; }
   };
+  // @ts-ignore
+  window.scrollTo = window.scrollTo || (() => {});
 }
 
 const rootElement = document.getElementById('root');
