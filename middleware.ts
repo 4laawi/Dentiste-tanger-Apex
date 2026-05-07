@@ -2,7 +2,7 @@
 
 
 export const config = {
-  matcher: '/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js).*)',
+  matcher: '/(.*)',
   runtime: 'edge',
 };
 
@@ -122,6 +122,15 @@ export function middleware(request: Request) {
 
   const url = new URL(request.url);
   const pathname = url.pathname;
+  
+  // Skip middleware for static assets even if bot is detected
+  const isAsset = pathname.match(/\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|txt|xml|map|woff2?|ttf|otf)$/i);
+
+  if (!isBot || isInternal || isAsset) {
+    // Continue with the request
+    return;
+  }
+
   const isEn = pathname.startsWith('/en');
   const lang = isEn ? 'en' : 'fr';
   const cleanPath = pathname.replace(/^\/en/, '') || '/';
