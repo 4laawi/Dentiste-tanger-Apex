@@ -70,17 +70,26 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
             <ContactSection t={t.contact} />
 
             <style>{`
+                .blog-content h2 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #005163;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                    font-family: 'Work Sans', sans-serif;
+                }
                 .blog-content h3 {
                     font-size: 1.5rem;
                     font-weight: 700;
                     color: #005163;
                     margin-top: 2rem;
+                    margin-bottom: 0.75rem;
                     font-family: 'Work Sans', sans-serif;
                 }
                 .blog-content p {
                     margin-bottom: 1.5rem;
                 }
-                .blog-content ul {
+                .blog-content ul, .blog-content ol {
                     list-style-type: disc;
                     padding-left: 1.5rem;
                     margin-bottom: 1.5rem;
@@ -90,6 +99,19 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
                 }
                 .blog-content strong {
                     color: #005163;
+                    font-weight: 700;
+                }
+                .seo-faq {
+                    background-color: #f8fafc;
+                    padding: 2rem;
+                    border-radius: 0.5rem;
+                    margin-top: 3rem;
+                    border-left: 4px solid #00D1FF;
+                }
+                .seo-faq h3 {
+                    margin-top: 0;
+                    color: #005163;
+                    font-size: 1.25rem;
                 }
             `}</style>
         </div>
