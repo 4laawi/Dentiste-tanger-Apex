@@ -113,6 +113,11 @@ export default async function handler(request: Request) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
+  // Safety: If the request is specifically for index.html, always passthrough
+  if (pathname === '/index.html') {
+    return fetch(new URL('/index.html', request.url));
+  }
+
   // If not a bot, serve the normal index.html with x-edge-hit header
   if (!isBot) {
     const response = await fetch(new URL('/index.html', request.url));
