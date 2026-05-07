@@ -246,12 +246,10 @@ export const TRANSLATIONS = {
       p3: "Using the latest CAD/CAM technology and pain-free laser solutions, we redefine what a dental visit feels like in Morocco."
     },
     smile: {
-      title_light: "Helping you",
-      title_bold: "Smile with Confidence",
-      desc1: "At Dr. Reda Saoui's clinic, <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>your expert dentist in Tangier</a>, we specialize in transforming smiles and lives. Whether you are dealing with complex orthodontic issues, missing teeth requiring implants, or aesthetic concerns like stained or chipped teeth, we provide world-class solutions.",
-      desc2: "Our approach integrates <b>Orthodontics</b> (Invisalign), <b>Implantology</b>, and <b>Cosmetic Dentistry</b> (Veneers) under one roof. We use digital smile design to plan your treatment, ensuring predictable, stunning results that harmonize with your face and personality.",
+      desc1: "At APEX, <a href='/en' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>your expert dentist in Tangier</a>, we specialize in transforming smiles and lives through high-tech care. Whether you are searching for a <strong>dental clinic in Tangier</strong> for complex orthodontic issues, missing teeth requiring <strong>dental implants in Morocco</strong>, or aesthetic concerns like stained teeth, we provide world-class solutions.",
+      desc2: "Our multidisciplinary approach integrates <b>Orthodontics</b> (Invisalign), <b>Implantology</b>, and <b>Cosmetic Dentistry</b> (Veneers) under one roof. As a leading <strong>dentist Tangier</strong>, Dr. Reda Saoui uses digital smile design to plan your treatment, ensuring predictable, stunning results that harmonize with your personality.",
       cta: "Schedule your consultation at",
-      cta_end: "and start your journey to a perfect smile."
+      cta_end: "and discover why we are the preferred choice for dental care in Northern Morocco."
     },
     faq: {
       title_bold: "Frequently Asked Questions",
@@ -891,11 +889,11 @@ export const TRANSLATIONS = {
     },
     smile: {
       title_light: "Vous aider à",
-      title_bold: "Sourire à Nouveau",
-      desc1: "À la clinique du Dr. Reda Saoui, <a href='/' class='underline decoration-brand-cyan hover:text-brand-cyan transition-colors'>votre expert dentiste à Tanger</a>, nous transformons bien plus que des sourires. Que vous souffriez de problèmes d'alignement complexes, de dents manquantes nécessitant des implants, ou de préoccupations esthétiques, nous apportons une solution d'excellence.",
-      desc2: "Notre approche intègre <b>l'Orthodontie</b> (Invisalign), <b>l'Implantologie</b> et la <b>Dentisterie Esthétique</b> sous un même toit. Nous utilisons le Digital Smile Design pour planifier votre traitement, garantissant des résultats prévisibles et harmonieux avec votre visage.",
-      cta: "Appelez-nous ou envoyez-nous un message au",
-      cta_end: "et commencez votre voyage vers un sourire parfait."
+      title_bold: "Sourire avec Confiance",
+      desc1: "Chez APEX, votre <strong>clinique dentaire à Tanger</strong> dirigée par le Dr Reda Saoui, nous transformons votre santé bucco-dentaire grâce aux technologies les plus avancées. Que vous recherchiez un <strong>dentiste Tanger</strong> expert pour des soins esthétiques, des implants ou une urgence, notre équipe vous accueille dans un environnement serein et moderne.",
+      desc2: "Notre expertise couvre l'<b>Orthodontie</b> (Invisalign), l'<b>Implantologie</b> de haute précision et la <b>Dentisterie Esthétique</b> (Facettes). En tant que centre de référence pour l'<strong>implant dentaire au Maroc</strong>, nous utilisons la conception numérique pour garantir des résultats naturels et durables.",
+      cta: "Prenez rendez-vous au",
+      cta_end: "et découvrez l'excellence des soins dentaires à Tanger."
     },
     faq: {
       title_bold: "Questions Fréquentes",

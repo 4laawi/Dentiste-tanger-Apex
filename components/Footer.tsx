@@ -58,9 +58,9 @@ const Footer: React.FC<Props> = ({ lang }) => {
           <div>
             <h4 className="text-2xl font-bold mb-6 text-brand-cyan">{t.services}</h4>
             <ul className="space-y-4 font-sans text-white/70">
-              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
-              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
-              <li><Link href={getLangPath('/#services')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
+              <li><Link href={getLangPath('/dental-implants-morocco')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
+              <li><Link href={getLangPath('/problemes-traites')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
+              <li><Link href={getLangPath('/problemes-traites')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
               <li><Link href={getLangPath('/urgence-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
             </ul>
           </div>
@@ -72,6 +72,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
               <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i2}</Link></li>
               <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
               <li><Link href={getLangPath('/contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
+              <li><Link href={getLangPath('/blog')} className="hover:text-brand-cyan transition-colors">Blog</Link></li>
             </ul>
           </div>
 

@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en',
       'fr': '/',
+      'x-default': '/',
     },
   },
   robots: {
@@ -52,18 +53,18 @@ export const viewport = {
   themeColor: '#6AE0F2',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ lang?: string }>;
 }>) {
-  // This is a global layout. In App Router, params might not be available in root layout
-  // if not using [lang] at root. We'll handle lang at page level or via middleware.
+  const { lang } = await params;
+  const currentLang = lang || 'fr';
   
   return (
-    <html lang="fr" className={`${sen.variable} ${workSans.variable} ${amiri.variable} ${karla.variable}`}>
+    <html lang={currentLang} className={`${sen.variable} ${workSans.variable} ${amiri.variable} ${karla.variable}`}>
       <body className="antialiased">
         {children}
       </body>

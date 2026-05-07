@@ -1,4 +1,5 @@
 "use client";import React from 'react';
+import Link from 'next/link';
 import TechSection from './TechSection.tsx';
 import FAQAccordion from './FAQAccordion.tsx';
 import ScheduleBanner from './ScheduleBanner.tsx';
@@ -357,7 +358,67 @@ const DentalImplantsView: React.FC<Props> = ({ t, lang }) => {
                     </div>
                 </section>
 
+                {/* Expert Insights Section - Topical Authority Flow */}
+                <section className="py-20 bg-white border-t border-neutral-100">
+                    <div className="container mx-auto px-4 md:px-12">
+                        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                            <div className="max-w-2xl">
+                                <h2 className="text-3xl md:text-5xl font-work font-bold text-black mb-4">
+                                    {lang === 'fr' ? 'Expertise & Conseils' : 'Expert Insights'}
+                                </h2>
+                                <p className="text-xl text-neutral-600">
+                                    {lang === 'fr' 
+                                        ? 'Consultez nos guides détaillés pour tout savoir sur les implants dentaires et la santé de votre sourire.'
+                                        : 'Explore our detailed guides to learn everything about dental implants and your smile health.'}
+                                </p>
+                            </div>
+                            <Link 
+                                href={lang === 'en' ? '/en/blog' : '/blog'}
+                                className="text-brand-cyan font-bold uppercase tracking-widest hover:translate-x-2 transition-transform flex items-center gap-2"
+                            >
+                                {lang === 'fr' ? 'Voir tout le blog' : 'View all posts'}
+                                <span className="text-2xl">→</span>
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <Link href={lang === 'en' ? '/en/blog/maintaining-smile-post-implant-care-tangier' : '/blog/implant-dentaire-tanger-entretien-longevite'}>
+                                <div className="group cursor-pointer">
+                                    <div className="aspect-video overflow-hidden rounded-sm mb-6 shadow-lg">
+                                        <img src="/implant.webp" alt="Post-Implant Care" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    </div>
+                                    <h3 className="text-2xl font-work font-bold text-black group-hover:text-brand-cyan transition-colors mb-3">
+                                        {lang === 'fr' ? 'Entretien & Longévité des Implants' : 'Post-Implant Care & Longevity'}
+                                    </h3>
+                                    <p className="text-neutral-600 leading-relaxed">
+                                        {lang === 'fr' 
+                                            ? 'Comment assurer le succès de vos implants dentaires sur le long terme ? Nos conseils d\'experts.'
+                                            : 'How to ensure the long-term success of your dental implants? Our expert advice.'}
+                                    </p>
+                                </div>
+                            </Link>
+
+                            <Link href={lang === 'en' ? '/en/blog/dental-tourism-tangier-quality-care' : '/blog/tourisme-dentaire-tanger-soins-luxe'}>
+                                <div className="group cursor-pointer">
+                                    <div className="aspect-video overflow-hidden rounded-sm mb-6 shadow-lg">
+                                        <img src="/Photo3.webp" alt="Dental Tourism" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    </div>
+                                    <h3 className="text-2xl font-work font-bold text-black group-hover:text-brand-cyan transition-colors mb-3">
+                                        {lang === 'fr' ? 'Tourisme Dentaire à Tanger' : 'Dental Tourism in Tangier'}
+                                    </h3>
+                                    <p className="text-neutral-600 leading-relaxed">
+                                        {lang === 'fr' 
+                                            ? 'Pourquoi des patients du monde entier choisissent APEX pour leurs implants dentaires au Maroc.'
+                                            : 'Why patients from around the world choose APEX for their dental implants in Morocco.'}
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 <FAQAccordion t={ut.faq} />
+
                 <Testimonials t={t.testimonials} />
                 <ScheduleBanner t={t.schedule_banner} lang={lang} />
                 <ContactSection t={t.contact} />

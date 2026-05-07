@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://apexdental.ma',
     languages: {
-      'en-US': 'https://apexdental.ma/en',
-      'fr-FR': 'https://apexdental.ma',
+      'en': 'https://apexdental.ma/en',
+      'fr': 'https://apexdental.ma',
     },
   },
   openGraph: {

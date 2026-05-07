@@ -56,7 +56,7 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
 
                         <img
                             src={post.image}
-                            alt={post.title}
+                            alt={post.imageAlt || post.title}
                             className="w-full aspect-video object-cover rounded-sm shadow-2xl"
                         />
 
@@ -64,9 +64,61 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
                             className="prose prose-lg max-w-none text-brand-dark/80 font-sans leading-relaxed space-y-6 blog-content"
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
+
+                        {/* Authority Flow: Relevant Services Box */}
+                        <div className="mt-16 p-8 bg-brand-dark text-white rounded-sm">
+                            <h3 className="text-2xl font-bold font-work mb-4">
+                                {lang === 'fr' ? 'Besoin de plus d\'informations ?' : 'Need more information?'}
+                            </h3>
+                            <p className="text-white/80 mb-6">
+                                {lang === 'fr' 
+                                    ? 'Découvrez nos solutions personnalisées pour votre santé bucco-dentaire à Tanger.'
+                                    : 'Discover our personalized solutions for your oral health in Tangier.'}
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {post.category.includes('Technologie') || post.category.includes('Technology') || post.category.includes('Guide') ? (
+                                    <>
+                                        <Link href={getLangPath('/')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
+                                            {lang === 'fr' ? 'Nos Technologies' : 'Our Technologies'}
+                                        </Link>
+                                        <Link href={getLangPath('/problemes-traites')} className="px-6 py-3 border border-white/20 text-white font-bold text-center hover:bg-white/10 transition-colors">
+                                            {lang === 'fr' ? 'Tous nos Soins' : 'All our Treatments'}
+                                        </Link>
+                                    </>
+                                ) : post.category.includes('Implant') || post.category.includes('Tourisme') || post.category.includes('Tourism') ? (
+                                    <>
+                                        <Link href={getLangPath('/dental-implants-morocco')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
+                                            {lang === 'fr' ? 'Implants Dentaires' : 'Dental Implants'}
+                                        </Link>
+                                        <Link href={getLangPath('/problemes-traites')} className="px-6 py-3 border border-white/20 text-white font-bold text-center hover:bg-white/10 transition-colors">
+                                            {lang === 'fr' ? 'Esthétique Dentaire' : 'Cosmetic Dentistry'}
+                                        </Link>
+                                    </>
+                                ) : post.category.includes('Urgence') || post.category.includes('Emergency') ? (
+                                    <>
+                                        <Link href={getLangPath('/urgence-dentaire-tanger')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
+                                            {lang === 'fr' ? 'SOS Urgence Dentaire' : 'Emergency Dental Care'}
+                                        </Link>
+                                        <Link href={getLangPath('/contact')} className="px-6 py-3 border border-white/20 text-white font-bold text-center hover:bg-white/10 transition-colors">
+                                            {lang === 'fr' ? 'Nous Contacter' : 'Contact Us'}
+                                        </Link>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link href={getLangPath('/problemes-traites')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
+                                            {lang === 'fr' ? 'Voir nos Services' : 'View our Services'}
+                                        </Link>
+                                        <Link href={getLangPath('/')} className="px-6 py-3 border border-white/20 text-white font-bold text-center hover:bg-white/10 transition-colors">
+                                            {lang === 'fr' ? 'Retour à l\'Accueil' : 'Back to Home'}
+                                        </Link>
+                                    </>
+                                )}
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </div>
+
             <ContactSection t={t.contact} />
 
             <style>{`

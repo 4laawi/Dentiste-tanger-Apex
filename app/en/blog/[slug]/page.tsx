@@ -4,6 +4,7 @@ import { BLOG_POSTS } from "@/blogData";
 import ClientPageLayout from "@/components/ClientPageLayout";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getBlogPostJsonLd } from "@/lib/jsonld";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.en.map((post) => ({
@@ -25,6 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.seoDescription,
       images: [{ url: post.image }],
     },
+    alternates: {
+      canonical: `/en/blog/${slug}`,
+      languages: {
+        'fr': `/blog/${slug}`,
+        'en': `/en/blog/${slug}`,
+      },
+    },
   };
 }
 
@@ -40,6 +48,10 @@ export default async function BlogPostPageEN({ params }: { params: Promise<{ slu
 
   return (
     <ClientPageLayout lang={lang} t={t} currentView="blog">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBlogPostJsonLd(post, lang)) }}
+      />
       <BlogPostView t={t} lang={lang} post={post} />
     </ClientPageLayout>
   );

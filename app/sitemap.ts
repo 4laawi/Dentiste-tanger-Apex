@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/urgence-dentaire-tanger',
     '/dental-implants-morocco',
+    '/english-speaking-dentist-tangier',
     '/en',
     '/en/about',
     '/en/problemes-traites',
