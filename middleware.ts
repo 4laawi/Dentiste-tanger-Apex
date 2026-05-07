@@ -2,7 +2,7 @@
 
 
 export const config = {
-  matcher: '/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js|.*\\.html).*)',
+  matcher: '/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js).*)',
   runtime: 'edge',
 };
 
@@ -113,9 +113,9 @@ export function middleware(request: Request) {
     'slackbot', 'vkShare', 'W3C_Validator', 'whatsapp', 'telegrambot', 'threads'
   ];
 
-  const isBot = bots.some(bot => userAgent.toLowerCase().includes(bot));
+  const isInternal = request.headers.get('x-internal-fetch') === 'true';
 
-  if (!isBot) {
+  if (!isBot || isInternal) {
     // Continue with the request
     return;
   }
@@ -175,7 +175,9 @@ export function middleware(request: Request) {
   const ogImage = metadata.image.startsWith('http') ? metadata.image : `${SITE_URL}${metadata.image}`;
 
   // Inject meta tags into index.html
-  return fetch(new URL('/index.html', request.url))
+  return fetch(new URL('/index.html', request.url), {
+    headers: { 'x-internal-fetch': 'true' }
+  })
     .then(async (response) => {
       let html = await response.text();
       console.log(`[Middleware] index.html fetched, length: ${html.length}`);
