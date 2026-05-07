@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+// No imports needed for standard Request/Response in Edge Runtime
+
 
 export const config = {
   matcher: '/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js|.*\\.html).*)',
@@ -104,7 +104,7 @@ const BLOG_POSTS: Record<string, any[]> = {
   ]
 };
 
-export function middleware(request: NextRequest) {
+export function middleware(request: Request) {
   const userAgent = request.headers.get('user-agent') || '';
   const bots = [
     'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot',
@@ -116,10 +116,12 @@ export function middleware(request: NextRequest) {
   const isBot = bots.some(bot => userAgent.toLowerCase().includes(bot));
 
   if (!isBot) {
-    return NextResponse.next();
+    // Continue with the request
+    return;
   }
 
-  const { pathname } = request.nextUrl;
+  const url = new URL(request.url);
+  const pathname = url.pathname;
   const isEn = pathname.startsWith('/en');
   const lang = isEn ? 'en' : 'fr';
   const cleanPath = pathname.replace(/^\/en/, '') || '/';
@@ -199,5 +201,9 @@ export function middleware(request: NextRequest) {
         headers: { 'content-type': 'text/html; charset=UTF-8' },
       });
     })
-    .catch(() => NextResponse.next());
+    .catch(() => {
+        // Fallback to continue with the request if fetch fails
+        return;
+    });
 }
+

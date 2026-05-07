@@ -10,7 +10,8 @@ The middleware intercepts requests from known bots and crawlers:
 1.  **Detection**: It checks the `User-Agent` header for bot identifiers.
 2.  **Metadata Mapping**: It determines the correct `title`, `description`, and `og:image` based on the request path (supporting both French and English `/en/` routes).
 3.  **Server-Side Injection**: It fetches the base `index.html`, injects the relevant meta tags directly into the `<head>` section, and returns the modified HTML to the bot.
-4.  **Passthrough**: Requests from regular users are passed through untouched, allowing the SPA to function as normal.
+4.  **Passthrough**: Requests from regular users are passed through untouched.
+5.  **Standards-Based**: The middleware uses standard Web APIs (`Request`, `Response`, `fetch`) and does not depend on the `next` package, making it compatible with this Vite project.
 
 ## Supported Routes
 
