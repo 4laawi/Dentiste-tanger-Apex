@@ -1,21 +1,20 @@
-# Deployment & SEO Middleware
+# Deployment & SEO Edge Function
 
-This project includes a Vercel Edge Middleware (`middleware.ts`) designed to enhance SEO and social media previews for the Single Page Application (SPA).
+This project uses a Vercel Edge Function (`api/index.ts`) to provide server-side SEO rendering for social media bots and search engine crawlers.
 
-## What the Middleware Does
+## Architecture
 
-Since the application is a React SPA, most metadata is usually handled client-side via `react-helmet-async`. However, many social media crawlers (WhatsApp, Facebook, Twitter, LinkedIn) and some search engines do not execute JavaScript, which can result in poor previews or incomplete indexing.
+Since the application is a Vite-based SPA, standard `middleware.ts` is not automatically detected. Instead, we use a catch-all rewrite in `vercel.json` that routes all page requests through an Edge Function.
 
-The middleware intercepts requests from known bots and crawlers:
-1.  **Detection**: It checks the `User-Agent` header for bot identifiers.
-2.  **Metadata Mapping**: It determines the correct `title`, `description`, and `og:image` based on the request path (supporting both French and English `/en/` routes).
-3.  **Server-Side Injection**: It fetches the base `index.html`, injects the relevant meta tags directly into the `<head>` section, and returns the modified HTML to the bot.
-4.  **Passthrough**: Requests from regular users are passed through untouched.
-5.  **Standards-Based**: The middleware uses standard Web APIs (`Request`, `Response`, `fetch`) and does not depend on the `next` package, making it compatible with this Vite project.
+1.  **Routing**: `vercel.json` routes all non-asset requests to `/api/index`.
+2.  **Detection**: The Edge Function checks the `User-Agent` for bots.
+3.  **Regular Users**: For normal browsers, the function fetches and returns the static `index.html`.
+4.  **Bots**: For crawlers, the function fetches `index.html`, injects the appropriate meta tags (Title, Description, Open Graph, Twitter), and returns the modified HTML.
+5.  **Headers**: Every response handled by the function includes `x-edge-hit: true`.
 
 ## Supported Routes
 
-The middleware currently provides specific metadata for:
+The Edge Function provides specific metadata for:
 - Home (`/` and `/en`)
 - About (`/about`)
 - Problems We Treat (`/problemes-traites`)
@@ -29,21 +28,16 @@ The middleware currently provides specific metadata for:
 
 ## How to Test
 
-You can test the middleware locally or on a deployed environment using `curl` by spoofing a bot's User-Agent.
+You can verify the Edge Function is running by checking for the `x-edge-hit` header in any page request.
 
-### Testing the Home Page (French)
+### Testing a Regular Request
 ```bash
-curl -H "User-Agent: WhatsApp/2.21.12.21 A" https://apexdental.ma/ -v
+curl -I https://apexdental.ma/
 ```
+Look for `x-edge-hit: true`.
 
-### Testing the About Page (English)
+### Testing a Bot Request
 ```bash
-curl -H "User-Agent: facebookexternalhit/1.1" https://apexdental.ma/en/about -v
+curl -A "WhatsApp/2.0" -v https://apexdental.ma/
 ```
-
-### Testing a Blog Post
-```bash
-curl -H "User-Agent: Twitterbot/1.1" https://apexdental.ma/blog/avenir-dentisterie-numerique-tanger -v
-```
-
-Look for the `<!-- Server-Side Injected SEO for Bots -->` comment in the `<head>` of the returned HTML to verify it's working.
+Look for `x-edge-hit: true`, `x-bot-detected: true`, and the `<!-- Server-Side Injected SEO for Bots (Edge Function) -->` comment in the HTML.

@@ -1,20 +1,9 @@
 {
     "cleanUrls": true,
-    "headers": [
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "no-store, must-revalidate"
-                }
-            ]
-        }
-    ],
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+            "source": "/((?!api|_next/static|_next/image|favicon.ico|.*\\.png|.*\\.webp|.*\\.jpg|.*\\.svg|.*\\.css|.*\\.js|.*\\.html).*)",
+            "destination": "/api/index"
         }
     ]
 }

@@ -1,8 +1,4 @@
-// No imports needed for standard Request/Response in Edge Runtime
-
-
 export const config = {
-  matcher: '/(.*)',
   runtime: 'edge',
 };
 
@@ -104,7 +100,7 @@ const BLOG_POSTS: Record<string, any[]> = {
   ]
 };
 
-export function middleware(request: Request) {
+export default async function handler(request: Request) {
   const userAgent = request.headers.get('user-agent') || '';
   const bots = [
     'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot',
@@ -113,22 +109,20 @@ export function middleware(request: Request) {
     'slackbot', 'vkShare', 'W3C_Validator', 'whatsapp', 'telegrambot', 'threads'
   ];
 
-  const isInternal = request.headers.get('x-internal-fetch') === 'true';
-
-  if (!isBot || isInternal) {
-    // Continue with the request
-    return;
-  }
-
+  const isBot = bots.some(bot => userAgent.toLowerCase().includes(bot));
   const url = new URL(request.url);
   const pathname = url.pathname;
-  
-  // Skip middleware for static assets even if bot is detected
-  const isAsset = pathname.match(/\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|txt|xml|map|woff2?|ttf|otf)$/i);
 
-  if (!isBot || isInternal || isAsset) {
-    // Continue with the request
-    return;
+  // If not a bot, serve the normal index.html with x-edge-hit header
+  if (!isBot) {
+    const response = await fetch(new URL('/index.html', request.url));
+    const newHeaders = new Headers(response.headers);
+    newHeaders.set('x-edge-hit', 'true');
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: newHeaders,
+    });
   }
 
   const isEn = pathname.startsWith('/en');
@@ -177,61 +171,47 @@ export function middleware(request: Request) {
     metadata.description = SEO_DATA[lang].dental_implants.description;
   }
 
-  console.log(`[Middleware] Bot detected: ${userAgent} | Path: ${pathname}`);
-  console.log(`[Middleware] Metadata:`, JSON.stringify(metadata));
-
-  // Ensure absolute image URL
   const ogImage = metadata.image.startsWith('http') ? metadata.image : `${SITE_URL}${metadata.image}`;
 
-  // Inject meta tags into index.html
-  return fetch(new URL('/index.html', request.url), {
-    headers: { 'x-internal-fetch': 'true' }
-  })
-    .then(async (response) => {
-      let html = await response.text();
-      console.log(`[Middleware] index.html fetched, length: ${html.length}`);
+  try {
+    const response = await fetch(new URL('/index.html', request.url));
+    let html = await response.text();
 
-      const metaTags = [
-        '<!-- Server-Side Injected SEO for Bots -->',
-        `<title>${metadata.title}</title>`,
-        `<meta name="description" content="${metadata.description}" />`,
-        `<link rel="canonical" href="${metadata.url}" />`,
-        '<meta property="og:site_name" content="APEX Dental Clinic" />',
-        `<meta property="og:title" content="${metadata.title}" />`,
-        `<meta property="og:description" content="${metadata.description}" />`,
-        `<meta property="og:image" content="${ogImage}" />`,
-        `<meta property="og:url" content="${metadata.url}" />`,
-        '<meta property="og:type" content="website" />',
-        '<meta name="twitter:card" content="summary_large_image" />',
-        `<meta name="twitter:title" content="${metadata.title}" />`,
-        `<meta name="twitter:description" content="${metadata.description}" />`,
-        `<meta name="twitter:image" content="${ogImage}" />`
-      ].join('\n    ');
+    const metaTags = [
+      '<!-- Server-Side Injected SEO for Bots (Edge Function) -->',
+      `<title>${metadata.title}</title>`,
+      `<meta name="description" content="${metadata.description}" />`,
+      `<link rel="canonical" href="${metadata.url}" />`,
+      '<meta property="og:site_name" content="APEX Dental Clinic" />',
+      `<meta property="og:title" content="${metadata.title}" />`,
+      `<meta property="og:description" content="${metadata.description}" />`,
+      `<meta property="og:image" content="${ogImage}" />`,
+      `<meta property="og:url" content="${metadata.url}" />`,
+      '<meta property="og:type" content="website" />',
+      '<meta name="twitter:card" content="summary_large_image" />',
+      `<meta name="twitter:title" content="${metadata.title}" />`,
+      `<meta name="twitter:description" content="${metadata.description}" />`,
+      `<meta name="twitter:image" content="${ogImage}" />`
+    ].join('\n    ');
 
-      // Remove existing title and description to avoid duplicates
-      html = html.replace(/<title>.*?<\/title>/gi, '');
-      html = html.replace(/<meta name="description" content=".*?"\s*\/?>/gi, '');
+    // Remove existing title and description
+    html = html.replace(/<title>.*?<\/title>/gi, '');
+    html = html.replace(/<meta name="description" content=".*?"\s*\/?>/gi, '');
 
-      // Insert before </head> (case-insensitive)
-      const headEndIndex = html.toLowerCase().indexOf('</head>');
-      if (headEndIndex !== -1) {
-        html = html.slice(0, headEndIndex) + metaTags + '\n  ' + html.slice(headEndIndex);
-        console.log('[Middleware] Successfully injected meta tags');
-      } else {
-        console.warn('[Middleware] Could not find </head> tag in index.html');
-      }
+    // Insert before </head>
+    const headEndIndex = html.toLowerCase().indexOf('</head>');
+    if (headEndIndex !== -1) {
+      html = html.slice(0, headEndIndex) + metaTags + '\n  ' + html.slice(headEndIndex);
+    }
 
-      return new Response(html, {
-        headers: { 
-          'content-type': 'text/html; charset=UTF-8',
-          'x-middleware-hit': 'true',
-          'x-bot-detected': userAgent.split(' ')[0]
-        },
-      });
-    })
-    .catch((err) => {
-        console.error('[Middleware] Error fetching index.html:', err);
-        return;
+    return new Response(html, {
+      headers: { 
+        'content-type': 'text/html; charset=UTF-8',
+        'x-edge-hit': 'true',
+        'x-bot-detected': 'true'
+      },
     });
+  } catch (err) {
+    return new Response('Internal Server Error', { status: 500 });
+  }
 }
-
