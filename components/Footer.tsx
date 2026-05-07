@@ -70,7 +70,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
             <ul className="space-y-4 font-sans text-white/70">
               <li><Link href={getLangPath('/dentiste-reda-saoui')} className="hover:text-brand-cyan transition-colors">{t.i1}</Link></li>
               <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i2}</Link></li>
-              <li><Link href={getLangPath('/about')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
+              <li><Link href={getLangPath('/#technologies')} className="hover:text-brand-cyan transition-colors">{t.i3}</Link></li>
               <li><Link href={getLangPath('/contact')} className="hover:text-brand-cyan transition-colors">{t.i4}</Link></li>
               <li><Link href={getLangPath('/blog')} className="hover:text-brand-cyan transition-colors">Blog</Link></li>
             </ul>

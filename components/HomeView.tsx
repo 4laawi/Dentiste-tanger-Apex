@@ -43,6 +43,13 @@ const HomeView: React.FC<Props> = ({
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
+    } else if (hash === '#technologies') {
+      const element = document.getElementById('technologies');
+      if (element) {
+        const yOffset = -100; // Adjust for fixed navbar
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     } else if (hash === '#contact-team') {
       const element = document.getElementById('contact-team');
       if (element) {
@@ -356,7 +363,7 @@ const HomeView: React.FC<Props> = ({
       </section >
 
       {/* 6. Technologies Section Parallax */}
-      < section ref={comfortParallax.containerRef} className="parallax-section bg-white py-12 md:py-24 lg:py-0" >
+      < section id="technologies" ref={comfortParallax.containerRef} className="parallax-section bg-white py-12 md:py-24 lg:py-0" >
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-10 md:gap-20 items-start">
             <div ref={comfortParallax.targetRef} className="lg:w-1/2">
