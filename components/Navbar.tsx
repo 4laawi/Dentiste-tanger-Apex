@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { PHONE } from '../constants.tsx';
 import { motion, AnimatePresence } from 'framer-motion';
 import AboutDropdown from './AboutDropdown.tsx';
@@ -82,7 +82,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
   const isProblemsActive = pathname === getLangPath('/problemes-traites');
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled || activeDropdown ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed top-0 left-0 right-0 transition-all duration-700 ${isOpen ? 'z-[110]' : 'z-50'} ${isOpen ? 'bg-transparent' : (scrolled || activeDropdown ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4')}`}>
       <div className="w-[95%] mx-auto flex items-center justify-between">
 
         {/* Left Side: Logo */}
@@ -98,7 +98,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
         </div>
 
         {/* Right Side: Desktop Menu */}
-        <div className="sr-safe-hidden lg:sr-safe-visible lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10">
           <div className="flex items-center gap-8">
             <div className="relative">
               <button
@@ -202,15 +202,32 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
         </div>
 
         {/* Mobile Controls */}
-        <div className="lg:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-2 sm:gap-4">
           <button
             onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-            className="text-white/80 font-bold uppercase text-sm hover:text-brand-cyan transition-colors"
+            className="text-white/80 font-bold uppercase text-xs sm:text-sm hover:text-brand-cyan transition-colors px-2 py-1"
           >
             {lang === 'fr' ? 'EN' : 'FR'}
           </button>
-          <button className="text-brand-cyan p-2" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? (lang === 'fr' ? "Fermer le menu" : "Close menu") : (lang === 'fr' ? "Ouvrir le menu" : "Open menu")}>
-            {isOpen ? <X size={36} strokeWidth={1.5} /> : <Menu size={36} strokeWidth={1.5} />}
+          <button 
+            className="text-brand-cyan p-2 relative z-[110]" 
+            onClick={() => setIsOpen(!isOpen)} 
+            aria-label={isOpen ? (lang === 'fr' ? "Fermer le menu" : "Close menu") : (lang === 'fr' ? "Ouvrir le menu" : "Open menu")}
+          >
+            <div className="relative w-8 h-8 flex items-center justify-center">
+              <motion.span
+                animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -8 }}
+                className="absolute w-8 h-0.5 bg-current rounded-full"
+              />
+              <motion.span
+                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="absolute w-8 h-0.5 bg-current rounded-full"
+              />
+              <motion.span
+                animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 8 }}
+                className="absolute w-8 h-0.5 bg-current rounded-full"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -254,60 +271,110 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
       {typeof document !== 'undefined' && createPortal(
         <AnimatePresence>
           {isOpen && (
-            <motion.div initial={{ opacity: 0, x: '100%' }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: '100%' }} className="lg:hidden fixed inset-0 bg-black z-[100] overflow-y-auto">
-              <div className="p-6 flex flex-col min-h-full">
-                <div className="flex justify-between items-center mb-12">
-                  <span className="text-white font-work font-bold text-xl uppercase tracking-tighter">APEX</span>
-                  <button onClick={() => setIsOpen(false)} className="text-brand-cyan"><X size={40} /></button>
-                </div>
-                <div className="flex flex-col gap-8 flex-1">
-                  <Link href={getLangPath('/')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.home}</Link>
-                  <Link href={getLangPath('/about')} onClick={() => handleLinkClick('/about')} className={`text-3xl font-work text-left ${pathname === getLangPath('/about') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.about.label}</Link>
-                  <Link href={getLangPath('/#services')} onClick={() => handleLinkClick('/')} className="text-white text-3xl font-work text-left">{nt.services.label}</Link>
-                  <Link href={getLangPath('/problemes-traites')} onClick={() => handleLinkClick('/problemes-traites')} className={`text-3xl font-work text-left ${pathname === getLangPath('/problemes-traites') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.problems}</Link>
-                  <Link href={getLangPath('/urgence-dentaire-tanger')} onClick={() => handleLinkClick('/urgence-dentaire-tanger')} className={`text-3xl font-work text-left ${pathname === getLangPath('/urgence-dentaire-tanger') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.urgence}</Link>
-                  <Link href={getLangPath('/contact')} onClick={() => handleLinkClick('/contact')} className={`text-3xl font-work text-left ${pathname === getLangPath('/contact') ? 'text-brand-cyan font-bold' : 'text-white'}`}>{nt.contact_label}</Link>
-                  <Link href={getLangPath('/blog')} onClick={() => handleLinkClick('/blog')} className={`text-3xl font-work text-left ${pathname === getLangPath('/blog') ? 'text-brand-cyan font-bold' : 'text-white'}`}>Blog</Link>
-
-                  <div className="mt-8 pt-8 border-t border-white/10">
-                    <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group relative h-12 overflow-hidden">
-                      <AnimatePresence mode="wait">
-                        {!showUrgency ? (
-                          <motion.div
-                            key="phone-mobile"
-                            initial={{ y: 40, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -40, opacity: 0 }}
-                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                            className="flex items-center gap-4"
-                          >
-                            <div className="w-12 h-12 rounded-full bg-brand-cyan/10 flex items-center justify-center">
-                              <Phone size={24} className="text-brand-cyan" fill="currentColor" />
-                            </div>
-                            <span className="text-white font-work font-bold text-2xl tracking-tight">{PHONE}</span>
-                          </motion.div>
-                        ) : (
-                          <motion.div
-                            key="urgency-mobile"
-                            initial={{ y: 40, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -40, opacity: 0 }}
-                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                            className="flex items-center"
-                          >
-                            <span className="text-red-500 font-work font-black text-2xl uppercase tracking-tighter">
-                              {lang === 'fr' ? 'urgences 24/7' : 'emergencies 24/7'}
-                            </span>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </a>
+            <>
+              <motion.div 
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                exit={{ opacity: 0 }} 
+                onClick={() => setIsOpen(false)}
+                className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[90]" 
+              />
+              <motion.div 
+                initial={{ x: '100%' }} 
+                animate={{ x: 0 }} 
+                exit={{ x: '100%' }} 
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="lg:hidden fixed inset-y-0 right-0 w-[85%] max-w-md bg-black border-l border-white/10 z-[100] flex flex-col shadow-2xl"
+              >
+                <div className="p-8 flex flex-col h-full">
+                  <div className="flex justify-end items-center mb-12 lg:hidden">
+                    {/* The close button is handled by the dynamic Navbar z-index above, 
+                        but we keep this spacing to match the header height */}
+                    <div className="h-10" />
                   </div>
 
+                  <nav className="flex flex-col gap-6 flex-1 overflow-y-auto pr-4 custom-scrollbar">
+                    {[
+                      { label: nt.home, href: '/' },
+                      { 
+                        label: lang === 'fr' ? 'À Propos' : 'About', 
+                        href: '/about',
+                        subItems: [
+                          { label: lang === 'fr' ? 'Notre Clinique' : 'Our Clinic', href: '/about' },
+                          { label: lang === 'fr' ? 'Dentiste Anglophone' : 'English Dentist', href: '/english-speaking-dentist-tangier' },
+                          { label: lang === 'fr' ? 'Dr. Reda Saoui' : 'Dr. Reda Saoui', href: '/dentiste-reda-saoui' }
+                        ]
+                      },
+                      { 
+                        label: 'Services', 
+                        href: '/#services',
+                        subItems: [
+                          { label: lang === 'fr' ? 'Implants Dentaires' : 'Dental Implants', href: '/dental-implants-morocco' },
+                          { label: lang === 'fr' ? 'Esthétique Dentaire' : 'Cosmetic Dentistry', href: '/#services' },
+                          { label: lang === 'fr' ? 'Soins Généraux' : 'General Care', href: '/#services' }
+                        ]
+                      },
+                      { label: nt.problems, href: '/problemes-traites' },
+                      { label: nt.urgence, href: '/urgence-dentaire-tanger', important: true },
+                      { label: 'Blog', href: '/blog' },
+                      { label: 'Contact', href: '/contact' },
+                    ].map((item, idx) => (
+                      <motion.div 
+                        key={idx}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 + idx * 0.05 }}
+                        className="flex flex-col gap-4"
+                      >
+                        <Link 
+                          href={getLangPath(item.href)} 
+                          onClick={() => handleLinkClick(item.href)}
+                          className={`text-2xl font-work font-medium ${item.important ? 'text-red-500' : 'text-white'} hover:text-brand-cyan transition-colors flex items-center justify-between group`}
+                        >
+                          {item.label}
+                          <ChevronRight size={20} className="text-white/20 group-hover:text-brand-cyan transition-colors" />
+                        </Link>
+                        
+                        {item.subItems && (
+                          <div className="flex flex-col gap-3 pl-4 border-l border-white/5">
+                            {item.subItems.map((sub, sIdx) => (
+                              <Link 
+                                key={sIdx}
+                                href={getLangPath(sub.href)}
+                                onClick={() => handleLinkClick(sub.href)}
+                                className="text-lg font-work font-light text-white/60 hover:text-brand-cyan transition-colors"
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </motion.div>
+                    ))}
+                  </nav>
 
+                  <div className="mt-auto pt-8 border-t border-white/10 flex flex-col gap-6">
+                    <a href={`tel:${PHONE.replace(/\D/g, '')}`} className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-full bg-brand-cyan flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Phone size={24} className="text-black" fill="currentColor" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-white/50 text-xs uppercase tracking-widest">{lang === 'fr' ? 'Appelez-nous' : 'Call Us'}</span>
+                        <span className="text-white font-work font-bold text-xl tracking-tight">{PHONE}</span>
+                      </div>
+                    </a>
+
+                    <Link
+                      href={getLangPath('/contact')}
+                      onClick={() => handleLinkClick('/contact')}
+                      className="w-full bg-brand-cyan text-black py-4 font-work font-bold text-center tracking-tight hover:bg-white transition-all shadow-lg"
+                    >
+                      {nt.schedule}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>,
         document.body
