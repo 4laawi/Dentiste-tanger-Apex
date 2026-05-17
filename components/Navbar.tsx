@@ -301,8 +301,8 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                         href: '/about',
                         subItems: [
                           { label: lang === 'fr' ? 'Notre Clinique' : 'Our Clinic', href: '/about' },
-                          { label: lang === 'fr' ? 'Dentiste Anglophone' : 'English Dentist', href: '/english-speaking-dentist-tangier' },
-                          { label: lang === 'fr' ? 'Dr. Reda Saoui' : 'Dr. Reda Saoui', href: '/dentiste-reda-saoui' }
+                          { label: lang === 'fr' ? 'Dentiste Anglophone' : 'English Dentist', href: lang === 'fr' ? '/dentiste-anglophone-tanger' : '/english-speaking-dentist-tangier' },
+                          { label: lang === 'fr' ? 'Dr. Reda Saoui' : 'Dr. Reda Saoui', href: lang === 'fr' ? '/dentiste-reda-saoui' : '/dr-reda-saoui-dentist' }
                         ]
                       },
                       { 

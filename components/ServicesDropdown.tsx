@@ -16,11 +16,11 @@ interface Props {
 const ServicesDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t, setSelectedService }) => {
     const expertise = t.expertise;
     const menuItems = [
-        { label: expertise.facettes, path: '/#services' },
-        { label: expertise.aligneurs, path: '/#services' },
+        { label: expertise.facettes, path: lang === 'fr' ? '/facettes-dentaires-tanger' : '/#services' },
+        { label: expertise.aligneurs, path: lang === 'fr' ? '/invisalign-tanger' : '/#services' },
         { label: expertise.couronnes, path: '/#services' },
-        { label: expertise.blanchimentFlash, path: '/#services' },
-        { label: expertise.implant, path: '/dental-implants-morocco' },
+        { label: expertise.blanchimentFlash, path: lang === 'fr' ? '/blanchiment-dentaire-tanger' : '/#services' },
+        { label: expertise.implant, path: lang === 'fr' ? '/implants-dentaires-tanger' : '/dental-implants-morocco' },
         { label: expertise.pedodontie, path: '/#services' },
         { label: expertise.traitementsCanalaires, path: '/#services' },
         { label: expertise.parodontie, path: '/#services' },

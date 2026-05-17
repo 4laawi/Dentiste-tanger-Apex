@@ -7,10 +7,11 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.doctor.title,
   description: TRANSLATIONS.en.seo.doctor.description,
   alternates: {
-    canonical: '/en/dentiste-reda-saoui',
+    canonical: '/en/dr-reda-saoui-dentist',
     languages: {
-      'en': '/en/dentiste-reda-saoui',
+      'en': '/en/dr-reda-saoui-dentist',
       'fr': '/dentiste-reda-saoui',
+      'x-default': '/dentiste-reda-saoui',
     },
   },
 };

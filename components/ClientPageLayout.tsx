@@ -5,9 +5,13 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ContactFloatingButton from './ContactFloatingButton';
 import MobileActionBar from './MobileActionBar';
-import ProblemsOverlay from './ProblemsOverlay';
+import dynamic from 'next/dynamic';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter, usePathname } from 'next/navigation';
+
+const ProblemsOverlay = dynamic(() => import('./ProblemsOverlay'), {
+  ssr: false
+});
 
 interface Props {
   children: React.ReactNode;

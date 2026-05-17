@@ -132,7 +132,7 @@ export const TRANSLATIONS = {
     },
     hero: {
       tag: "APEX Dental Clinic - Tangier",
-      title_part1: "Redefining Your Smile",
+      title_part1: "Expert Dentist",
       title_part2: "in Tangier",
       desc: "Experience world-class dental care at APEX Dental Clinic, your premier center for high-tech dentistry in Tangier. Under the expert guidance of Dr. Reda Saoui, we combine innovation, artistic precision, and patient-centered care to transform your oral health and confidence.",
       cta_schedule: "Book Now",
@@ -774,7 +774,7 @@ export const TRANSLATIONS = {
     },
     hero: {
       tag: "APEX Dental Clinic - Tanger",
-      title_part1: "Redessinez Votre Sourire",
+      title_part1: "Dentiste Expert",
       title_part2: "à Tanger",
       desc: "Vivez une expérience de soins dentaires d'exception chez APEX Dental Clinic, votre centre de référence en dentisterie de haute technologie à Tanger. Sous la direction experte du Dr Reda Saoui, nous combinons innovation, précision artistique et approche humaine pour transformer votre santé bucco-dentaire.",
       cta_schedule: "Prendre RDV",

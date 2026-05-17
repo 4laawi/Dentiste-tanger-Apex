@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/dentiste-reda-saoui',
     languages: {
-      'en': '/en/dentiste-reda-saoui',
+      'en': '/en/dr-reda-saoui-dentist',
       'fr': '/dentiste-reda-saoui',
+      'x-default': '/dentiste-reda-saoui',
     },
   },
 };

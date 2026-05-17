@@ -189,7 +189,7 @@ const HomeView: React.FC<Props> = ({
                 </ul>
                 <div className="pt-6 md:pt-10">
                   <Link
-                    href={getLangPath('/dentiste-reda-saoui')}
+                    href={lang === 'fr' ? '/dentiste-reda-saoui' : '/en/dr-reda-saoui-dentist'}
                     className="inline-block bg-brand-dark text-brand-cyan px-8 py-3 md:px-10 md:py-4 font-bold uppercase hover:bg-brand-cyan hover:text-black transition-all rounded-none"
                   >
                     {t.know_doctor.cta}
@@ -311,7 +311,7 @@ const HomeView: React.FC<Props> = ({
             const isLast = i === expertiseItems.length - 1;
             const isImplant = item.img.includes('implant.webp'); // Identify implant item by image or title
 
-            const CardContent = () => (
+            const cardContent = (
               <>
                 <img
                   src={item.img}
@@ -338,7 +338,7 @@ const HomeView: React.FC<Props> = ({
               >
                 {isImplant ? (
                   <Link href={getLangPath('/dental-implants-morocco')} className="block w-full h-full">
-                    <CardContent />
+                    {cardContent}
                   </Link>
                 ) : (
                   <div
@@ -353,7 +353,7 @@ const HomeView: React.FC<Props> = ({
                       }
                     }}
                   >
-                    <CardContent />
+                    {cardContent}
                   </div>
                 )}
               </div>

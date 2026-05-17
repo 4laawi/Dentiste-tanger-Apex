@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en/problemes-traites',
       'fr': '/problemes-traites',
+    
+      'x-default': '/problemes-traites',
     },
   },
 };

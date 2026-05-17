@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://apexdental.ma/en',
       'fr': 'https://apexdental.ma',
+    
+      'x-default': 'https://apexdental.ma',
     },
   },
   openGraph: {

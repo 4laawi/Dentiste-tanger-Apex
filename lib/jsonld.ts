@@ -62,7 +62,7 @@ export function getBlogPostJsonLd(post: any, lang: 'en' | 'fr') {
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": `${baseUrl}${lang === 'en' ? '/en' : ''}/dentiste-reda-saoui`
+      "url": `${baseUrl}${lang === 'en' ? '/en/dr-reda-saoui-dentist' : '/dentiste-reda-saoui'}`
     },
     "publisher": {
       "@type": "Organization",

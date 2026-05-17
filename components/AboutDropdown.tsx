@@ -15,8 +15,8 @@ interface Props {
 const AboutDropdown: React.FC<Props> = ({ isOpen, onClose, onLinkClick, lang, t }) => {
     const menuItems = [
         { label: lang === 'fr' ? 'À propos' : 'About', path: '/about' },
-        { label: lang === 'fr' ? 'English Speaking Dentist' : 'English Speaking Dentist', path: '/english-speaking-dentist-tangier' },
-        { label: lang === 'fr' ? 'Rencontrer le Dr. Reda Saoui' : 'Meet Dr. Reda Saoui', path: '/dentiste-reda-saoui' },
+        { label: lang === 'fr' ? 'Dentiste Anglophone' : 'English Speaking Dentist', path: lang === 'fr' ? '/dentiste-anglophone-tanger' : '/english-speaking-dentist-tangier' },
+        { label: lang === 'fr' ? 'Rencontrer le Dr. Reda Saoui' : 'Meet Dr. Reda Saoui', path: lang === 'fr' ? '/dentiste-reda-saoui' : '/dr-reda-saoui-dentist' },
         { label: lang === 'fr' ? 'Blog' : 'Blog', path: '/blog' },
         { label: lang === 'fr' ? 'Technologie' : 'Technology', path: '/#technologies' },
         { label: lang === 'fr' ? 'Horaires et location' : 'Hours and Location', path: '#contact' },

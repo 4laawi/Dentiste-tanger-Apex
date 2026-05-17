@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en/urgence-dentaire-tanger',
       'fr': '/urgence-dentaire-tanger',
+    
+      'x-default': '/urgence-dentaire-tanger',
     },
   },
 };

@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en/contact',
       'fr': '/contact',
+    
+      'x-default': '/contact',
     },
   },
 };

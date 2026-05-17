@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en/dental-implants-morocco',
       'fr': '/dental-implants-morocco',
+    
+      'x-default': '/dental-implants-morocco',
     },
   },
 };

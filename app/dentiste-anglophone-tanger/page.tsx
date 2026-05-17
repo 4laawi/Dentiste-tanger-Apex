@@ -7,10 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.english_dentist.title,
   description: TRANSLATIONS.fr.seo.english_dentist.description,
   alternates: {
-    canonical: '/english-speaking-dentist-tangier',
+    canonical: '/dentiste-anglophone-tanger',
     languages: {
       'en': '/en/english-speaking-dentist-tangier',
-      'fr': '/english-speaking-dentist-tangier',
+      'fr': '/dentiste-anglophone-tanger',
+    
+      'x-default': '/dentiste-anglophone-tanger',
     },
   },
 };

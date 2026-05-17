@@ -15,6 +15,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS.fr.find((p) => p.slug === slug);
+  const enPost = BLOG_POSTS.en.find((p) => p.id === post?.id);
   
   if (!post) return {};
 
@@ -30,7 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `/blog/${slug}`,
       languages: {
         'fr': `/blog/${slug}`,
-        'en': `/en/blog/${slug}`,
+        'en': enPost ? `/en/blog/${enPost.slug}` : `/en/blog/${slug}`,
+        'x-default': `/blog/${slug}`,
       },
     },
   };

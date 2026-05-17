@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Sen, Work_Sans, Amiri, Karla } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactFloatingButton from "@/components/ContactFloatingButton";
-import MobileActionBar from "@/components/MobileActionBar";
-import { TRANSLATIONS } from "@/constants";
+
 
 const sen = Sen({
   subsets: ["latin"],

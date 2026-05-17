@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     languages: {
       'en': '/en/english-speaking-dentist-tangier',
       'fr': '/english-speaking-dentist-tangier',
+    
+      'x-default': '/english-speaking-dentist-tangier',
     },
   },
 };
