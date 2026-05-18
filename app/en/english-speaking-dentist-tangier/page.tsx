@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     canonical: '/en/english-speaking-dentist-tangier',
     languages: {
       'en': '/en/english-speaking-dentist-tangier',
-      'fr': '/english-speaking-dentist-tangier',
+      'fr': '/dentiste-anglophone-tanger',
     
-      'x-default': '/english-speaking-dentist-tangier',
+      'x-default': '/dentiste-anglophone-tanger',
     },
   },
 };

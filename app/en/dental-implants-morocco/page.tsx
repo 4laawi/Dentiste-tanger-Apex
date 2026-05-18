@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     canonical: '/en/dental-implants-morocco',
     languages: {
       'en': '/en/dental-implants-morocco',
-      'fr': '/dental-implants-morocco',
+      'fr': '/implants-dentaires-tanger',
     
-      'x-default': '/dental-implants-morocco',
+      'x-default': '/implants-dentaires-tanger',
     },
   },
 };

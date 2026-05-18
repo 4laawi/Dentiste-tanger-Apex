@@ -6,6 +6,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.blog.title,
   description: TRANSLATIONS.fr.seo.blog.description,
+  alternates: {
+    canonical: '/blog',
+    languages: {
+      'en': '/en/blog',
+      'fr': '/blog',
+      'x-default': '/blog',
+    },
+  },
 };
 
 export default function BlogPage() {

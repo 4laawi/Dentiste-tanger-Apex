@@ -316,7 +316,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
                         label: 'Services', 
                         href: '/#services',
                         subItems: [
-                          { label: lang === 'fr' ? 'Implants Dentaires' : 'Dental Implants', href: '/dental-implants-morocco' },
+                          { label: lang === 'fr' ? 'Implants Dentaires' : 'Dental Implants', href: lang === 'fr' ? '/implants-dentaires-tanger' : '/dental-implants-morocco' },
                           { label: lang === 'fr' ? 'Esthétique Dentaire' : 'Cosmetic Dentistry', href: '/#services' },
                           { label: lang === 'fr' ? 'Soins Généraux' : 'General Care', href: '/#services' }
                         ]

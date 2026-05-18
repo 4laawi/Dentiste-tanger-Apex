@@ -52,8 +52,8 @@ export const TRANSLATIONS = {
         description: "Contact APEX Dental Clinic in Tangier for appointments or emergencies. Located at Place des Nations, we are here to help you."
       },
       urgence: {
-        title: "Urgence Dentaire à Tanger | Dr. Reda Saoui",
-        description: "Besoin d'un dentiste à Tanger ? APEX Dental offre des soins dentaires d'urgence avec le Dr. Reda Saoui. Contactez-nous pour toute urgence dentaire à Tanger."
+        title: "Emergency Dentist in Tangier | 24/7 Dental Care | APEX Clinic",
+        description: "Need an emergency dentist in Tangier? APEX Clinic provides immediate care with Dr. Reda Saoui. Fast relief for toothache, abscess, and trauma 24/7."
       },
       english_dentist: {
         title: "English Speaking Dentist in Tangier | Dr. Reda Saoui | APEX",

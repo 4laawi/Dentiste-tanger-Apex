@@ -87,7 +87,7 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
                                     </>
                                 ) : post.category.includes('Implant') || post.category.includes('Tourisme') || post.category.includes('Tourism') ? (
                                     <>
-                                        <Link href={getLangPath('/dental-implants-morocco')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
+                                        <Link href={lang === 'fr' ? '/implants-dentaires-tanger' : getLangPath('/dental-implants-morocco')} className="px-6 py-3 bg-brand-cyan text-brand-dark font-bold text-center hover:bg-white transition-colors">
                                             {lang === 'fr' ? 'Implants Dentaires' : 'Dental Implants'}
                                         </Link>
                                         <Link href={getLangPath('/problemes-traites')} className="px-6 py-3 border border-white/20 text-white font-bold text-center hover:bg-white/10 transition-colors">

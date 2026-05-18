@@ -47,6 +47,7 @@ function getTranslatedPath(pathname: string, targetLang: 'en' | 'fr'): string {
   const reverseStaticMap: Record<string, string> = {
     '/dr-reda-saoui-dentist': '/dentiste-reda-saoui',
     '/english-speaking-dentist-tangier': '/dentiste-anglophone-tanger',
+    '/dental-implants-morocco': '/implants-dentaires-tanger',
   };
 
   if (targetLang === 'en') {
@@ -86,6 +87,10 @@ export default function ClientPageLayout({ children, lang, t, currentView = 'hom
   const [selectedService, setSelectedService] = useState<string>('');
   const router = useRouter();
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   useEffect(() => {
     const handleScroll = () => {

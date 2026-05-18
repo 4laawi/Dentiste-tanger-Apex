@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/contact',
     '/urgence-dentaire-tanger',
-    '/dental-implants-morocco',
     '/facettes-dentaires-tanger',
     '/invisalign-tanger',
     '/implants-dentaires-tanger',
@@ -26,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/en/contact',
     '/en/dental-implants-morocco',
     '/en/urgence-dentaire-tanger',
+    '/en/english-speaking-dentist-tangier',
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({

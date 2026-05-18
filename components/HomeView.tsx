@@ -337,7 +337,7 @@ const HomeView: React.FC<Props> = ({
                 onMouseLeave={() => setHoveredIndex(0)}
               >
                 {isImplant ? (
-                  <Link href={getLangPath('/dental-implants-morocco')} className="block w-full h-full">
+                  <Link href={lang === 'fr' ? '/implants-dentaires-tanger' : getLangPath('/dental-implants-morocco')} className="block w-full h-full">
                     {cardContent}
                   </Link>
                 ) : (
