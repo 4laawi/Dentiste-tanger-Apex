@@ -10,10 +10,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: data.seoTitle,
     description: data.seoDescription,
     alternates: {
-      canonical: `/${data.slug}`,
+      canonical: `https://apexdental.ma/${data.slug}`,
       languages: {
-        'fr': `/${data.slug}`,
-        'x-default': `/${data.slug}`,
+        'fr': `https://apexdental.ma/${data.slug}`,
+        'x-default': `https://apexdental.ma/${data.slug}`,
       },
     },
   };

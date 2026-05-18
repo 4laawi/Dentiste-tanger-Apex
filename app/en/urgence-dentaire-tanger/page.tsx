@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.urgence.title,
   description: TRANSLATIONS.en.seo.urgence.description,
   alternates: {
-    canonical: '/en/urgence-dentaire-tanger',
+    canonical: 'https://apexdental.ma/en/urgence-dentaire-tanger',
     languages: {
-      'en': '/en/urgence-dentaire-tanger',
-      'fr': '/urgence-dentaire-tanger',
+      'en': 'https://apexdental.ma/en/urgence-dentaire-tanger',
+      'fr': 'https://apexdental.ma/urgence-dentaire-tanger',
     
-      'x-default': '/urgence-dentaire-tanger',
+      'x-default': 'https://apexdental.ma/urgence-dentaire-tanger',
     },
   },
 };

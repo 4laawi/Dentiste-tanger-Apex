@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.english_dentist.title,
   description: TRANSLATIONS.fr.seo.english_dentist.description,
   alternates: {
-    canonical: '/dentiste-anglophone-tanger',
+    canonical: 'https://apexdental.ma/dentiste-anglophone-tanger',
     languages: {
-      'en': '/en/english-speaking-dentist-tangier',
-      'fr': '/dentiste-anglophone-tanger',
+      'en': 'https://apexdental.ma/en/english-speaking-dentist-tangier',
+      'fr': 'https://apexdental.ma/dentiste-anglophone-tanger',
     
-      'x-default': '/dentiste-anglophone-tanger',
+      'x-default': 'https://apexdental.ma/dentiste-anglophone-tanger',
     },
   },
 };

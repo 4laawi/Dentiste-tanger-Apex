@@ -53,7 +53,7 @@ export function getHomeJsonLd(lang: 'en' | 'fr') {
         "priceRange": "$$",
         "currenciesAccepted": "MAD, EUR",
         "paymentAccepted": "Cash, Credit Card, Insurance",
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=Apex+Dental+Clinic+Tanger",
+        "hasMap": "https://www.google.com/maps/place/APEX+Dental+Clinic/@35.7767,-5.8039,17z/",
         "address": address,
         "geo": geo,
         "openingHoursSpecification": openingHours,
@@ -72,7 +72,7 @@ export function getHomeJsonLd(lang: 'en' | 'fr') {
         ],
         "sameAs": [
           "https://www.instagram.com/dr_reda_saoui/",
-          "https://www.google.com/maps/search/?api=1&query=Apex+Dental+Clinic+Tanger"
+          "https://www.google.com/maps/place/APEX+Dental+Clinic/@35.7767,-5.8039,17z/"
         ],
         "aggregateRating": {
           "@type": "AggregateRating",

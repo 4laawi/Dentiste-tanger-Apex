@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.doctor.title,
   description: TRANSLATIONS.en.seo.doctor.description,
   alternates: {
-    canonical: '/en/dr-reda-saoui-dentist',
+    canonical: 'https://apexdental.ma/en/dr-reda-saoui-dentist',
     languages: {
-      'en': '/en/dr-reda-saoui-dentist',
-      'fr': '/dentiste-reda-saoui',
-      'x-default': '/dentiste-reda-saoui',
+      'en': 'https://apexdental.ma/en/dr-reda-saoui-dentist',
+      'fr': 'https://apexdental.ma/dentiste-reda-saoui',
+      'x-default': 'https://apexdental.ma/dentiste-reda-saoui',
     },
   },
 };

@@ -671,7 +671,7 @@ export const TRANSLATIONS = {
     seo: {
       home: {
         title: "Dentiste à Tanger | Dr. Reda Saoui – APEX Dental Clinic",
-        description: "Bienvenue chez APEX Dental Clinic. Le Dr. Reda Saoui, votre dentiste de confiance à Tanger, propose des soins d'excellence : implants, facettes et Invisalign."
+        description: "Dentiste à Tanger — Le Dr. Reda Saoui reçoit à l'APEX Dental Clinic : implants dentaires, facettes, Invisalign et urgences. Cabinet haut de gamme, Place des Nations."
       },
       about: {
         title: "Dr. Reda Saoui | Dentiste Expert à Tanger – À propos d'APEX",
@@ -774,7 +774,7 @@ export const TRANSLATIONS = {
     },
     hero: {
       tag: "APEX Dental Clinic - Tanger",
-      title_part1: "Dentiste Expert",
+      title_part1: "Dentiste",
       title_part2: "à Tanger",
       desc: "Vivez une expérience de soins dentaires d'exception chez APEX Dental Clinic, votre centre de référence en dentisterie de haute technologie à Tanger. Sous la direction experte du Dr Reda Saoui, nous combinons innovation, précision artistique et approche humaine pour transformer votre santé bucco-dentaire.",
       cta_schedule: "Prendre RDV",
@@ -784,7 +784,7 @@ export const TRANSLATIONS = {
     why_choose: {
       title_light: "Pourquoi Choisir Notre",
       title_bold: "Cabinet à Tanger ?",
-      p1: "Chez APEX Dental Clinic, nous redéfinissons les standards du cabinet dentaire à Tanger. En alliant expertise chirurgicale et vision esthétique, nous offrons une approche multidisciplinaire unique. Notre clinique est équipée des dernières technologies CAD/CAM et d'imagerie 3D, garantissant des traitements précis, durables et parfaitement adaptés à votre anatomie.",
+      p1: "Votre dentiste à Tanger de référence, l'APEX Dental Clinic, redéfinit les standards du soin dentaire moderne. En alliant expertise chirurgicale et vision esthétique, nous offrons une approche multidisciplinaire unique. Notre clinique est équipée des dernières technologies CAD/CAM et d'imagerie 3D, garantissant des traitements précis, durables et parfaitement adaptés à votre anatomie.",
       p2: "Que vous cherchiez un détartrage de routine, des implants dentaires complexes ou une transformation complète de votre sourire via Invisalign et facettes, le Dr Reda Saoui et son équipe s'engagent à vous offrir une expérience sans douleur. Nous privilégions l’éducation thérapeutique pour que chaque patient comprenne son parcours de soin vers un sourire parfait à Tanger.",
       cta: "Découvrir notre approche"
     },

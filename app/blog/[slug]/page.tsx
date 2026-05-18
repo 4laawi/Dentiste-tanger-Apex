@@ -28,11 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [{ url: post.image }],
     },
     alternates: {
-      canonical: `/blog/${slug}`,
+      canonical: `https://apexdental.ma/blog/${slug}`,
       languages: {
-        'fr': `/blog/${slug}`,
-        'en': enPost ? `/en/blog/${enPost.slug}` : `/en/blog/${slug}`,
-        'x-default': `/blog/${slug}`,
+        'fr': `https://apexdental.ma/blog/${slug}`,
+        'en': enPost ? `https://apexdental.ma/en/blog/${enPost.slug}` : `https://apexdental.ma/en/blog/${slug}`,
+        'x-default': `https://apexdental.ma/blog/${slug}`,
       },
     },
   };

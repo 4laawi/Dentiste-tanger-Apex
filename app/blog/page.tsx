@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.blog.title,
   description: TRANSLATIONS.fr.seo.blog.description,
   alternates: {
-    canonical: '/blog',
+    canonical: 'https://apexdental.ma/blog',
     languages: {
-      'en': '/en/blog',
-      'fr': '/blog',
-      'x-default': '/blog',
+      'en': 'https://apexdental.ma/en/blog',
+      'fr': 'https://apexdental.ma/blog',
+      'x-default': 'https://apexdental.ma/blog',
     },
   },
 };

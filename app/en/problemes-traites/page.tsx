@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.problems.title,
   description: TRANSLATIONS.en.seo.problems.description,
   alternates: {
-    canonical: '/en/problemes-traites',
+    canonical: 'https://apexdental.ma/en/problemes-traites',
     languages: {
-      'en': '/en/problemes-traites',
-      'fr': '/problemes-traites',
+      'en': 'https://apexdental.ma/en/problemes-traites',
+      'fr': 'https://apexdental.ma/problemes-traites',
     
-      'x-default': '/problemes-traites',
+      'x-default': 'https://apexdental.ma/problemes-traites',
     },
   },
 };

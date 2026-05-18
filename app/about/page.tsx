@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.fr.seo.about.title,
   description: TRANSLATIONS.fr.seo.about.description,
   alternates: {
-    canonical: '/about',
+    canonical: 'https://apexdental.ma/about',
     languages: {
-      'en': '/en/about',
-      'fr': '/about',
+      'en': 'https://apexdental.ma/en/about',
+      'fr': 'https://apexdental.ma/about',
     
-      'x-default': '/about',
+      'x-default': 'https://apexdental.ma/about',
     },
   },
 };

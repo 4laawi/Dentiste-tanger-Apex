@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: TRANSLATIONS.en.seo.implants.title,
   description: TRANSLATIONS.en.seo.implants.description,
   alternates: {
-    canonical: '/en/dental-implants-morocco',
+    canonical: 'https://apexdental.ma/en/dental-implants-morocco',
     languages: {
-      'en': '/en/dental-implants-morocco',
-      'fr': '/implants-dentaires-tanger',
+      'en': 'https://apexdental.ma/en/dental-implants-morocco',
+      'fr': 'https://apexdental.ma/implants-dentaires-tanger',
     
-      'x-default': '/implants-dentaires-tanger',
+      'x-default': 'https://apexdental.ma/implants-dentaires-tanger',
     },
   },
 };
