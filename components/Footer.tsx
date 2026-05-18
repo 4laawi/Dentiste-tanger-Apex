@@ -17,6 +17,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
       connect: "Suivez-nous",
       appointment: "Prendre Rendez-vous",
       rights: "Tous droits réservés APEX Dental Care 2026",
+      s0: "Dentiste à Tanger",
       s1: "Implants Dentaires",
       s2: "Esthétique Dentaire",
       s3: "Blanchiment Laser",
@@ -33,6 +34,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
       connect: "Connect",
       appointment: "Book Consultation",
       rights: "All rights reserved APEX Dental Care 2026",
+      s0: "Dentist in Tangier",
       s1: "Dental Implants",
       s2: "Cosmetic Dentistry",
       s3: "Laser Whitening",
@@ -58,9 +60,10 @@ const Footer: React.FC<Props> = ({ lang }) => {
           <div>
             <h4 className="text-2xl font-bold mb-6 text-brand-cyan">{t.services}</h4>
             <ul className="space-y-4 font-sans text-white/70">
+              <li><Link href={getLangPath('/')} className="hover:text-brand-cyan transition-colors font-semibold text-white/90">{t.s0}</Link></li>
               <li><Link href={lang === 'fr' ? '/implants-dentaires-tanger' : getLangPath('/dental-implants-morocco')} className="hover:text-brand-cyan transition-colors">{t.s1}</Link></li>
               <li><Link href={getLangPath('/problemes-traites')} className="hover:text-brand-cyan transition-colors">{t.s2}</Link></li>
-              <li><Link href={getLangPath('/problemes-traites')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
+              <li><Link href={getLangPath('/blanchiment-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s3}</Link></li>
               <li><Link href={getLangPath('/urgence-dentaire-tanger')} className="hover:text-brand-cyan transition-colors">{t.s4}</Link></li>
             </ul>
           </div>
@@ -103,7 +106,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
         </div>
 
         <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/40 font-sans text-sm">
-          <p>© {t.rights} | Clinique Dentaire Tanger</p>
+          <p>© {t.rights} | <Link href={getLangPath('/')} className="hover:text-brand-cyan transition-colors">{t.s0}</Link></p>
           <p>
             Made by <a href="https://www.sitepro.ma" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">www.sitepro.ma</a>
           </p>
