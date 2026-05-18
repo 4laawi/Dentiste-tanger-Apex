@@ -27,6 +27,7 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
   const pathname = usePathname();
   const router = useRouter();
   const nt = t.nav;
+  const isBlogPage = currentView === 'blog' || (pathname && pathname.split('/').includes('blog'));
 
   const toggleDropdown = (dropdown: 'about' | 'services' | 'problems') => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -82,7 +83,13 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
   const isProblemsActive = pathname === getLangPath('/problemes-traites');
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 transition-all duration-700 ${isOpen ? 'z-[110]' : 'z-50'} ${isOpen ? 'bg-transparent' : (scrolled || activeDropdown ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4')}`}>
+    <nav className={`fixed top-0 left-0 right-0 transition-all duration-700 ${isOpen ? 'z-[110]' : 'z-50'} ${
+      isOpen 
+        ? 'bg-transparent' 
+        : (scrolled || activeDropdown || isBlogPage)
+          ? `bg-black/95 backdrop-blur-md border-b border-white/10 ${scrolled || activeDropdown ? 'py-2' : 'py-4'}`
+          : 'bg-transparent py-4'
+    }`}>
       <div className="w-[95%] mx-auto flex items-center justify-between">
 
         {/* Left Side: Logo */}

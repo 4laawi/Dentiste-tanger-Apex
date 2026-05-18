@@ -8,6 +8,65 @@ import MobileActionBar from './MobileActionBar';
 import dynamic from 'next/dynamic';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter, usePathname } from 'next/navigation';
+import { BLOG_POSTS } from '../blogData';
+
+function getTranslatedPath(pathname: string, targetLang: 'en' | 'fr'): string {
+  let path = pathname || '/';
+  
+  // 1. Dynamic Blog post lookup
+  const segments = path.split('/');
+  const blogIndex = segments.indexOf('blog');
+  if (blogIndex !== -1 && blogIndex < segments.length - 1) {
+    const currentSlug = segments[blogIndex + 1];
+    const isFrenchPost = BLOG_POSTS.fr.find(p => p.slug === currentSlug);
+    const isEnglishPost = BLOG_POSTS.en.find(p => p.slug === currentSlug);
+    const post = isFrenchPost || isEnglishPost;
+
+    if (post) {
+      const targetPost = BLOG_POSTS[targetLang].find(p => p.id === post.id);
+      if (targetPost) {
+        return targetLang === 'en' ? `/en/blog/${targetPost.slug}` : `/blog/${targetPost.slug}`;
+      }
+    }
+  }
+
+  // Remove lang prefix from path to work with base path
+  const isEnPath = path.startsWith('/en/') || path === '/en';
+  const basePath = isEnPath ? (path.replace(/^\/en(\/|$)/, '$1') || '/') : path;
+  
+  // 2. Static path translations
+  const staticMap: Record<string, string> = {
+    '/dentiste-reda-saoui': '/dr-reda-saoui-dentist',
+    '/dentiste-anglophone-tanger': '/english-speaking-dentist-tangier',
+    '/facettes-dentaires-tanger': '/#services',
+    '/invisalign-tanger': '/#services',
+    '/implants-dentaires-tanger': '/dental-implants-morocco',
+    '/blanchiment-dentaire-tanger': '/#services',
+  };
+
+  const reverseStaticMap: Record<string, string> = {
+    '/dr-reda-saoui-dentist': '/dentiste-reda-saoui',
+    '/english-speaking-dentist-tangier': '/dentiste-anglophone-tanger',
+  };
+
+  if (targetLang === 'en') {
+    const mapped = staticMap[basePath];
+    if (mapped) {
+      return `/en${mapped === '/' ? '' : mapped}`;
+    }
+    return `/en${basePath === '/' ? '' : basePath}`;
+  } else {
+    const mapped = reverseStaticMap[basePath];
+    if (mapped) {
+      return mapped;
+    }
+    const frenchCounterpart = Object.keys(staticMap).find(key => staticMap[key] === basePath);
+    if (frenchCounterpart) {
+      return frenchCounterpart;
+    }
+    return basePath;
+  }
+}
 
 const ProblemsOverlay = dynamic(() => import('./ProblemsOverlay'), {
   ssr: false
@@ -52,12 +111,7 @@ export default function ClientPageLayout({ children, lang, t, currentView = 'hom
         lang={lang}
         setLang={(newLang) => {
             if (newLang === lang) return;
-            let newPath = pathname;
-            if (newLang === 'en') {
-              newPath = `/en${pathname === '/' ? '' : pathname}`;
-            } else {
-              newPath = pathname.replace(/^\/en(\/|$)/, '$1') || '/';
-            }
+            const newPath = getTranslatedPath(pathname, newLang);
             router.push(newPath);
         }}
         t={t}
