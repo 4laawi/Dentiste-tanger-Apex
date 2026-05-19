@@ -16,13 +16,21 @@ const ProblemsGrid: React.FC = () => {
           transition={{ delay: index * 0.1 }}
           className="group relative h-[280px] overflow-hidden block"
         >
-          <img
-            src={problem.image}
-            alt={problem.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            width="1200"
-            height="800"
-          />
+          <picture className="absolute inset-0 w-full h-full">
+            {problem.image === '/photo5.webp' && (
+              <source media="(max-width: 1023px)" srcSet="/photo5-low.webp" />
+            )}
+            {problem.image === '/DSCF7556.webp' && (
+              <source media="(max-width: 1023px)" srcSet="/DSCF7556-low.webp" />
+            )}
+            <img
+              src={problem.image}
+              alt={problem.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              width="1200"
+              height="800"
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/35 group-hover:bg-black/5 transition-all duration-300"></div>
           <div className="absolute inset-x-0 bottom-0 p-6 text-left">
             <h3 className="text-white text-2xl font-work font-bold uppercase leading-tight drop-shadow-md group-hover:text-brand-cyan transition-colors">

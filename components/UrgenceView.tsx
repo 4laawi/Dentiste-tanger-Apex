@@ -23,14 +23,24 @@ const UrgenceView: React.FC<Props> = ({ t, lang }) => {
             
 
             {/* Urgence Hero */}
-            <section className="relative pt-[12vh] pb-[12vh] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `linear-gradient(180deg, rgba(54, 54, 54, 0.65) 100%, rgba(255, 255, 255, 0) 100%), url(/Photo3.webp)`,
-                        backgroundBlendMode: 'soft-light'
-                    }}
-                ></div>
+            <section className="relative pt-[12vh] pb-[12vh] overflow-hidden bg-black text-white">
+                <div className="absolute inset-0 z-0">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcSet="/Photo3.webp" />
+                        <img 
+                            src="/Photo3-low.webp" 
+                            alt="Background" 
+                            className="w-full h-full object-cover opacity-75"
+                        />
+                    </picture>
+                    <div 
+                        className="absolute inset-0"
+                        style={{
+                            background: 'linear-gradient(180deg, rgba(54, 54, 54, 0.65) 100%, rgba(255, 255, 255, 0) 100%)',
+                            mixBlendMode: 'soft-light'
+                        }}
+                    ></div>
+                </div>
                 <div className="container mx-auto px-4 md:px-12 lg:px-24 relative z-10">
                     <div className="max-w-full">
                         <motion.div

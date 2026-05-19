@@ -73,12 +73,17 @@ const BlogView: React.FC<Props> = ({ t, lang }) => {
                             >
                                 <Link href={getLangPath(`/blog/${post.slug}`)} className="group block">
                                     <div className="relative aspect-[16/10] overflow-hidden mb-6 rounded-sm shadow-lg">
-                                        <img
-                                            src={post.image}
-                                            alt={post.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            loading="lazy"
-                                        />
+                                        <picture>
+                                            {post.image === '/Photo3.webp' && (
+                                                <source media="(max-width: 1023px)" srcSet="/Photo3-low.webp" />
+                                            )}
+                                            <img
+                                                src={post.image}
+                                                alt={post.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <div className="absolute top-4 left-4">
                                             <span className="bg-brand-cyan text-black px-4 py-1 text-xs font-bold uppercase tracking-widest">
                                                 {post.category}

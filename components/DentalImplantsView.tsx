@@ -288,11 +288,14 @@ const DentalImplantsView: React.FC<Props> = ({ t, lang }) => {
                                 className="w-full lg:w-1/2"
                             >
                                 <div className="aspect-[4/3] bg-neutral-100 rounded-sm overflow-hidden shadow-2xl">
-                                    <img
-                                        src="/photo5.webp"
-                                        alt="Apex Clinic Interior"
-                                        className="w-full h-full object-cover"
-                                    />
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcSet="/photo5.webp" />
+                                        <img
+                                            src="/photo5-low.webp"
+                                            alt="Apex Clinic Interior"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </picture>
                                 </div>
                             </motion.div>
                         </div>
@@ -401,7 +404,10 @@ const DentalImplantsView: React.FC<Props> = ({ t, lang }) => {
                             <Link href={lang === 'en' ? '/en/blog/dental-tourism-tangier-quality-care' : '/blog/tourisme-dentaire-tanger-soins-luxe'}>
                                 <div className="group cursor-pointer">
                                     <div className="aspect-video overflow-hidden rounded-sm mb-6 shadow-lg">
-                                        <img src="/Photo3.webp" alt="Dental Tourism" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        <picture className="w-full h-full">
+                                            <source media="(min-width: 1024px)" srcSet="/Photo3.webp" />
+                                            <img src="/Photo3-low.webp" alt="Dental Tourism" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </picture>
                                     </div>
                                     <h3 className="text-2xl font-work font-bold text-black group-hover:text-brand-cyan transition-colors mb-3">
                                         {lang === 'fr' ? 'Tourisme Dentaire à Tanger' : 'Dental Tourism in Tangier'}

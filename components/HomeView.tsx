@@ -98,28 +98,21 @@ const HomeView: React.FC<Props> = ({
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/photo5.webp"
-            alt="Dr. Reda Saoui - Dental Consultation"
-            className="hidden md:block w-full h-full object-cover"
-            style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
-            width="6240"
-            height="4160"
-            fetchPriority="high"
-            decoding="async"
-            sizes="100vw"
-          />
-          <img
-            src="/homepage-hero-mobiles (1).webp"
-            alt="Dr. Reda Saoui - Dental Consultation Mobile"
-            className="block md:hidden w-full h-full object-cover"
-            style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
-            width="800"
-            height="1200"
-            fetchPriority="high"
-            decoding="async"
-            sizes="100vw"
-          />
+          <picture className="w-full h-full">
+            <source media="(min-width: 1024px)" srcSet="/photo5.webp" />
+            <source media="(min-width: 768px)" srcSet="/photo5-low.webp" />
+            <img
+              src="/homepage-hero-mobiles (1).webp"
+              alt="Dr. Reda Saoui - Dental Consultation"
+              className="w-full h-full object-cover"
+              style={{ opacity: 0.6, transform: 'scaleX(-1)' }}
+              width="800"
+              height="1200"
+              fetchPriority="high"
+              decoding="async"
+              sizes="100vw"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 pt-20">
@@ -210,15 +203,18 @@ const HomeView: React.FC<Props> = ({
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-cyan/5 translate-x-6 translate-y-6 -z-10"></div>
-                <img
-                  src="/Photo3.webp"
-                  className="w-full h-[300px] md:h-[650px] object-cover shadow-2xl rounded-sm"
-                  alt="Clinic"
-                  loading="lazy"
-                  width="1371"
-                  height="839"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+                <picture>
+                  <source media="(min-width: 1024px)" srcSet="/Photo3.webp" />
+                  <img
+                    src="/Photo3-low.webp"
+                    className="w-full h-[300px] md:h-[650px] object-cover shadow-2xl rounded-sm"
+                    alt="Clinic"
+                    loading="lazy"
+                    width="1371"
+                    height="839"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </picture>
               </div>
             </div>
             <div ref={detailsParallax.targetRef} className="w-full lg:w-1/2">
@@ -270,15 +266,18 @@ const HomeView: React.FC<Props> = ({
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-24">
             <div className="w-full lg:w-1/2 h-[300px] md:h-[600px] overflow-hidden shadow-[0_0_100px_rgba(106,224,242,0.1)] rounded-sm">
-              <img
-                src="/DSCF7556.webp"
-                className="w-full h-full object-cover"
-                alt="Dental Technology"
-                loading="lazy"
-                width="6044"
-                height="4029"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+              <picture>
+                <source media="(min-width: 1024px)" srcSet="/DSCF7556.webp" />
+                <img
+                  src="/DSCF7556-low.webp"
+                  className="w-full h-full object-cover"
+                  alt="Dental Technology"
+                  loading="lazy"
+                  width="6044"
+                  height="4029"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </picture>
             </div>
             <div ref={implantsParallax.targetRef} className="w-full lg:w-1/2 space-y-8 md:space-y-10">
               <h2 className="text-3xl md:text-8xl font-bold font-work leading-none tracking-tighter">
@@ -313,15 +312,20 @@ const HomeView: React.FC<Props> = ({
 
             const cardContent = (
               <>
-                <img
-                  src={item.img}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isHovered ? 'opacity-60 grayscale-0 scale-110' : 'opacity-30 grayscale'}`}
-                  alt={item.title}
-                  loading="lazy"
-                  width={item.width}
-                  height={item.height}
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
+                <picture className="absolute inset-0 w-full h-full">
+                  {item.img === '/photo5.webp' && (
+                    <source media="(max-width: 1023px)" srcSet="/photo5-low.webp" />
+                  )}
+                  <img
+                    src={item.img}
+                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isHovered ? 'opacity-60 grayscale-0 scale-110' : 'opacity-30 grayscale'}`}
+                    alt={item.title}
+                    loading="lazy"
+                    width={item.width}
+                    height={item.height}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </picture>
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 text-white bg-gradient-to-t from-black/80 to-transparent">
                   <h3 className={`text-xl md:text-4xl font-bold font-work leading-none mb-2 md:mb-4 transition-transform ${isHovered ? '-translate-y-2' : ''}`}>{item.title}</h3>
                   <div className={`h-1 bg-brand-cyan transition-all duration-700 ${isHovered ? 'w-10 md:w-16' : 'w-0'}`}></div>

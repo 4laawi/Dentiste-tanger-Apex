@@ -54,11 +54,16 @@ const BlogPostView: React.FC<Props> = ({ t, lang, post }) => {
                             </div>
                         </div>
 
-                        <img
-                            src={post.image}
-                            alt={post.imageAlt || post.title}
-                            className="w-full aspect-video object-cover rounded-sm shadow-2xl"
-                        />
+                        <picture>
+                            {post.image === '/Photo3.webp' && (
+                                <source media="(max-width: 1023px)" srcSet="/Photo3-low.webp" />
+                            )}
+                            <img
+                                src={post.image}
+                                alt={post.imageAlt || post.title}
+                                className="w-full aspect-video object-cover rounded-sm shadow-2xl"
+                            />
+                        </picture>
 
                         <div
                             className="prose prose-lg max-w-none text-brand-dark/80 font-sans leading-relaxed space-y-6 blog-content"

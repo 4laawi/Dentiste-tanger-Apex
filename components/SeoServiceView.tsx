@@ -28,11 +28,14 @@ const SeoServiceView: React.FC<Props> = ({ data, lang = 'fr' }) => {
       {/* 1. Hero Section (Above the Fold) */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-black text-white">
         <div className="absolute inset-0 opacity-40 z-0">
-            <img 
-              src="/DSCF7556.webp" 
-              alt={data.title} 
-              className="w-full h-full object-cover" 
-            />
+            <picture>
+              <source media="(min-width: 1024px)" srcSet="/DSCF7556.webp" />
+              <img 
+                src="/DSCF7556-low.webp" 
+                alt={data.title} 
+                className="w-full h-full object-cover" 
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         
@@ -94,11 +97,14 @@ const SeoServiceView: React.FC<Props> = ({ data, lang = 'fr' }) => {
               {...fadeInUp}
               className="relative aspect-square md:aspect-video lg:aspect-square overflow-hidden bg-gray-100"
             >
-              <img 
-                src="/Photo3.webp" 
-                alt={`${data.title} Cabinet Dentaire`} 
-                className="w-full h-full object-cover" 
-              />
+              <picture>
+                <source media="(min-width: 1024px)" srcSet="/Photo3.webp" />
+                <img 
+                  src="/Photo3-low.webp" 
+                  alt={`${data.title} Cabinet Dentaire`} 
+                  className="w-full h-full object-cover" 
+                />
+              </picture>
             </motion.div>
           </div>
         </div>
