@@ -6,10 +6,20 @@ import { motion } from 'framer-motion';
 import { PHONE, ADDRESS } from '../constants.tsx';
 import { Instagram, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 import { useParallax } from '../hooks/useParallax.ts';
-import BeautifulSmileSection from './BeautifulSmileSection.tsx';
-import Testimonials from './Testimonials.tsx';
-import ScheduleBanner from './ScheduleBanner.tsx';
-import ContactSection from './ContactSection.tsx';
+import dynamic from 'next/dynamic';
+
+const BeautifulSmileSection = dynamic(() => import('./BeautifulSmileSection.tsx'), {
+  ssr: true,
+});
+const Testimonials = dynamic(() => import('./Testimonials.tsx'), {
+  ssr: true,
+});
+const ScheduleBanner = dynamic(() => import('./ScheduleBanner.tsx'), {
+  ssr: true,
+});
+const ContactSection = dynamic(() => import('./ContactSection.tsx'), {
+  ssr: true,
+});
 
 interface Props {
   t: any;
