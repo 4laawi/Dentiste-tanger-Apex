@@ -10,11 +10,23 @@ const nextConfig: NextConfig = {
         destination: '/implants-dentaires-tanger',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.apexdental.ma',
+          },
+        ],
+        destination: 'https://apexdental.ma/:path*',
+        permanent: true,
+      },
     ];
   },
 
   experimental: {
-    optimizePackageImports: ["lucide-react"]
+    optimizePackageImports: ["lucide-react"],
+    inlineCss: true,
   }
 };
 

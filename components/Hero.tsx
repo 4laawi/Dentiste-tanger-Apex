@@ -19,6 +19,9 @@ const Hero: React.FC<Props> = ({ t }) => {
           alt="Centre Dentaire Apex"
           className="w-full h-full object-cover object-center"
           style={{ transform: 'scaleX(-1)' }}
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
       </div>

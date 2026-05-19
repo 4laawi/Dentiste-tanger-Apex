@@ -61,6 +61,9 @@ export default async function RootLayout({
   
   return (
     <html lang={currentLang} className={`${sen.variable} ${workSans.variable} ${amiri.variable} ${karla.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+      </head>
       <body className="antialiased">
         {children}
       </body>
