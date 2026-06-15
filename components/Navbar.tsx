@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import AboutDropdown from './AboutDropdown.tsx';
 import ServicesDropdown from './ServicesDropdown.tsx';
 import ProblemsDropdown from './ProblemsDropdown.tsx';
+import { getTranslatedPath } from './ClientPageLayout.tsx';
 
 interface Props {
   scrolled: boolean;
@@ -199,23 +200,23 @@ const Navbar: React.FC<Props> = ({ scrolled, lang, setLang, t, onOpenProblems, c
               {nt.schedule}
             </Link>
 
-            <button
-              onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+            <Link
+              href={getTranslatedPath(pathname, lang === 'fr' ? 'en' : 'fr')}
               className="text-white/50 text-sm font-bold hover:text-brand-cyan uppercase"
             >
               {lang === 'fr' ? 'EN' : 'FR'}
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* Mobile Controls */}
         <div className="lg:hidden flex items-center gap-2 sm:gap-4">
-          <button
-            onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+          <Link
+            href={getTranslatedPath(pathname, lang === 'fr' ? 'en' : 'fr')}
             className="text-white/80 font-bold uppercase text-xs sm:text-sm hover:text-brand-cyan transition-colors px-2 py-1"
           >
             {lang === 'fr' ? 'EN' : 'FR'}
-          </button>
+          </Link>
           <button 
             className="text-brand-cyan p-2 relative z-[110]" 
             onClick={() => setIsOpen(!isOpen)} 

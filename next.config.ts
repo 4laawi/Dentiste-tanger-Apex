@@ -8,18 +8,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/dental-implants-morocco',
-        destination: '/implants-dentaires-tanger',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.apexdental.ma',
-          },
-        ],
-        destination: 'https://apexdental.ma/:path*',
+        destination: '/en/dental-implants-morocco',
         permanent: true,
       },
     ];

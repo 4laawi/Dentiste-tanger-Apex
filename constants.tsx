@@ -32,16 +32,16 @@ export const TRANSLATIONS = {
         description: "Experience premium dental care in Tangier with Dr. Reda Saoui. Expert specialists in dental implants, aesthetic veneers, and Invisalign clear aligners."
       },
       about: {
-        title: "About Dr. Reda Saoui | Expert Dentist in Tangier | APEX",
-        description: "Meet Dr. Reda Saoui and learn about the philosophy and advanced technology behind APEX Dental Clinic in Tangier."
+        title: "APEX Dental Clinic Tangier | Our Philosophy & Technology",
+        description: "Discover the advanced technology and customer-centric philosophy at APEX Dental Clinic, your premier center for modern dentistry in Tangier."
       },
       problems: {
         title: "Dental Treatments in Tangier | Implants & Aesthetics | APEX",
         description: "Discover the professional dental solutions at APEX, from emergency care to cosmetic transformations and dental implants in Tangier."
       },
       doctor: {
-        title: "Dr. Reda Saoui - Dentist in Tangier | Expertise & Vision",
-        description: "Expertise, training, and philosophy of Dr. Reda Saoui, your trusted dentist for high-tech care in Tangier."
+        title: "Dr. Reda Saoui | Surgeon Dentist in Tangier | Profile & Education",
+        description: "Profile and professional background of Dr. Reda Saoui, expert dentist and implantologist at APEX Dental Clinic in Tangier."
       },
       blog: {
         title: "Dental Blog Tangier | Tips & Innovations | APEX Dental",
@@ -674,16 +674,16 @@ export const TRANSLATIONS = {
         description: "Dentiste à Tanger — Le Dr. Reda Saoui reçoit à l'APEX Dental Clinic : implants dentaires, facettes, Invisalign et urgences. Cabinet haut de gamme, Place des Nations."
       },
       about: {
-        title: "Dr. Reda Saoui | Dentiste Expert à Tanger – À propos d'APEX",
-        description: "Rencontrez le Dr. Reda Saoui, expert en dentisterie moderne à Tanger. Découvrez son parcours, sa vision et son engagement pour votre santé bucco-dentaire."
+        title: "APEX Dental Clinic Tanger | Notre Cabinet, Vision & Équipe",
+        description: "Découvrez l'APEX Dental Clinic à Tanger : notre philosophie de soins modernes, nos équipements haut de gamme et notre équipe dédiée à votre sourire Place des Nations."
       },
       problems: {
         title: "Soins Dentaires à Tanger | Esthétique & Orthodontie | APEX",
         description: "Découvrez les soins dentaires innovants du Dr. Saoui à Tanger. Spécialiste en implants, facettes, orthodontie et esthétique dentaire moderne."
       },
       doctor: {
-        title: "Dr. Reda Saoui - Dentiste à Tanger | Expertise & Vision",
-        description: "Parcours et expertise du Dr. Reda Saoui, votre dentiste de confiance au service de l'innovation dentaire à Tanger."
+        title: "Dr. Reda Saoui | Chirurgien-Dentiste à Tanger | Profil & Parcours",
+        description: "Profil et parcours professionnel du Dr. Reda Saoui, chirurgien-dentiste expert et implantologue à l'APEX Dental Clinic à Tanger."
       },
       blog: {
         title: "Blog Dentaire Tanger | Conseils & Innovations | APEX Dental",

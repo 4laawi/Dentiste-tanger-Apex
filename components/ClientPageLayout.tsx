@@ -10,7 +10,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useRouter, usePathname } from 'next/navigation';
 import { BLOG_POSTS } from '../blogData';
 
-function getTranslatedPath(pathname: string, targetLang: 'en' | 'fr'): string {
+export function getTranslatedPath(pathname: string, targetLang: 'en' | 'fr'): string {
   let path = pathname || '/';
   
   // 1. Dynamic Blog post lookup

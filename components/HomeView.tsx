@@ -343,6 +343,18 @@ const HomeView: React.FC<Props> = ({
               </>
             );
 
+            const cardLink = (() => {
+              if (item.img.includes('implant.webp')) {
+                return lang === 'fr' ? '/implants-dentaires-tanger' : getLangPath('/dental-implants-morocco');
+              }
+              if (lang === 'fr') {
+                if (item.img.includes('photo5.webp')) return '/facettes-dentaires-tanger';
+                if (item.img.includes('orthodontie.webp')) return '/invisalign-tanger';
+                if (item.img.includes('blanchiment')) return '/blanchiment-dentaire-tanger';
+              }
+              return '';
+            })();
+
             return (
               <div
                 key={i}
@@ -350,8 +362,8 @@ const HomeView: React.FC<Props> = ({
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(0)}
               >
-                {isImplant ? (
-                  <Link href={lang === 'fr' ? '/implants-dentaires-tanger' : getLangPath('/dental-implants-morocco')} className="block w-full h-full">
+                {cardLink ? (
+                  <Link href={cardLink} className="block w-full h-full">
                     {cardContent}
                   </Link>
                 ) : (
